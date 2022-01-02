@@ -30,7 +30,6 @@ class ViewController: UIViewController{
         imageSlideShow.image = UIImage(named: imageToShow)
     }
     
-    
     @IBAction func previousImage(_ sender: Any) {
         if(currentImage < 2) {
             self.currentImage = 4

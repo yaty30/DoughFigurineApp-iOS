@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qof-7S-8HX" userLabel="Vertical Scroll View">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qof-7S-8HX">
                                 <rect key="frame" x="0.0" y="44" width="428" height="882"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sof-zC-g9v" userLabel="Home View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sof-zC-g9v" userLabel="Vertical Scroll View">
                                         <rect key="frame" x="0.0" y="40" width="428" height="1200"/>
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJ8-HJ-uCd" userLabel="Image Slider Container">
@@ -37,18 +37,144 @@
                                                     <segue destination="D7S-RD-3y7" kind="embed" id="NN9-In-yCY"/>
                                                 </connections>
                                             </containerView>
-                                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3W-wI-2qt" userLabel="Features Container">
-                                                <rect key="frame" x="27" y="330" width="374" height="163"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                            <view contentMode="scaleToFill" id="4R6-Xh-Kf9" userLabel="Feature View">
+                                                <rect key="frame" x="27" y="323" width="374" height="163"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Twk-NB-UpU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="163"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4TF-wC-Jjl" userLabel="Horizontal Scroll View">
+                                                                <rect key="frame" x="0.0" y="0.0" width="1000" height="163"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xwf-YC-Wtf" userLabel="Create Your Own View">
+                                                                        <rect key="frame" x="27" y="17" width="305" height="128"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="create_figurine_hero" translatesAutoresizingMaskIntoConstraints="NO" id="nw0-WN-cAM">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="305" height="128"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowOpacity" value="0.2"/>
+                                                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                                                <size key="value" width="0.0" height="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uUN-kZ-K9e" userLabel="Gallery View">
+                                                                        <rect key="frame" x="347" y="17" width="305" height="128"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gallery_hero" translatesAutoresizingMaskIntoConstraints="NO" id="JTO-sS-LS1">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="305" height="128"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowOpacity" value="0.2"/>
+                                                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                                                <size key="value" width="0.0" height="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JZ7-4f-Ryu" userLabel="Item Tracking View">
+                                                                        <rect key="frame" x="666" y="17" width="305" height="128"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="item_tracking_hero" translatesAutoresizingMaskIntoConstraints="NO" id="1p8-ss-Nfe">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="305" height="128"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowOpacity" value="0.2"/>
+                                                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                                                <size key="value" width="0.0" height="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="1000" id="s0e-C2-xcH"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YS7-EZ-8sU" userLabel="Create Your Own Btn">
+                                                                <rect key="frame" x="27" y="13" width="307" height="137"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                                <connections>
+                                                                    <action selector="firstArticleButton:" destination="D7S-RD-3y7" eventType="touchUpInside" id="9tW-dK-0fj"/>
+                                                                    <segue destination="k5P-9r-wkW" kind="modal" identifier="toCreatYourOwn" modalPresentationStyle="fullScreen" id="Ym0-8C-fxp"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLC-98-cKV" userLabel="Gallery Btn">
+                                                                <rect key="frame" x="347" y="13" width="306" height="137"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                                <connections>
+                                                                    <action selector="firstArticleButton:" destination="D7S-RD-3y7" eventType="touchUpInside" id="PaB-y7-D1R"/>
+                                                                    <segue destination="vaV-wT-5xx" kind="modal" identifier="toGallery" modalPresentationStyle="fullScreen" id="LP1-O1-hBo"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJH-tJ-9dn" userLabel="Item Tracking Btn">
+                                                                <rect key="frame" x="666" y="13" width="306" height="137"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                                <connections>
+                                                                    <action selector="firstArticleButton:" destination="D7S-RD-3y7" eventType="touchUpInside" id="o9M-NX-HgC"/>
+                                                                    <segue destination="eoN-ce-osi" kind="modal" identifier="toItemTracking" modalPresentationStyle="fullScreen" id="fjE-gx-929"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="4TF-wC-Jjl" firstAttribute="leading" secondItem="Twk-NB-UpU" secondAttribute="leading" id="W2t-UZ-2g5"/>
+                                                            <constraint firstAttribute="trailing" secondItem="4TF-wC-Jjl" secondAttribute="trailing" id="dh8-mE-KFn"/>
+                                                            <constraint firstAttribute="bottom" secondItem="4TF-wC-Jjl" secondAttribute="bottom" id="oGh-ml-4CN"/>
+                                                            <constraint firstItem="4TF-wC-Jjl" firstAttribute="top" secondItem="Twk-NB-UpU" secondAttribute="top" id="uuo-vp-bth"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </scrollView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Twk-NB-UpU" secondAttribute="trailing" id="GMZ-W1-RQz"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Twk-NB-UpU" secondAttribute="bottom" id="Pok-cP-2E1"/>
+                                                    <constraint firstItem="Twk-NB-UpU" firstAttribute="leading" secondItem="4R6-Xh-Kf9" secondAttribute="leading" id="TgO-7B-XzC"/>
+                                                    <constraint firstItem="Twk-NB-UpU" firstAttribute="top" secondItem="4R6-Xh-Kf9" secondAttribute="top" id="fHd-Hv-A8h"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowOpacity" value="0.2"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="20"/>
                                                 </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <segue destination="zNG-jK-h9d" kind="embed" id="VPq-Ur-mCl"/>
-                                                </connections>
-                                            </containerView>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -86,12 +212,41 @@
                             <constraint firstItem="Sof-zC-g9v" firstAttribute="width" secondItem="rFk-N7-Jem" secondAttribute="width" id="yH4-EM-c0c"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="verticalScrollView" destination="qof-7S-8HX" id="G7q-HL-1su"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="m93-sI-ONs"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="292.99065420560748" y="-45.356371490280779"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TlU-ob-9oG">
+            <objects>
+                <viewController id="k5P-9r-wkW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1jJ-jj-pVM">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cS1-aK-oJN">
+                                <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Create Your Own Dough Fiigurine" id="wyx-t4-s9D">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="7cI-JL-jWl">
+                                            <connections>
+                                                <segue destination="gqo-2B-zBr" kind="modal" identifier="backToHomePageFromCreateYourOwn" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="aCR-5w-yOi"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Huh-Mz-rsw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8rJ-Qx-nBZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047" y="-760"/>
         </scene>
         <!--Article List Controller-->
         <scene sceneID="iMj-ui-KHQ">
@@ -260,7 +415,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRY-AT-JJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1311" y="762"/>
+            <point key="canvasLocation" x="1290" y="762"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="BKF-Ae-Nfa">
@@ -312,171 +467,83 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRc-8Q-1mR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-146" y="538"/>
+            <point key="canvasLocation" x="-229" y="539"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="Ter-Zy-81y">
+        <scene sceneID="18E-Dc-p0F">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0nz-TA-WQL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="zNG-jK-h9d" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fnL-BO-MtS" userLabel="Basic View">
-                        <rect key="frame" x="0.0" y="0.0" width="374" height="163"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XQf-0v-xKM" userLabel="Horizontal Scroll View">
-                                <rect key="frame" x="0.0" y="0.0" width="374" height="163"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dCt-gg-xMg" userLabel="Scroll Area">
-                                        <rect key="frame" x="0.0" y="0.0" width="1000" height="163"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="87Y-oC-HPO" userLabel="Creat Your Own View">
-                                                <rect key="frame" x="27" y="17" width="305" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="create_figurine_hero" translatesAutoresizingMaskIntoConstraints="NO" id="7Ov-TO-v5O">
-                                                        <rect key="frame" x="0.0" y="0.0" width="305" height="128"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowOpacity" value="0.2"/>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="0.0" height="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b4d-5I-GcO" userLabel="Gallery View">
-                                                <rect key="frame" x="347" y="17" width="305" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iI0-Vj-PY4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="305" height="128"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gallery_hero" translatesAutoresizingMaskIntoConstraints="NO" id="Fl1-ti-Tqv">
-                                                                <rect key="frame" x="0.0" y="0.0" width="305" height="128"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </imageView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowOpacity" value="0.2"/>
-                                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                                <size key="value" width="0.0" height="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowOpacity" value="0.2"/>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="0.0" height="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rWD-Ab-8Ts" userLabel="Item Tracking View">
-                                                <rect key="frame" x="666" y="17" width="305" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u2G-1D-Pnq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="305" height="128"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="item_tracking_hero" translatesAutoresizingMaskIntoConstraints="NO" id="Hc4-8I-euW">
-                                                                <rect key="frame" x="0.0" y="0.0" width="305" height="128"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </imageView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowOpacity" value="0.2"/>
-                                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                                <size key="value" width="0.0" height="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowOpacity" value="0.2"/>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                        <size key="value" width="0.0" height="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="1000" id="Y10-RW-tZq"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="dCt-gg-xMg" secondAttribute="trailing" id="HIg-u2-Zi0"/>
-                                    <constraint firstAttribute="bottom" secondItem="dCt-gg-xMg" secondAttribute="bottom" id="ONJ-gU-Ftq"/>
-                                    <constraint firstItem="dCt-gg-xMg" firstAttribute="leading" secondItem="XQf-0v-xKM" secondAttribute="leading" id="bCb-wx-18r"/>
-                                    <constraint firstItem="dCt-gg-xMg" firstAttribute="top" secondItem="XQf-0v-xKM" secondAttribute="top" id="bjU-kt-UuV"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
-                                </userDefinedRuntimeAttributes>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="XQf-0v-xKM" secondAttribute="bottom" id="6D0-oN-awV"/>
-                            <constraint firstItem="XQf-0v-xKM" firstAttribute="top" secondItem="fnL-BO-MtS" secondAttribute="top" id="7qn-hx-do5"/>
-                            <constraint firstItem="XQf-0v-xKM" firstAttribute="leading" secondItem="fnL-BO-MtS" secondAttribute="leading" id="HGN-5t-0cX"/>
-                            <constraint firstAttribute="trailing" secondItem="XQf-0v-xKM" secondAttribute="trailing" id="PWE-dE-h2v"/>
-                        </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
-                        </userDefinedRuntimeAttributes>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="1179" y="-519"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="w4z-eO-qGo">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YO1-SX-3yt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="wMh-Xh-kfG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KqB-s9-Dc0">
+                <viewController id="vaV-wT-5xx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IiX-in-buh">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="1tr-hq-VxL"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VlK-Z1-2Th">
+                                <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Gallery" id="0XF-LP-Uhc">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="cEy-tB-UAc">
+                                            <connections>
+                                                <segue destination="gqo-2B-zBr" kind="modal" animates="NO" modalPresentationStyle="fullScreen" id="trC-4A-LeT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uQb-SI-TOf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kVb-1j-Dvt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1217" y="-45"/>
+            <point key="canvasLocation" x="1871" y="-760"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cpD-Fe-Zva">
+            <objects>
+                <viewController id="eoN-ce-osi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="26J-Yd-KhQ">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2oa-co-81x">
+                                <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Item Tracking" id="qAi-wg-yyV">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="cpw-WO-Wql">
+                                            <connections>
+                                                <segue destination="gqo-2B-zBr" kind="modal" animates="NO" modalPresentationStyle="fullScreen" id="lpw-Lg-6t5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="inB-4M-V91"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QEq-Ko-2h7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="1xU-4U-cBk" userLabel="Create Your Own Btn">
+                    <rect key="frame" x="0.0" y="0.0" width="307" height="137"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title=""/>
+                    <connections>
+                        <action selector="firstArticleButton:" destination="D7S-RD-3y7" eventType="touchUpInside" id="W2P-OO-OM0"/>
+                    </connections>
+                </button>
+            </objects>
+            <point key="canvasLocation" x="2722" y="-760"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="lpw-Lg-6t5"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="create_figurine_hero" width="6016" height="4016"/>
         <image name="gallery_hero" width="6016" height="4016"/>
