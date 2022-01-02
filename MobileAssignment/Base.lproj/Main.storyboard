@@ -225,28 +225,112 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cS1-aK-oJN">
-                                <rect key="frame" x="0.0" y="44" width="428" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <navigationItem title="Create Your Own Dough Fiigurine" id="wyx-t4-s9D">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="7cI-JL-jWl">
-                                            <connections>
-                                                <segue destination="gqo-2B-zBr" kind="modal" identifier="backToHomePageFromCreateYourOwn" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="aCR-5w-yOi"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GW7-vQ-eW3">
+                                <rect key="frame" x="146" y="829" width="136" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="cancel"/>
+                                <connections>
+                                    <segue destination="gqo-2B-zBr" kind="modal" animates="NO" modalPresentationStyle="fullScreen" id="DZm-kL-Utf"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bzh-Av-Pp7" userLabel="Create Now Button View">
+                                <rect key="frame" x="94" y="682" width="240" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="create_figurine_main_btn" translatesAutoresizingMaskIntoConstraints="NO" id="Ipq-sR-WuO">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowOpacity" value="0.2"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="0.0" height="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="10"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vs-Az-NXi" userLabel="Create Now Button">
+                                <rect key="frame" x="94" y="682" width="240" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="e2T-7Y-cJY" kind="modal" modalPresentationStyle="fullScreen" id="S3z-UW-31k"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Customise Dough Figurine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZED-Du-J19">
+                                <rect key="frame" x="85" y="450" width="269" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sP-OP-jCc">
+                                <rect key="frame" x="48" y="509" width="343" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Creating a customise dough figurine by uploading a photo or picture and we will send it to the dough figure craftman to craft out the dough figure you want.</string>
+                                <fontDescription key="fontDescription" name="KhmerSangamMN" family="Khmer Sangam MN" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="create_figurine_main_image" translatesAutoresizingMaskIntoConstraints="NO" id="iO3-SA-Wl0">
+                                <rect key="frame" x="60" y="59" width="319" height="383"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Huh-Mz-rsw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Gfn-kC-zXi"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rJ-Qx-nBZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047" y="-760"/>
+            <point key="canvasLocation" x="1045.7943925233644" y="-760.0431965442765"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yG8-NS-AcZ">
+            <objects>
+                <viewController id="e2T-7Y-cJY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mBC-EG-oO8">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8P-rW-LHU">
+                                <rect key="frame" x="20" y="60" width="136" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <connections>
+                                    <segue destination="k5P-9r-wkW" kind="modal" animates="NO" modalPresentationStyle="fullScreen" id="csH-J7-mxL"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ia-cL-Q8D">
+                                <rect key="frame" x="20" y="110" width="388" height="741"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nQx-mm-N8m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3rZ-qe-J4V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1767.7570093457944" y="-760.0431965442765"/>
         </scene>
         <!--Article List Controller-->
         <scene sceneID="iMj-ui-KHQ">
@@ -288,7 +372,7 @@
                                         <buttonConfiguration key="configuration" style="plain" title=""/>
                                         <connections>
                                             <action selector="firstArticleButton:" destination="D7S-RD-3y7" eventType="touchUpInside" id="F8u-UU-p9v"/>
-                                            <segue destination="zFj-EW-7Zl" kind="showDetail" identifier="ShowArticleDetails" id="ou7-ph-iU8"/>
+                                            <segue destination="zFj-EW-7Zl" kind="modal" identifier="ShowArticleDetails" modalPresentationStyle="fullScreen" id="ou7-ph-iU8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -386,14 +470,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LtG-7K-JZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="521.73913043478262" y="694.75446428571422"/>
+            <point key="canvasLocation" x="-191" y="916"/>
         </scene>
         <!--Article List Controller-->
         <scene sceneID="maQ-ra-a0c">
             <objects>
                 <viewController id="zFj-EW-7Zl" customClass="ArticleListController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GeC-FN-UAP">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="846"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IER-KC-06U">
@@ -415,7 +499,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRY-AT-JJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1290" y="762"/>
+            <point key="canvasLocation" x="562" y="984"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="BKF-Ae-Nfa">
@@ -498,7 +582,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVb-1j-Dvt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1871" y="-760"/>
+            <point key="canvasLocation" x="1822" y="-45"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cpD-Fe-Zva">
@@ -528,29 +612,26 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEq-Ko-2h7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="1xU-4U-cBk" userLabel="Create Your Own Btn">
-                    <rect key="frame" x="0.0" y="0.0" width="307" height="137"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title=""/>
-                    <connections>
-                        <action selector="firstArticleButton:" destination="D7S-RD-3y7" eventType="touchUpInside" id="W2P-OO-OM0"/>
-                    </connections>
-                </button>
             </objects>
-            <point key="canvasLocation" x="2722" y="-760"/>
+            <point key="canvasLocation" x="2741" y="733"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lpw-Lg-6t5"/>
+        <segue reference="csH-J7-mxL"/>
+        <segue reference="trC-4A-LeT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="create_figurine_hero" width="6016" height="4016"/>
+        <image name="create_figurine_main_btn" width="6000" height="4000"/>
+        <image name="create_figurine_main_image" width="460" height="561"/>
         <image name="gallery_hero" width="6016" height="4016"/>
         <image name="item_tracking_hero" width="6016" height="4016"/>
         <image name="slide_image_1" width="500" height="333"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
