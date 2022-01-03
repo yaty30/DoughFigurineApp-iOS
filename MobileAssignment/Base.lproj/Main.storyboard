@@ -11,7 +11,6 @@
         <!--View Controller-->
         <scene sceneID="Wl6-gz-rT1">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ULU-mN-iEG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="gqo-2B-zBr" customClass="ViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rFk-N7-Jem">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
@@ -220,6 +219,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="m93-sI-ONs"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ULU-mN-iEG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="292.99065420560748" y="-45.356371490280779"/>
         </scene>
@@ -495,19 +495,25 @@
                     <navigationItem key="navigationItem" id="YVI-fT-gpw"/>
                     <connections>
                         <outlet property="backViewBtn" destination="v8r-BA-65h" id="dez-H2-72s"/>
+                        <outlet property="backViewButtonIcon" destination="z81-TU-FdD" id="BUj-4D-sm6"/>
+                        <outlet property="backViewStepIcon" destination="a0K-cr-NDv" id="3pC-Gz-twA"/>
+                        <outlet property="continueButton" destination="fF7-sp-uaZ" id="BTQ-Mm-Vvb"/>
                         <outlet property="firstStepView" destination="9HX-38-jiv" id="4VK-gJ-jzc"/>
                         <outlet property="frontViewBtn" destination="hu5-Hl-rqw" id="G8M-6N-cyS"/>
+                        <outlet property="frontViewStepIcon" destination="NWd-cn-VLa" id="xMa-YI-AVd"/>
                         <outlet property="topViewBtn" destination="uSI-HW-src" id="JXD-Fl-civ"/>
+                        <outlet property="topViewButtonIcon" destination="1Jv-ie-Dxs" id="U8E-gb-gMZ"/>
+                        <outlet property="topViewStepIcon" destination="gdO-68-P0c" id="BPg-pt-SNf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rZ-qe-J4V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1767.7570093457944" y="-760.0431965442765"/>
         </scene>
-        <!--Create Your Own Controller-->
+        <!--Preview Create Your Own Photos Controller-->
         <scene sceneID="FiP-Aq-kQY">
             <objects>
-                <viewController id="UcS-Xu-9CQ" customClass="CreateYourOwnController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="previewCreateYourOwnPhotos" id="UcS-Xu-9CQ" customClass="PreviewCreateYourOwnPhotosController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GiF-nN-BRe">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -547,13 +553,8 @@
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             </imageView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowOpacity" value="0.2"/>
-                                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                                <size key="value" width="0.0" height="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
@@ -566,13 +567,9 @@
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             </imageView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowOpacity" value="0.2"/>
-                                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                                <size key="value" width="0.0" height="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
@@ -585,13 +582,8 @@
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             </imageView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowOpacity" value="0.2"/>
-                                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                                <size key="value" width="0.0" height="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
@@ -655,9 +647,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="K27-YH-u4Y"/>
                     <connections>
-                        <outlet property="backViewImage" destination="s4a-2Z-4Ap" id="LWX-nY-OQg"/>
-                        <outlet property="frontViewImage" destination="pVe-mw-o9Y" id="S07-nI-2y2"/>
-                        <outlet property="topViewImage" destination="G70-Bs-TGh" id="nxk-m0-h1I"/>
+                        <outlet property="backViewImage" destination="s4a-2Z-4Ap" id="t5R-WO-x5y"/>
+                        <outlet property="frontViewImage" destination="pVe-mw-o9Y" id="Qo4-mO-QNC"/>
+                        <outlet property="topViewImage" destination="G70-Bs-TGh" id="fGS-6W-Bk0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ylu-eo-lgR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -783,6 +775,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="tTx-aG-CJ1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
@@ -874,6 +867,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="D5o-bU-ljN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
@@ -949,9 +943,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="APJ-5y-BSg"/>
         <segue reference="p4z-0P-ZkH"/>
         <segue reference="csH-J7-mxL"/>
-        <segue reference="DZm-kL-Utf"/>
+        <segue reference="trC-4A-LeT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera_icon_black" width="344" height="344"/>
@@ -969,15 +964,6 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
