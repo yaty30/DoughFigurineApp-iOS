@@ -22,6 +22,7 @@ class CreateYourOwnController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var topViewButtonIcon: UIImageView!
     
     @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var previousPageButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,7 @@ class CreateYourOwnController: UIViewController, UIImagePickerControllerDelegate
     var topViewImage: UIImage? = nil;
     var imageList = [UIImage]()
     var imageIndexList = [Int]()
+    var isGoingBack: Bool = false
     
     @IBAction func getViewsImages(_ sender: Any) {
         currentButtonIndex = (sender as AnyObject).tag
@@ -91,11 +93,15 @@ class CreateYourOwnController: UIViewController, UIImagePickerControllerDelegate
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let previewImagesVC = segue.destination as! PreviewCreateYourOwnPhotosController
-        
-        previewImagesVC.imageList.append(imageList[0])
-        previewImagesVC.imageList.append(imageList[1])
-        previewImagesVC.imageList.append(imageList[2])
+        if segue.identifier == "goingBackToPreviousPage" {
+            if segue.destination is ViewController { return }
+        } else if segue.destination is PreviewCreateYourOwnPhotosController {
+            let previewImagesVC = segue.destination as! PreviewCreateYourOwnPhotosController
+            
+            previewImagesVC.imageList.append(imageList[0])
+            previewImagesVC.imageList.append(imageList[1])
+            previewImagesVC.imageList.append(imageList[2])
+        }
     }
     
 }
