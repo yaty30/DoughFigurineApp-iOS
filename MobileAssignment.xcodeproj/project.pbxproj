@@ -20,6 +20,7 @@
 		28534BAB27809E0400CC9120 /* ArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534BAA27809E0400CC9120 /* ArticleList.swift */; };
 		28534BB12780D6A000CC9120 /* Articles.json in Resources */ = {isa = PBXBuildFile; fileRef = 28534BB02780D69F00CC9120 /* Articles.json */; };
 		28534BB32780DE0B00CC9120 /* ArticleListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534BB22780DE0B00CC9120 /* ArticleListController.swift */; };
+		28534BB92782D31900CC9120 /* CreateYourOwnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534BB82782D31900CC9120 /* CreateYourOwnController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		28534BAA27809E0400CC9120 /* ArticleList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleList.swift; sourceTree = "<group>"; };
 		28534BB02780D69F00CC9120 /* Articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Articles.json; sourceTree = "<group>"; };
 		28534BB22780DE0B00CC9120 /* ArticleListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListController.swift; sourceTree = "<group>"; };
+		28534BB82782D31900CC9120 /* CreateYourOwnController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateYourOwnController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		28534B6927804F7A00CC9120 /* MobileAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				28534BB72782D2FB00CC9120 /* Features */,
 				28534B6A27804F7A00CC9120 /* AppDelegate.swift */,
 				28534B6C27804F7A00CC9120 /* SceneDelegate.swift */,
 				28534B6E27804F7A00CC9120 /* ViewController.swift */,
@@ -137,6 +140,14 @@
 				28534B9027804F7C00CC9120 /* MobileAssignmentUITestsLaunchTests.swift */,
 			);
 			path = MobileAssignmentUITests;
+			sourceTree = "<group>";
+		};
+		28534BB72782D2FB00CC9120 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				28534BB82782D31900CC9120 /* CreateYourOwnController.swift */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28534BB32780DE0B00CC9120 /* ArticleListController.swift in Sources */,
+				28534BB92782D31900CC9120 /* CreateYourOwnController.swift in Sources */,
 				28534B6F27804F7A00CC9120 /* ViewController.swift in Sources */,
 				28534B6B27804F7A00CC9120 /* AppDelegate.swift in Sources */,
 				28534BAB27809E0400CC9120 /* ArticleList.swift in Sources */,
