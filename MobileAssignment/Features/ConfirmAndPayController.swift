@@ -10,12 +10,15 @@ import UIKit
 class ConfirmAndPayController: UIViewController {
 
     @IBOutlet weak var applePayButton: UIButton!
-    @IBOutlet weak var invoiceID: UILabel!
+//    @IBOutlet weak var invoiceID: UILabel!
     @IBOutlet weak var orderDate: UILabel!
     @IBOutlet weak var orderTime: UILabel!
+    @IBOutlet weak var orderBy: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        invoiceID.text = self.generateInvoiceID()
+//        invoiceID.text = self.generateInvoiceID()
+        orderBy.text = "current_user"
         orderDate.text = self.getOrderTimeAndDate(type: "orderDate")
         orderTime.text = self.getOrderTimeAndDate(type: "orderTime")
     }

@@ -30,6 +30,7 @@ class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerCont
         frontViewRetake?.tag = 0
         backViewRetake?.tag = 1
         topViewRetake?.tag = 2
+        
     }
     
     var currentButtonIndex: Int = -1;
@@ -61,5 +62,4 @@ class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerCont
         } else { print("Incorrect button index") }
         
     }
-
 }
