@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2815C5B927830528007795E6 /* PreviewCreateYourOwnPhotosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2815C5B827830528007795E6 /* PreviewCreateYourOwnPhotosController.swift */; };
+		2815C5BB27832974007795E6 /* ConfirmAndPayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2815C5BA27832974007795E6 /* ConfirmAndPayController.swift */; };
+		2815C5BE278329E6007795E6 /* iPaymentButton in Frameworks */ = {isa = PBXBuildFile; productRef = 2815C5BD278329E6007795E6 /* iPaymentButton */; };
 		28534B6B27804F7A00CC9120 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534B6A27804F7A00CC9120 /* AppDelegate.swift */; };
 		28534B6D27804F7A00CC9120 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534B6C27804F7A00CC9120 /* SceneDelegate.swift */; };
 		28534B6F27804F7A00CC9120 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534B6E27804F7A00CC9120 /* ViewController.swift */; };
@@ -43,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		2815C5B827830528007795E6 /* PreviewCreateYourOwnPhotosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCreateYourOwnPhotosController.swift; sourceTree = "<group>"; };
+		2815C5BA27832974007795E6 /* ConfirmAndPayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmAndPayController.swift; sourceTree = "<group>"; };
 		28534B6727804F7A00CC9120 /* MobileAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28534B6A27804F7A00CC9120 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28534B6C27804F7A00CC9120 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2815C5BE278329E6007795E6 /* iPaymentButton in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +153,7 @@
 			children = (
 				28534BB82782D31900CC9120 /* CreateYourOwnController.swift */,
 				2815C5B827830528007795E6 /* PreviewCreateYourOwnPhotosController.swift */,
+				2815C5BA27832974007795E6 /* ConfirmAndPayController.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -169,6 +174,9 @@
 			dependencies = (
 			);
 			name = MobileAssignment;
+			packageProductDependencies = (
+				2815C5BD278329E6007795E6 /* iPaymentButton */,
+			);
 			productName = MobileAssignment;
 			productReference = 28534B6727804F7A00CC9120 /* MobileAssignment.app */;
 			productType = "com.apple.product-type.application";
@@ -241,6 +249,9 @@
 				Base,
 			);
 			mainGroup = 28534B5E27804F7900CC9120;
+			packageReferences = (
+				2815C5BC278329E6007795E6 /* XCRemoteSwiftPackageReference "iPaymentButton" */,
+			);
 			productRefGroup = 28534B6827804F7A00CC9120 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -292,6 +303,7 @@
 				28534BAB27809E0400CC9120 /* ArticleList.swift in Sources */,
 				28534B7527804F7A00CC9120 /* MobileAssignment.xcdatamodeld in Sources */,
 				28534B6D27804F7A00CC9120 /* SceneDelegate.swift in Sources */,
+				2815C5BB27832974007795E6 /* ConfirmAndPayController.swift in Sources */,
 				2815C5B927830528007795E6 /* PreviewCreateYourOwnPhotosController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,6 +646,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2815C5BC278329E6007795E6 /* XCRemoteSwiftPackageReference "iPaymentButton" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/benjaminsage/iPaymentButton";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2815C5BD278329E6007795E6 /* iPaymentButton */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2815C5BC278329E6007795E6 /* XCRemoteSwiftPackageReference "iPaymentButton" */;
+			productName = iPaymentButton;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		28534B7327804F7A00CC9120 /* MobileAssignment.xcdatamodeld */ = {
