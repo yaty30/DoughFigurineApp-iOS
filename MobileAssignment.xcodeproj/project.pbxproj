@@ -518,6 +518,8 @@
 				DEVELOPMENT_TEAM = TTWRDTBV94;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MobileAssignment/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "The Dough";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Create Your Own Dough Figure requires Camera to take photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -547,6 +549,8 @@
 				DEVELOPMENT_TEAM = TTWRDTBV94;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MobileAssignment/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "The Dough";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Create Your Own Dough Figure requires Camera to take photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
