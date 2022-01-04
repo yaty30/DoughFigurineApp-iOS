@@ -62,4 +62,42 @@ class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerCont
         } else { print("Incorrect button index") }
         
     }
+    
+    func getOrderTimeAndDate(type: String) -> String {
+        let date = Date()
+        let format = DateFormatter()
+        format.dateFormat = type == "orderDate" ? "yyyy-MM-dd" : "HH:mm:ss"
+        
+        let result = format.string(from: date)
+        
+        return "\(result)"
+    }
+    
+    func randomString(length: Int) -> String {
+      let letters = "0123456789"
+      return String((0..<length).map{ _ in letters.randomElement()! })
+    }
+    
+    func generateInvoiceID() -> String {
+        let date = Date()
+        let format = DateFormatter()
+        
+        format.dateFormat = "yyyyMMddHHmmss"
+        
+        let invoiceID = format.string(from: date)
+        let addon = self.randomString(length: 5)
+        
+        return "#\(invoiceID)\(addon)"
+    }
+    
+    @IBAction func createDraftInvoice(_ sender: Any) {
+        invoiceData.invoiceNumber = generateInvoiceID()
+        invoiceData.orderBy = currentUserData.currentUser
+        invoiceData.orderDate = getOrderTimeAndDate(type: "orderDate")
+        invoiceData.orderTime = getOrderTimeAndDate(type: "orderTime")
+        invoiceData.items.append("Customise Dough Figurine")
+        invoiceData.itemQty.append(1)
+        invoiceData.itemPrices.append(399.00)
+        invoiceData.totalPrice = 399.00
+    }
 }

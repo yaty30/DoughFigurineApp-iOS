@@ -11,6 +11,9 @@
 		2815C5BB27832974007795E6 /* ConfirmAndPayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2815C5BA27832974007795E6 /* ConfirmAndPayController.swift */; };
 		2815C5BE278329E6007795E6 /* iPaymentButton in Frameworks */ = {isa = PBXBuildFile; productRef = 2815C5BD278329E6007795E6 /* iPaymentButton */; };
 		2815C5C127834F5E007795E6 /* GlobalStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2815C5C027834F5E007795E6 /* GlobalStatus.swift */; };
+		2815C5C427840B59007795E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2815C5C327840B59007795E6 /* LoginViewController.swift */; };
+		2815C5C627841034007795E6 /* CreateYourOwnInvoiceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2815C5C527841034007795E6 /* CreateYourOwnInvoiceStatus.swift */; };
+		2815C5C82784169A007795E6 /* FinalInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2815C5C72784169A007795E6 /* FinalInvoiceViewController.swift */; };
 		28534B6B27804F7A00CC9120 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534B6A27804F7A00CC9120 /* AppDelegate.swift */; };
 		28534B6D27804F7A00CC9120 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534B6C27804F7A00CC9120 /* SceneDelegate.swift */; };
 		28534B6F27804F7A00CC9120 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534B6E27804F7A00CC9120 /* ViewController.swift */; };
@@ -48,6 +51,9 @@
 		2815C5B827830528007795E6 /* PreviewCreateYourOwnPhotosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCreateYourOwnPhotosController.swift; sourceTree = "<group>"; };
 		2815C5BA27832974007795E6 /* ConfirmAndPayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmAndPayController.swift; sourceTree = "<group>"; };
 		2815C5C027834F5E007795E6 /* GlobalStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalStatus.swift; sourceTree = "<group>"; };
+		2815C5C327840B59007795E6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2815C5C527841034007795E6 /* CreateYourOwnInvoiceStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateYourOwnInvoiceStatus.swift; sourceTree = "<group>"; };
+		2815C5C72784169A007795E6 /* FinalInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalInvoiceViewController.swift; sourceTree = "<group>"; };
 		28534B6727804F7A00CC9120 /* MobileAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28534B6A27804F7A00CC9120 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28534B6C27804F7A00CC9120 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,8 +104,17 @@
 			isa = PBXGroup;
 			children = (
 				2815C5C027834F5E007795E6 /* GlobalStatus.swift */,
+				2815C5C527841034007795E6 /* CreateYourOwnInvoiceStatus.swift */,
 			);
 			path = GlobalStatus;
+			sourceTree = "<group>";
+		};
+		2815C5C227840B43007795E6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2815C5C327840B59007795E6 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		28534B5E27804F7900CC9120 = {
@@ -125,6 +140,7 @@
 		28534B6927804F7A00CC9120 /* MobileAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				2815C5C227840B43007795E6 /* Login */,
 				2815C5BF27834F39007795E6 /* GlobalStatus */,
 				28534BB72782D2FB00CC9120 /* Features */,
 				28534B6A27804F7A00CC9120 /* AppDelegate.swift */,
@@ -165,6 +181,7 @@
 				28534BB82782D31900CC9120 /* CreateYourOwnController.swift */,
 				2815C5B827830528007795E6 /* PreviewCreateYourOwnPhotosController.swift */,
 				2815C5BA27832974007795E6 /* ConfirmAndPayController.swift */,
+				2815C5C72784169A007795E6 /* FinalInvoiceViewController.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -311,12 +328,15 @@
 				28534BB92782D31900CC9120 /* CreateYourOwnController.swift in Sources */,
 				2815C5C127834F5E007795E6 /* GlobalStatus.swift in Sources */,
 				28534B6F27804F7A00CC9120 /* ViewController.swift in Sources */,
+				2815C5C82784169A007795E6 /* FinalInvoiceViewController.swift in Sources */,
 				28534B6B27804F7A00CC9120 /* AppDelegate.swift in Sources */,
 				28534BAB27809E0400CC9120 /* ArticleList.swift in Sources */,
 				28534B7527804F7A00CC9120 /* MobileAssignment.xcdatamodeld in Sources */,
 				28534B6D27804F7A00CC9120 /* SceneDelegate.swift in Sources */,
 				2815C5BB27832974007795E6 /* ConfirmAndPayController.swift in Sources */,
 				2815C5B927830528007795E6 /* PreviewCreateYourOwnPhotosController.swift in Sources */,
+				2815C5C627841034007795E6 /* CreateYourOwnInvoiceStatus.swift in Sources */,
+				2815C5C427840B59007795E6 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
