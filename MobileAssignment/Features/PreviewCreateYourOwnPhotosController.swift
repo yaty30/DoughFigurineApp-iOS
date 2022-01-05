@@ -99,5 +99,9 @@ class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerCont
         invoiceData.itemQty.append(1)
         invoiceData.itemPrices.append(399.00)
         invoiceData.totalPrice = 399.00
+        
+        orderImages.frontView = (frontViewImage.image?.pngData()) as AnyObject
+        orderImages.backView = (backViewImage.image?.pngData()) as AnyObject
+        orderImages.topView = (topViewImage.image?.pngData()) as AnyObject
     }
 }

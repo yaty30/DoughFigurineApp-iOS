@@ -20,3 +20,17 @@ struct invoiceData {
     static var pickupAddress: String = "";
     static var contactNumber: String = "";
 }
+
+struct orderImages {
+    static var frontView: AnyObject = "" as AnyObject;
+    static var backView: AnyObject = "" as AnyObject;
+    static var topView: AnyObject = "" as AnyObject;
+}
+
+struct orderPayment {
+    static var paymentMethod: String = "";
+    static var paidDate: String = "";
+    static var paidTime: String = "";
+    static var paymentID: String = "";
+    static var paymentStatus: Bool = false;
+}

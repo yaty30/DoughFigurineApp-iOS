@@ -27,13 +27,6 @@ class LoginViewController: UIViewController {
         
     }
     
-    let db = firebase.db
-    
-    func login(data: [String: Any]) {
-        let docRef = db.document("user/loginData")
-        docRef.setData(data)
-    }
-    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -41,35 +34,33 @@ class LoginViewController: UIViewController {
     func getTimeAndDate(type: String) -> String {
         let date = Date()
         let format = DateFormatter()
-        format.dateFormat = type == "orderDate" ? "yyyy-MM-dd" : "HH:mm:ss"
+        format.dateFormat = type == "loginDate" ? "yyyy-MM-dd" : "HH:mm:ss"
         
         let result = format.string(from: date)
         
         return "\(result)"
     }
     
-    func randomString(length: Int) -> String {
-      let letters = "0123456789"
-      return String((0..<length).map{ _ in letters.randomElement()! })
+    func generateToken() -> String {
+      let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+      return String((0..<25).map{ _ in letters.randomElement()! })
     }
     
-    func generateToken() -> String {
-        let date = Date()
-        let format = DateFormatter()
-        
-        format.dateFormat = "yyyyMMddHHmmss"
-        
-        let token = format.string(from: date)
-        let addon = self.randomString(length: 5)
-        
-        return "\(token)\(addon)"
-    }
+    let db = firebase.db
     
     @IBAction func loginButton(_ sender: Any) {
-        login(data: ["username": usernameField.text ?? "username_nil"])
-        login(data: ["date": getTimeAndDate(type: "orderDate")])
-        login(data: ["time": getTimeAndDate(type: "orderTime")])
-        login(data: ["token": generateToken()])
+//        login(data: ["username": usernameField.text ?? "username_nil"])
+//        login(data: ["date": getTimeAndDate(type: "orderDate")])
+//        login(data: ["time": getTimeAndDate(type: "orderTime")])
+        
+        let token = generateToken()
+        
+        db.document("login/\(token)").setData([
+            "username": usernameField.text ?? "username_nil",
+            "date": getTimeAndDate(type: "loginDate"),
+            "time": getTimeAndDate(type: "loginTime")
+        ])
+        
         currentUserData.currentUser = usernameField.text ?? ""
     }
     /*

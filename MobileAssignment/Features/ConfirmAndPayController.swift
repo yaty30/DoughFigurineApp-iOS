@@ -8,6 +8,8 @@
 import UIKit
 
 class ConfirmAndPayController: UIViewController {
+    
+    let db = firebase.db
 
     @IBOutlet weak var applePayButton: UIButton!
 //    @IBOutlet weak var invoiceID: UILabel!
@@ -40,8 +42,57 @@ class ConfirmAndPayController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    func randomString() -> String {
+      let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      return String((0..<4).map{ _ in letters.randomElement()! })
+    }
+    
+    func paymentID() -> String {
+        let id = "\(randomString())-\(randomString())-\(randomString())-\(randomString())"
+        return id
+    }
+    
+    func getTimeAndDate(type: String) -> String {
+        let date = Date()
+        let format = DateFormatter()
+        format.dateFormat = type == "paidDate" ? "yyyy-MM-dd" : "HH:mm:ss"
+        
+        let result = format.string(from: date)
+        
+        return "\(result)"
+    }
+    
+    func saveOrderData() {
+        db.document("orders/\(invoiceData.invoiceNumber)").setData([
+            "orderBy": currentUserData.currentUser,
+            "date": invoiceData.orderDate,
+            "time": invoiceData.orderTime,
+            "itemName": invoiceData.items[0],
+            "itemPrice": invoiceData.itemPrices[0],
+            "itemQty": invoiceData.itemQty[0],
+            "totalPrice": invoiceData.totalPrice,
+            "emailAddress": emailAddress.text ?? "_nil",
+            "paymentID": orderPayment.paymentID,
+            "paidDate": orderPayment.paidDate,
+            "paidTime": orderPayment.paidTime,
+            "paymentMethod": orderPayment.paymentMethod,
+            "paymentStatus": orderPayment.paymentStatus,
+            "frontView": orderImages.frontView,
+            "backView": orderImages.backView,
+            "topView": orderImages.topView
+        ])
+    }
+    
     @IBAction func payButton(_ sender: Any) {
         invoiceData.emailAddress = emailAddress.text ?? ""
+        
+        orderPayment.paymentID = paymentID()
+        orderPayment.paidDate = getTimeAndDate(type: "paidDate")
+        orderPayment.paidTime = getTimeAndDate(type: "paidTime")
+        orderPayment.paymentMethod = "ApplePay"
+        orderPayment.paymentStatus = true
+        
+        orderPayment.paymentStatus ? saveOrderData() : print("paymentStatus: false")
     }
     
     @objc func dismissKeyboard() {
