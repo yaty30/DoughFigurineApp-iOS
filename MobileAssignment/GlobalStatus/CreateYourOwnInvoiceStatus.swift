@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct invoiceData {
     static var invoiceNumber: String = "";
@@ -22,9 +23,9 @@ struct invoiceData {
 }
 
 struct orderImages {
-    static var frontView: AnyObject = "" as AnyObject;
-    static var backView: AnyObject = "" as AnyObject;
-    static var topView: AnyObject = "" as AnyObject;
+    static var frontView: String = "";
+    static var backView: String = "";
+    static var topView: String = "";
 }
 
 struct orderPayment {
@@ -33,4 +34,14 @@ struct orderPayment {
     static var paidTime: String = "";
     static var paymentID: String = "";
     static var paymentStatus: Bool = false;
+}
+
+struct shippingInfo {
+    static var firstName: String = "";
+    static var lastName: String = "";
+    static var address: String = "";
+    static var residential: String = "";
+    static var city: String = "";
+    static var country: String = "Hong Kong";
+    static var zipCode: String = "";
 }

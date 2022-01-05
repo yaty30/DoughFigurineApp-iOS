@@ -16,4 +16,15 @@ struct currentUserData {
     static var logoutTime = ""
 }
 
-
+struct usefulData {
+    static let countryList = [
+        "Hong Kong", "Taiwan", "Austria", "Belgium", "Bulgaria",
+        "Czech Republic", "Denmark", "Estonia", "Finland",
+        "France", "Germany", "Greece", "Hungary","Ireland",
+        "Italy", "Latvia", "Lithuania", "Luxembourg",
+        "Malta", "Netherlands", "Poland", "Portugal",
+        "Romania", "Slovakia", "Slovenia", "Spain",
+        "Sweden", "Singapore", "Croatia", "Cyprus",
+        "United Kingdom", "United States", "Canada", "South Korea"
+    ]
+}

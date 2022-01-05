@@ -38,6 +38,8 @@
 		28534BB12780D6A000CC9120 /* Articles.json in Resources */ = {isa = PBXBuildFile; fileRef = 28534BB02780D69F00CC9120 /* Articles.json */; };
 		28534BB32780DE0B00CC9120 /* ArticleListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534BB22780DE0B00CC9120 /* ArticleListController.swift */; };
 		28534BB92782D31900CC9120 /* CreateYourOwnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534BB82782D31900CC9120 /* CreateYourOwnController.swift */; };
+		28AF29002785EE8B0026D6F2 /* ItemTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AF28FF2785EE8B0026D6F2 /* ItemTrackingViewController.swift */; };
+		28AF2902278622230026D6F2 /* InvoiceTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AF2901278622230026D6F2 /* InvoiceTrackingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		28534BB02780D69F00CC9120 /* Articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Articles.json; sourceTree = "<group>"; };
 		28534BB22780DE0B00CC9120 /* ArticleListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListController.swift; sourceTree = "<group>"; };
 		28534BB82782D31900CC9120 /* CreateYourOwnController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateYourOwnController.swift; sourceTree = "<group>"; };
+		28AF28FF2785EE8B0026D6F2 /* ItemTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTrackingViewController.swift; sourceTree = "<group>"; };
+		28AF2901278622230026D6F2 /* InvoiceTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTrackingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 		28534B6927804F7A00CC9120 /* MobileAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				28AF28FE2785EE770026D6F2 /* ItemTracking */,
 				281F2E842784B80E00551F98 /* Firebase */,
 				2815C5C227840B43007795E6 /* Login */,
 				2815C5BF27834F39007795E6 /* GlobalStatus */,
@@ -214,6 +219,15 @@
 				2815C5C72784169A007795E6 /* FinalInvoiceViewController.swift */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		28AF28FE2785EE770026D6F2 /* ItemTracking */ = {
+			isa = PBXGroup;
+			children = (
+				28AF28FF2785EE8B0026D6F2 /* ItemTrackingViewController.swift */,
+				28AF2901278622230026D6F2 /* InvoiceTrackingViewController.swift */,
+			);
+			path = ItemTracking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,7 +381,9 @@
 				281F2E862784B81F00551F98 /* Firebase.swift in Sources */,
 				28534BB32780DE0B00CC9120 /* ArticleListController.swift in Sources */,
 				28534BB92782D31900CC9120 /* CreateYourOwnController.swift in Sources */,
+				28AF29002785EE8B0026D6F2 /* ItemTrackingViewController.swift in Sources */,
 				2815C5C127834F5E007795E6 /* GlobalStatus.swift in Sources */,
+				28AF2902278622230026D6F2 /* InvoiceTrackingViewController.swift in Sources */,
 				28534B6F27804F7A00CC9120 /* ViewController.swift in Sources */,
 				2815C5C82784169A007795E6 /* FinalInvoiceViewController.swift in Sources */,
 				28534B6B27804F7A00CC9120 /* AppDelegate.swift in Sources */,

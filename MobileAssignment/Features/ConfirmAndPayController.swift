@@ -21,6 +21,7 @@ class ConfirmAndPayController: UIViewController {
     @IBOutlet weak var itemQty: UILabel!
     @IBOutlet weak var totalPrice: UILabel!
     @IBOutlet weak var emailAddress: UITextField!
+    @IBOutlet weak var countryPicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,10 @@ class ConfirmAndPayController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        countryPicker.delegate = self
+        countryPicker.dataSource = self
+        view.bringSubviewToFront(countryPicker)
     }
     
     func randomString() -> String {
@@ -72,11 +77,26 @@ class ConfirmAndPayController: UIViewController {
             "itemQty": invoiceData.itemQty[0],
             "totalPrice": invoiceData.totalPrice,
             "emailAddress": emailAddress.text ?? "_nil",
+        ])
+        
+        db.document("shipping/\(invoiceData.invoiceNumber)").setData([
+            "firstName": shippingInfo.firstName,
+            "lastName": shippingInfo.lastName,
+            "address": shippingInfo.address,
+            "residential": shippingInfo.residential,
+            "country": shippingInfo.country,
+            "zipCode": shippingInfo.zipCode
+        ])
+        
+        db.document("payment/\(invoiceData.invoiceNumber)").setData([
             "paymentID": orderPayment.paymentID,
             "paidDate": orderPayment.paidDate,
             "paidTime": orderPayment.paidTime,
             "paymentMethod": orderPayment.paymentMethod,
-            "paymentStatus": orderPayment.paymentStatus,
+            "paymentStatus": orderPayment.paymentStatus
+        ])
+        
+        db.document("orderImages/\(invoiceData.invoiceNumber)").setData([
             "frontView": orderImages.frontView,
             "backView": orderImages.backView,
             "topView": orderImages.topView
@@ -114,5 +134,23 @@ class ConfirmAndPayController: UIViewController {
     deinit {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+}
+
+extension ConfirmAndPayController: UIPickerViewDelegate, UIPickerViewDataSource {
+  func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return usefulData.countryList.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return usefulData.countryList[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        shippingInfo.country = usefulData.countryList[row]
     }
 }

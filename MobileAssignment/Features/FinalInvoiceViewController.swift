@@ -8,7 +8,9 @@
 import UIKit
 
 class FinalInvoiceViewController: UIViewController {
-
+    
+    let db = firebase.db
+    
     @IBOutlet weak var invoiceNumber: UILabel!
     @IBOutlet weak var orderBy: UILabel!
     @IBOutlet weak var orderDate: UILabel!
@@ -18,9 +20,7 @@ class FinalInvoiceViewController: UIViewController {
     @IBOutlet weak var itemPrice: UILabel!
     @IBOutlet weak var totalPrice: UILabel!
     @IBOutlet weak var emailAddress: UILabel!
-    
-    let db = firebase.db
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,8 +33,6 @@ class FinalInvoiceViewController: UIViewController {
         itemPrice.text = "$\(invoiceData.itemPrices[0])"
         totalPrice.text = "$\(invoiceData.totalPrice)"
         emailAddress.text = invoiceData.emailAddress
-        
-
     }
 
 }
