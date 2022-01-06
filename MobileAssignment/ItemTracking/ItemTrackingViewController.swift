@@ -25,8 +25,8 @@ class ItemTrackingViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        findYourOrder.targetInvoiceNumber = invoiceSerachBar?.text ?? ""
         self.view.endEditing(true)
-        print("clicked")
         return false
     }
     

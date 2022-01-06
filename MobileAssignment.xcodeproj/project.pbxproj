@@ -38,8 +38,14 @@
 		28534BB12780D6A000CC9120 /* Articles.json in Resources */ = {isa = PBXBuildFile; fileRef = 28534BB02780D69F00CC9120 /* Articles.json */; };
 		28534BB32780DE0B00CC9120 /* ArticleListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534BB22780DE0B00CC9120 /* ArticleListController.swift */; };
 		28534BB92782D31900CC9120 /* CreateYourOwnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534BB82782D31900CC9120 /* CreateYourOwnController.swift */; };
+		285574702786B44500527CCB /* ItemTrackingInvoiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855746F2786B44500527CCB /* ItemTrackingInvoiceDetailViewController.swift */; };
+		285574722786B5F200527CCB /* ItemTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285574712786B5F200527CCB /* ItemTracking.swift */; };
 		28AF29002785EE8B0026D6F2 /* ItemTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AF28FF2785EE8B0026D6F2 /* ItemTrackingViewController.swift */; };
 		28AF2902278622230026D6F2 /* InvoiceTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AF2901278622230026D6F2 /* InvoiceTrackingViewController.swift */; };
+		28CD3B102787162C00B329BF /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CD3B0F2787162C00B329BF /* FirestoreManager.swift */; };
+		28CD3B13278716F200B329BF /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 28CD3B12278716F200B329BF /* FirebaseRemoteConfig */; };
+		28CD3B15278718CD00B329BF /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 28CD3B14278718CD00B329BF /* FirebaseStorageCombine-Community */; };
+		28CD3B17278718CD00B329BF /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 28CD3B16278718CD00B329BF /* FirebaseStorageSwift-Beta */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,8 +92,11 @@
 		28534BB02780D69F00CC9120 /* Articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Articles.json; sourceTree = "<group>"; };
 		28534BB22780DE0B00CC9120 /* ArticleListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListController.swift; sourceTree = "<group>"; };
 		28534BB82782D31900CC9120 /* CreateYourOwnController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateYourOwnController.swift; sourceTree = "<group>"; };
+		2855746F2786B44500527CCB /* ItemTrackingInvoiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTrackingInvoiceDetailViewController.swift; sourceTree = "<group>"; };
+		285574712786B5F200527CCB /* ItemTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTracking.swift; sourceTree = "<group>"; };
 		28AF28FF2785EE8B0026D6F2 /* ItemTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTrackingViewController.swift; sourceTree = "<group>"; };
 		28AF2901278622230026D6F2 /* InvoiceTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTrackingViewController.swift; sourceTree = "<group>"; };
+		28CD3B0F2787162C00B329BF /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +104,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28CD3B15278718CD00B329BF /* FirebaseStorageCombine-Community in Frameworks */,
+				28CD3B13278716F200B329BF /* FirebaseRemoteConfig in Frameworks */,
 				281F2E812784B75600551F98 /* FirebaseMessaging in Frameworks */,
 				281F2E772784B75600551F98 /* FirebaseCrashlytics in Frameworks */,
 				281F2E832784B75600551F98 /* FirebaseStorage in Frameworks */,
+				28CD3B17278718CD00B329BF /* FirebaseStorageSwift-Beta in Frameworks */,
 				281F2E7F2784B75600551F98 /* FirebaseInstallations in Frameworks */,
 				281F2E732784B75600551F98 /* FirebaseAnalytics in Frameworks */,
 				281F2E792784B75600551F98 /* FirebaseDatabase in Frameworks */,
@@ -129,6 +141,7 @@
 			children = (
 				2815C5C027834F5E007795E6 /* GlobalStatus.swift */,
 				2815C5C527841034007795E6 /* CreateYourOwnInvoiceStatus.swift */,
+				285574712786B5F200527CCB /* ItemTracking.swift */,
 			);
 			path = GlobalStatus;
 			sourceTree = "<group>";
@@ -145,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				281F2E852784B81F00551F98 /* Firebase.swift */,
+				28CD3B0F2787162C00B329BF /* FirestoreManager.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -156,6 +170,7 @@
 				28534B8327804F7C00CC9120 /* MobileAssignmentTests */,
 				28534B8D27804F7C00CC9120 /* MobileAssignmentUITests */,
 				28534B6827804F7A00CC9120 /* Products */,
+				28CD3B11278716F200B329BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,7 +191,7 @@
 				281F2E842784B80E00551F98 /* Firebase */,
 				2815C5C227840B43007795E6 /* Login */,
 				2815C5BF27834F39007795E6 /* GlobalStatus */,
-				28534BB72782D2FB00CC9120 /* Features */,
+				28534BB72782D2FB00CC9120 /* CreateYourOwn */,
 				28534B6A27804F7A00CC9120 /* AppDelegate.swift */,
 				28534B6C27804F7A00CC9120 /* SceneDelegate.swift */,
 				28534B6E27804F7A00CC9120 /* ViewController.swift */,
@@ -210,7 +225,7 @@
 			path = MobileAssignmentUITests;
 			sourceTree = "<group>";
 		};
-		28534BB72782D2FB00CC9120 /* Features */ = {
+		28534BB72782D2FB00CC9120 /* CreateYourOwn */ = {
 			isa = PBXGroup;
 			children = (
 				28534BB82782D31900CC9120 /* CreateYourOwnController.swift */,
@@ -218,7 +233,7 @@
 				2815C5BA27832974007795E6 /* ConfirmAndPayController.swift */,
 				2815C5C72784169A007795E6 /* FinalInvoiceViewController.swift */,
 			);
-			path = Features;
+			path = CreateYourOwn;
 			sourceTree = "<group>";
 		};
 		28AF28FE2785EE770026D6F2 /* ItemTracking */ = {
@@ -226,8 +241,16 @@
 			children = (
 				28AF28FF2785EE8B0026D6F2 /* ItemTrackingViewController.swift */,
 				28AF2901278622230026D6F2 /* InvoiceTrackingViewController.swift */,
+				2855746F2786B44500527CCB /* ItemTrackingInvoiceDetailViewController.swift */,
 			);
 			path = ItemTracking;
+			sourceTree = "<group>";
+		};
+		28CD3B11278716F200B329BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +279,9 @@
 				281F2E7E2784B75600551F98 /* FirebaseInstallations */,
 				281F2E802784B75600551F98 /* FirebaseMessaging */,
 				281F2E822784B75600551F98 /* FirebaseStorage */,
+				28CD3B12278716F200B329BF /* FirebaseRemoteConfig */,
+				28CD3B14278718CD00B329BF /* FirebaseStorageCombine-Community */,
+				28CD3B16278718CD00B329BF /* FirebaseStorageSwift-Beta */,
 			);
 			productName = MobileAssignment;
 			productReference = 28534B6727804F7A00CC9120 /* MobileAssignment.app */;
@@ -332,6 +358,7 @@
 			packageReferences = (
 				2815C5BC278329E6007795E6 /* XCRemoteSwiftPackageReference "iPaymentButton" */,
 				281F2E712784B75600551F98 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				28CD3B0B2786F40F00B329BF /* XCRemoteSwiftPackageReference "swift-extras-base64" */,
 			);
 			productRefGroup = 28534B6827804F7A00CC9120 /* Products */;
 			projectDirPath = "";
@@ -386,6 +413,7 @@
 				28AF2902278622230026D6F2 /* InvoiceTrackingViewController.swift in Sources */,
 				28534B6F27804F7A00CC9120 /* ViewController.swift in Sources */,
 				2815C5C82784169A007795E6 /* FinalInvoiceViewController.swift in Sources */,
+				28CD3B102787162C00B329BF /* FirestoreManager.swift in Sources */,
 				28534B6B27804F7A00CC9120 /* AppDelegate.swift in Sources */,
 				28534BAB27809E0400CC9120 /* ArticleList.swift in Sources */,
 				28534B7527804F7A00CC9120 /* MobileAssignment.xcdatamodeld in Sources */,
@@ -393,7 +421,9 @@
 				2815C5BB27832974007795E6 /* ConfirmAndPayController.swift in Sources */,
 				2815C5B927830528007795E6 /* PreviewCreateYourOwnPhotosController.swift in Sources */,
 				2815C5C627841034007795E6 /* CreateYourOwnInvoiceStatus.swift in Sources */,
+				285574702786B44500527CCB /* ItemTrackingInvoiceDetailViewController.swift in Sources */,
 				2815C5C427840B59007795E6 /* LoginViewController.swift in Sources */,
+				285574722786B5F200527CCB /* ItemTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,6 +787,14 @@
 				kind = branch;
 			};
 		};
+		28CD3B0B2786F40F00B329BF /* XCRemoteSwiftPackageReference "swift-extras-base64" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swift-extras/swift-extras-base64.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -804,6 +842,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 281F2E712784B75600551F98 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		28CD3B12278716F200B329BF /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 281F2E712784B75600551F98 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		28CD3B14278718CD00B329BF /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 281F2E712784B75600551F98 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+		28CD3B16278718CD00B329BF /* FirebaseStorageSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 281F2E712784B75600551F98 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageSwift-Beta";
 		};
 /* End XCSwiftPackageProductDependency section */
 

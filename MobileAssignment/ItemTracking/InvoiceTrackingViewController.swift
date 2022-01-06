@@ -9,10 +9,11 @@ import UIKit
 
 class InvoiceTrackingViewController: UIViewController {
 
+    @IBOutlet weak var informationView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.bringSubviewToFront(informationView)
     }
     
 

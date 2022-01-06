@@ -17,6 +17,7 @@ class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerCont
     @IBOutlet weak var frontViewRetake: UIButton!
     @IBOutlet weak var backViewRetake: UIButton!
     @IBOutlet weak var topViewRetake: UIButton!
+    
     var imageList = [Any]();
     
     
@@ -30,7 +31,6 @@ class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerCont
         frontViewRetake?.tag = 0
         backViewRetake?.tag = 1
         topViewRetake?.tag = 2
-        
     }
     
     var currentButtonIndex: Int = -1;
@@ -100,12 +100,29 @@ class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerCont
         invoiceData.itemPrices.append(399.00)
         invoiceData.totalPrice = 399.00
         
-//        orderImages.frontView = (frontViewImage.image?.pngData()?.base64EncodedString()) as AnyObject
-//        orderImages.backView = (backViewImage.image?.pngData()?.base64EncodedString()) as AnyObject
-//        orderImages.topView = (topViewImage.image?.pngData()?.base64EncodedString()) as AnyObject
+        orderImages.frontView = frontViewImage.image as AnyObject
+        orderImages.backView = backViewImage.image as AnyObject
+        orderImages.topView = topViewImage.image as AnyObject
         
-        orderImages.frontView = "\(String(describing: frontViewImage.image))"
-        orderImages.backView = "\(String(describing: backViewImage.image))"
-        orderImages.topView = "\(String(describing: topViewImage.image))"
+        guard let frontViewImageUP = frontViewImage.image, let frontViewData = frontViewImageUP.pngData() else {
+            return
+        }
+        
+        uploadImage(frontViewData, "#20221221391237_frontView")
+        
+        
+        
+    }
+    
+    func uploadImage(_ data: Data, _ fileName: String) {
+        StorageManager.shared.uploadOrderImages(with: data, fileName: fileName, completion: { result in
+            switch result {
+            case .success(let downloadUrl):
+                print(downloadUrl)
+            case .failure(let error):
+                print("err: \(error)")
+            }
+        })
     }
 }
+

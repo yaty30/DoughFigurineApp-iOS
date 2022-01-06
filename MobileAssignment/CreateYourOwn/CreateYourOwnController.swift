@@ -22,7 +22,6 @@ class CreateYourOwnController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var topViewButtonIcon: UIImageView!
     
     @IBOutlet weak var continueButton: UIButton!
-    @IBOutlet weak var previousPageButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +50,41 @@ class CreateYourOwnController: UIViewController, UIImagePickerControllerDelegate
     
     @IBAction func getViewsImages(_ sender: Any) {
         currentButtonIndex = (sender as AnyObject).tag
+        getImageActionSheet()
+    }
+    
+    func getImageActionSheet() {
+        let title = currentButtonIndex == 0 ? "Front View" : currentButtonIndex == 1 ? "Back View" : "Top View"
+        
+        let actionSheet = UIAlertController(title: title, message: "How will you like to select the \(title) picture?", preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: { [weak self] _ in
+
+            self?.presentCamera()
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Choose Photo from Library", style: .default, handler: { [weak self] _ in
+            
+            self?.presentPhotoPicker()
+            
+        }))
+        
+        present(actionSheet, animated: true)
+    }
+    
+    func presentCamera() {
+        let camera = UIImagePickerController()
+        camera.sourceType = .camera
+        camera.delegate = self
+        camera.allowsEditing = true
+        present(camera, animated: true )
+    }
+    
+    func presentPhotoPicker() {
         let picker = UIImagePickerController()
-        picker.sourceType = .camera
+        picker.sourceType = .photoLibrary
         picker.delegate = self
+        picker.allowsEditing = true
         present(picker, animated: true )
     }
     
@@ -64,7 +95,7 @@ class CreateYourOwnController: UIViewController, UIImagePickerControllerDelegate
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         picker.dismiss(animated: true, completion: nil)
-        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
         
         if(currentButtonIndex == 0) {
             let front = image
@@ -88,9 +119,7 @@ class CreateYourOwnController: UIViewController, UIImagePickerControllerDelegate
             continueButton.isEnabled = true
         } else { print("Incorrect button index") }
         
-        // print("CreateYourOwn,line: 63: \(imageList.count)")
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goingBackToPreviousPage" {

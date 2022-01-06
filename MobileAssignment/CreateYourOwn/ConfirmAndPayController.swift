@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ConfirmAndPayController: UIViewController {
+class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     let db = firebase.db
 
@@ -23,16 +23,18 @@ class ConfirmAndPayController: UIViewController {
     @IBOutlet weak var emailAddress: UITextField!
     @IBOutlet weak var countryPicker: UIPickerView!
     
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var address: UITextField!
+    @IBOutlet weak var residential: UITextField!
+    @IBOutlet weak var city: UITextField!
+    @IBOutlet weak var zipCode: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        invoiceID.text = self.generateInvoiceID()
-        orderBy.text = currentUserData.currentUser
-        orderDate.text = invoiceData.orderDate
-        orderTime.text = invoiceData.orderTime
-        itemName.text = invoiceData.items[0]
-        itemPrice.text = "$\(invoiceData.itemPrices[0])"
-        itemQty.text = "\(invoiceData.itemQty[0])x\(Double(invoiceData.itemQty[0]) * invoiceData.itemPrices[0])"
-        totalPrice.text = "$\(invoiceData.totalPrice)"
+        
+        updateOrderInfo()
+        updateShippingInfo()
         
         let dismissKeyboard = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
@@ -95,7 +97,7 @@ class ConfirmAndPayController: UIViewController {
             "paymentMethod": orderPayment.paymentMethod,
             "paymentStatus": orderPayment.paymentStatus
         ])
-        
+    
         db.document("orderImages/\(invoiceData.invoiceNumber)").setData([
             "frontView": orderImages.frontView,
             "backView": orderImages.backView,
@@ -105,14 +107,28 @@ class ConfirmAndPayController: UIViewController {
     
     @IBAction func payButton(_ sender: Any) {
         invoiceData.emailAddress = emailAddress.text ?? ""
-        
-        orderPayment.paymentID = paymentID()
-        orderPayment.paidDate = getTimeAndDate(type: "paidDate")
-        orderPayment.paidTime = getTimeAndDate(type: "paidTime")
-        orderPayment.paymentMethod = "ApplePay"
-        orderPayment.paymentStatus = true
-        
-        orderPayment.paymentStatus ? saveOrderData() : print("paymentStatus: false")
+        updateOrderInfo()
+        updateShippingInfo()
+        saveOrderData()
+    }
+    
+    func updateOrderInfo() {
+        // invoiceID.text = self.generateInvoiceID()
+        orderBy.text = currentUserData.currentUser
+        orderDate.text = invoiceData.orderDate
+        orderTime.text = invoiceData.orderTime
+        itemName.text = invoiceData.items[0]
+        itemPrice.text = "$\(invoiceData.itemPrices[0])"
+        itemQty.text = "\(invoiceData.itemQty[0])x\(Double(invoiceData.itemQty[0]) * invoiceData.itemPrices[0])"
+        totalPrice.text = "$\(invoiceData.totalPrice)"
+    }
+    
+    func updateShippingInfo() {
+        shippingInfo.firstName = firstName.text ?? ""
+        shippingInfo.lastName = lastName.text ?? ""
+        shippingInfo.address = address.text ?? ""
+        shippingInfo.residential = residential.text ?? ""
+        shippingInfo.zipCode = zipCode.text ?? ""
     }
     
     @objc func dismissKeyboard() {
@@ -121,9 +137,8 @@ class ConfirmAndPayController: UIViewController {
     
     @objc private func keyboardWillShow(notification: NSNotification) {
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keyboardHeight = keyboardFrame.cgRectValue.height
-            let bottomSpace = self.view.frame.height - (applePayButton.frame.origin.y + applePayButton.frame.height)
-            self.view.frame.origin.y -= keyboardHeight - bottomSpace + 10
+            // let bottomSpace = (self.view.frame.height + 491) - (applePayButton.frame.origin.y + applePayButton.frame.height)
+            self.view.frame.origin.y -= keyboardFrame.cgRectValue.height
         }
     }
 
@@ -135,21 +150,19 @@ class ConfirmAndPayController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-}
-
-extension ConfirmAndPayController: UIPickerViewDelegate, UIPickerViewDataSource {
-  func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
+      
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return usefulData.countryList.count
     }
-    
+      
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return usefulData.countryList[row]
     }
-    
+      
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         shippingInfo.country = usefulData.countryList[row]
     }

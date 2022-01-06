@@ -119,6 +119,15 @@
         }
       },
       {
+        "package": "swift-extras-base64",
+        "repositoryURL": "https://github.com/swift-extras/swift-extras-base64.git",
+        "state": {
+          "branch": null,
+          "revision": "97237cf1bc1feebaeb0febec91c1e1b9e4d839b3",
+          "version": "0.7.0"
+        }
+      },
+      {
         "package": "SwiftProtobuf",
         "repositoryURL": "https://github.com/apple/swift-protobuf.git",
         "state": {

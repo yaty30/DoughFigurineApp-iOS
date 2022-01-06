@@ -20,10 +20,25 @@ class FinalInvoiceViewController: UIViewController {
     @IBOutlet weak var itemPrice: UILabel!
     @IBOutlet weak var totalPrice: UILabel!
     @IBOutlet weak var emailAddress: UILabel!
+    
+    @IBOutlet weak var firstName: UILabel!
+    @IBOutlet weak var lastName: UILabel!
+    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var residential: UILabel!
+    @IBOutlet weak var city: UILabel!
+    @IBOutlet weak var country: UILabel!
+    @IBOutlet weak var zipCode: UILabel!
+    @IBOutlet weak var contactNumber: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        getInvoiceInfo()
+        getShippingInfo()
+    }
+    
+    func getInvoiceInfo() {
         invoiceNumber.text = invoiceData.invoiceNumber
         orderBy.text = invoiceData.orderBy
         orderDate.text = invoiceData.orderDate
@@ -34,5 +49,17 @@ class FinalInvoiceViewController: UIViewController {
         totalPrice.text = "$\(invoiceData.totalPrice)"
         emailAddress.text = invoiceData.emailAddress
     }
+    
+    func getShippingInfo() {
+        firstName.text = shippingInfo.firstName
+        lastName.text = shippingInfo.lastName
+        address.text = shippingInfo.address
+        residential.text = shippingInfo.residential
+        city.text = shippingInfo.city
+        zipCode.text = shippingInfo.zipCode
+        // contactNumber.text = shippingInfo.contactNumber
+        country.text = shippingInfo.country
+    }
+    
 
 }
