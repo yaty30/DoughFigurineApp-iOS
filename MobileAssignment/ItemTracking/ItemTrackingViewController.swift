@@ -11,53 +11,44 @@ class ItemTrackingViewController: UIViewController, UITextFieldDelegate {
 
     let db = firebase.db
     
-    @IBOutlet weak var serachBarIconView: UIView!
-    @IBOutlet weak var invoiceSerachBar: UITextField!
+    @IBOutlet weak var searchBarIconView: UIView!
+    @IBOutlet weak var invoiceSearchBar: UITextField!
+    @IBOutlet weak var searchIcon: UIImageView!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var test: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        serachBarIconView?.alpha = 0.1
-
+        searchBarIconView?.alpha = 0.1
+        searchIcon?.alpha = 0.1
+        searchButton?.isEnabled = false
+        
+        self.invoiceSearchBar.delegate = self
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        
-        self.invoiceSerachBar?.delegate = self
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        findYourOrder.targetInvoiceNumber = invoiceSerachBar?.text ?? ""
-        self.view.endEditing(true)
-        return false
+    @IBAction func searchBarDidChanged(_ sender: Any) {
+        if let searchBarText = invoiceSearchBar.text {
+            if(searchBarText.count > 0) {
+                searchIcon?.alpha = 1
+                searchButton?.isEnabled = true
+                findYourOrder.targetInvoiceNumber = invoiceSearchBar?.text ?? ""
+                test.text = findYourOrder.targetInvoiceNumber
+            } else {
+                searchIcon?.alpha = 0.1
+                searchButton?.isEnabled = false
+            }
+        }
+    }
+    
+    @IBAction func onSearch(_ sender: Any) {
+ 
     }
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-
-    func getData(_ collection: String, _ field: String) -> String {
-        var result = ""
-        db.collection(collection).document(invoiceData.invoiceNumber).getDocument { (document, error) in
-            if let document = document, document.exists {
-                let dataDescription = document.get(field)
-                result = dataDescription as? String ?? "_no_data_found_"
-            } else {
-                result = "Fetch data failed: Document does not exist."
-            }
-        }
-        
-        return result
-    }
     
-    func fetchInvoiceData() {
-//        invoiceNumber.text = invoiceData.invoiceNumber
-//        orderBy.text = getData("orders", "orderBy")
-//        orderDate.text = getData("orders", "date")
-//        orderTime.text = getData("orders", "time")
-//        itemName.text = getData("orders", "itemName")
-//        itemQty.text = "\(invoiceData.itemQty[0])x\(Double(invoiceData.itemQty[0]) * invoiceData.itemPrices[0])"
-//        itemPrice.text = "$\(getData("orders", "itemPrice"))"
-//        totalPrice.text = "$\(getData("orders", "totalPrice"))"
-//        emailAddress.text = getData("orders", "emailAddress")
-    }
-
 }
