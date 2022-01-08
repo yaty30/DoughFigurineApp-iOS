@@ -18,7 +18,7 @@ struct invoiceTracking {
     static var deliverAddress: String = ""
     static var deliverResidential: String = ""
     static var orderDate: String = ""
-    static var orderDay: String = ""
-    static var orderMonth: String = ""
+    static var orderDay: Int = 0
+    static var orderMonth: Int = 0
     static var deliverCoordinate: CLLocationCoordinate2D? = nil
 }

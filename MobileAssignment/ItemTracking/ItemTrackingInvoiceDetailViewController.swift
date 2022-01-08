@@ -57,13 +57,15 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
     }
     
     func fetchData(completion: @escaping () -> Void) {
+        fetch("orders", "day", orderDate)
+        fetch("orders", "month", orderDate)
         fetch("orders", "date", orderDate)
         fetch("orders", "time", orderTime)
         fetch("orders", "itemName", itemName)
         fetch("orders", "itemPrice", itemPrice)
         fetch("orders", "totalPrice", totalPrice)
         fetch("orders", "emailAddress", emailAddress)
-        itemQty.text = "\(fetch("orders", "itemQty", itemQty))"
+        fetch("orders", "itemQty", itemQty)
         
         
         fetch("shipping", "firstName", firstName)
@@ -78,6 +80,7 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
         updateInvoiceTracking("orderMonth")
         updateInvoiceTracking("street")
         updateInvoiceTracking("country")
+        
     }
     
     func fetch(_ collection: String, _ field: String, _ label: UILabel) {
@@ -93,6 +96,12 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
                 }
                 if(field == "residential") {
                     invoiceTracking.deliverResidential = res as! String
+                }
+                if(field == "day") {
+                    invoiceTracking.orderDay = res as! Int
+                }
+                if(field == "month") {
+                    invoiceTracking.orderMonth = res as! Int
                 }
                 
             }
@@ -114,7 +123,7 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
     
     
     func updateInvoiceTracking(_ field: String) {
-        let docRef = db.document("\(field == "orderDay" || field == "orderDay" ? "orders" : "shipping")/#\(findYourOrder.targetInvoiceNumber)")
+        let docRef = db.document("\(field == "orderDay" ? "orders" : field == "orderMonth" ? "orders" : "shipping")/#\(findYourOrder.targetInvoiceNumber)")
         docRef.getDocument { snapshot, error in
             guard let data = snapshot?.data(), error == nil else { return }
             
@@ -122,10 +131,10 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
             
             DispatchQueue.main.async {
                 if(field == "orderDay") {
-                    invoiceTracking.orderDay = res as! String
+                    invoiceTracking.orderDay = res as! Int
                 }
                 if(field == "orderMonth"){
-                    invoiceTracking.orderMonth = res as! String
+                    invoiceTracking.orderMonth = res as! Int
                 }
                 if(field == "street") {
                     invoiceTracking.deliverStreet = res as! String

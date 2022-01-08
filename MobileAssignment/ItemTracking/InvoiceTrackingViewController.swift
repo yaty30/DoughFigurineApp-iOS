@@ -26,29 +26,52 @@ class InvoiceTrackingViewController: UIViewController, CLLocationManagerDelegate
     @IBOutlet weak var deliverWithin: UILabel!
     @IBOutlet weak var deliverAddress: UILabel!
     @IBOutlet weak var estimatedArrival: UILabel!
+    @IBOutlet weak var invoiceNumber: UILabel!
     
-    var locationManger = CLLocationManager()
+    var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getInformation()
         
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        locationManager.stopUpdatingLocation()
     }
 
    
     func getInformation() {
-        let deliverPoint = CLLocation(latitude: 22.507022312898645, longitude: 114.17998710790208)
+        invoiceNumber.text = "Invoice #\(findYourOrder.targetInvoiceNumber)"
         
-        distanceInKM = 0//round((deliverPoint.distance(from: destination!) / 1000) * 100) / 100.0
+        let deliverPoint = CLLocation(latitude: 22.507022312898645, longitude: 114.17998710790208)
+        let destination = CLLocation(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
+        
+        distanceInKM = round((deliverPoint.distance(from: destination) / 1000) * 100) / 100.0
         
         distanceFromDeliver.text = "around \(distanceInKM) km"
         
-        let days = Int(floor(distanceInKM / 14.54))
+        let days = Int(floor(distanceInKM / 5.34))
         deliverWithin.text = days < 1 ? "< 1 day" : "~\(days) \(days > 1 ? "days" : "day")"
         
         deliverAddress.text = fullAddress
-        
-        let estimatedDay = Int(invoiceTracking.orderDay) ?? 0 + days
+        print(invoiceTracking.orderDay)
+        print(Int(invoiceTracking.orderDay) ?? 0)
+        let estimatedDay = invoiceTracking.orderDay + days
         let estimatedMonth = getMonthName(invoiceTracking.orderMonth)
         
         estimatedArrival.text = "\(estimatedDay) \(estimatedMonth)"

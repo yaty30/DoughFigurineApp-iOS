@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     let db = firebase.db
 
@@ -49,24 +49,9 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
         view.bringSubviewToFront(countryPicker)
     }
     
-    func randomString() -> String {
-      let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-      return String((0..<4).map{ _ in letters.randomElement()! })
-    }
-    
     func paymentID() -> String {
         let id = "\(randomString())-\(randomString())-\(randomString())-\(randomString())"
         return id
-    }
-    
-    func getTimeAndDate(type: String) -> String {
-        let date = Date()
-        let format = DateFormatter()
-        format.dateFormat = type == "paidDate" ? "yyyy-MM-dd" : "HH:mm:ss"
-        
-        let result = format.string(from: date)
-        
-        return "\(result)"
     }
     
     func saveOrderData() {
@@ -135,11 +120,21 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
         shippingInfo.city = city.text ?? ""
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.firstName = textField
+        self.lastName = textField
+        self.address = textField
+        self.residential = textField
+        self.city = textField
+        self.zipCode = textField
+    }
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
     
     @objc private func keyboardWillShow(notification: NSNotification) {
+        self.firstName.enablesReturnKeyAutomatically
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             // let bottomSpace = (self.view.frame.height + 491) - (applePayButton.frame.origin.y + applePayButton.frame.height)
             self.view.frame.origin.y -= keyboardFrame.cgRectValue.height

@@ -96,9 +96,9 @@ class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerCont
         format.dateFormat = "yyyyMMddHHmmss"
         
         let invoiceID = format.string(from: date)
-        let addon = self.randomString(length: 5)
+        let addon = self.randomString(length: 6)
         
-        return "#\(invoiceID)\(addon)"
+        return "#\(addon)"
     }
     
     @IBAction func createDraftInvoice(_ sender: Any) {
@@ -114,17 +114,15 @@ class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerCont
         invoiceData.itemPrices.append(399.00)
         invoiceData.totalPrice = 399.00
         
-        orderImages.frontView = frontViewImage.image as AnyObject
-        orderImages.backView = backViewImage.image as AnyObject
-        orderImages.topView = topViewImage.image as AnyObject
+//        orderImages.frontView = frontViewImage.image as AnyObject
+//        orderImages.backView = backViewImage.image as AnyObject
+//        orderImages.topView = topViewImage.image as AnyObject
         
-        guard let frontViewImageUP = frontViewImage.image, let frontViewData = frontViewImageUP.pngData() else {
-            return
-        }
-        
-        uploadImage(frontViewData, "#20221221391237_frontView")
-        
-        
+//        guard let frontViewImageUP = frontViewImage.image, let frontViewData = frontViewImageUP.pngData() else {
+//            return
+//        }
+//
+//        uploadImage(frontViewData, "#20221221391237_frontView")
         
     }
     
