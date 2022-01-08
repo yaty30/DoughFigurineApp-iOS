@@ -73,6 +73,17 @@ class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerCont
         return "\(result)"
     }
     
+    func getSpecificDate( _ type: String) -> String {
+        let date = Date()
+        let calendar = Calendar.current
+        
+        let result = type == "year" ? calendar.component(.year, from: date) :
+                        type == "month" ? calendar.component(.month, from: date) :
+                        calendar.component(.day, from: date)
+        
+        return "\(result)"
+    }
+    
     func randomString(length: Int) -> String {
       let letters = "0123456789"
       return String((0..<length).map{ _ in letters.randomElement()! })
@@ -94,6 +105,9 @@ class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerCont
         invoiceData.invoiceNumber = generateInvoiceID()
         invoiceData.orderBy = currentUserData.currentUser
         invoiceData.orderDate = getOrderTimeAndDate(type: "orderDate")
+        invoiceData.orderDay = getSpecificDate("day")
+        invoiceData.orderMonth = getSpecificDate("month")
+        invoiceData.orderYear = getSpecificDate("year")
         invoiceData.orderTime = getOrderTimeAndDate(type: "orderTime")
         invoiceData.items.append("Customise Dough Figurine")
         invoiceData.itemQty.append(1)

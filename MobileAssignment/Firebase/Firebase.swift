@@ -6,8 +6,10 @@
 //
 
 import FirebaseFirestore
+import Firebase
 import Foundation
 
 struct firebase {
     static let db = Firestore.firestore()
+    static let ref = Storage.storage().reference()
 }

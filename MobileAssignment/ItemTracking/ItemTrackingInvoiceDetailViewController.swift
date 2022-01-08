@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import CoreData
+import CoreLocation
 
 class ItemTrackingInvoiceDetailViewController: UIViewController {
 
     let db = firebase.db
+    let dbref = firebase.ref
+    var isInvoiceExist = false
     
     @IBOutlet weak var invoiceNumber: UILabel!
     @IBOutlet weak var orderDate: UILabel!
@@ -36,26 +40,27 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var loadingIcon: UIActivityIndicatorView!
     
+    @IBOutlet weak var noResultFoundView: UIView!
+    @IBOutlet weak var noResultFoundLabel: UILabel!
+    @IBOutlet weak var noResultFoundIcon: UIImageView!
     @IBOutlet weak var invoiceTrackingButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadingView.isHidden = false
         loadingIcon.startAnimating()
+        noResultFoundView.isHidden = true
         view.bringSubviewToFront(invoiceTrackingButton)
         
-        fetchFindOrderData()
+        checkIfDocExist(completion: {})
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 0.8...1.4)) {
-            self.loadingView.isHidden = true
-        }
     }
     
-    func fetchFindOrderData() {
+    func fetchData(completion: @escaping () -> Void) {
         fetch("orders", "date", orderDate)
         fetch("orders", "time", orderTime)
         fetch("orders", "itemName", itemName)
         fetch("orders", "itemPrice", itemPrice)
-        // fetch("orders", "itemQty", itemQty)
         fetch("orders", "totalPrice", totalPrice)
         fetch("orders", "emailAddress", emailAddress)
         itemQty.text = "\(fetch("orders", "itemQty", itemQty))"
@@ -69,18 +74,27 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
         fetch("shipping", "country", country)
         fetch("shipping", "zipCode", zipCode)
         
-
+        updateInvoiceTracking("orderDay")
+        updateInvoiceTracking("orderMonth")
+        updateInvoiceTracking("street")
+        updateInvoiceTracking("country")
     }
     
     func fetch(_ collection: String, _ field: String, _ label: UILabel) {
         let docRef = db.document("\(collection)/#\(findYourOrder.targetInvoiceNumber)")
         docRef.getDocument { snapshot, error in
             guard let data = snapshot?.data(), error == nil else { return }
-            
             guard let res = data[field] else { return }
             
             DispatchQueue.main.async {
                 label.text = field == "itemPrice" || field == "totalPrice" ? "$\(res)" : field == "itemQty" ? "\(res)x $399" : "\(res)"
+                if(field == "address") {
+                    invoiceTracking.deliverAddress = res as! String
+                }
+                if(field == "residential") {
+                    invoiceTracking.deliverResidential = res as! String
+                }
+                
             }
         }
     }
@@ -98,4 +112,52 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
         }
     }
     
+    
+    func updateInvoiceTracking(_ field: String) {
+        let docRef = db.document("\(field == "orderDay" || field == "orderDay" ? "orders" : "shipping")/#\(findYourOrder.targetInvoiceNumber)")
+        docRef.getDocument { snapshot, error in
+            guard let data = snapshot?.data(), error == nil else { return }
+            
+            guard let res = data[field] else { return }
+            
+            DispatchQueue.main.async {
+                if(field == "orderDay") {
+                    invoiceTracking.orderDay = res as! String
+                }
+                if(field == "orderMonth"){
+                    invoiceTracking.orderMonth = res as! String
+                }
+                if(field == "street") {
+                    invoiceTracking.deliverStreet = res as! String
+                }
+                if(field == "country") {
+                    invoiceTracking.deliverCountry = res as! String
+                }
+            }
+        }
+    }
+
+    
+    // 2022010612034451158
+    func checkIfDocExist(completion: @escaping () -> Void) {
+        let docRef = db.collection("orders").document("#\(findYourOrder.targetInvoiceNumber)")
+        DispatchQueue.main.async {
+            docRef.getDocument { (document, error) in
+                
+                if let document = document, document.exists {
+                    print("...exist")
+                    self.fetchData(completion: {})
+                    DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 0.8...1.6)) {
+                        self.loadingView.isHidden = true
+                    }
+                    
+                } else {
+                    self.loadingView.isHidden = true
+                    self.noResultFoundView.isHidden = false
+                    self.noResultFoundLabel.text = "[ \(findYourOrder.targetInvoiceNumber) ]"
+                    self.noResultFoundIcon.alpha = 0.1
+                }
+            }
+        }
+    }
 }

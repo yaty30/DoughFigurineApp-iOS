@@ -73,6 +73,9 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
         db.document("orders/\(invoiceData.invoiceNumber)").setData([
             "orderBy": currentUserData.currentUser,
             "date": invoiceData.orderDate,
+            "day": invoiceData.orderDay,
+            "month": invoiceData.orderMonth,
+            "year": invoiceData.orderYear,
             "time": invoiceData.orderTime,
             "itemName": invoiceData.items[0],
             "itemPrice": invoiceData.itemPrices[0],
@@ -129,6 +132,7 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
         shippingInfo.address = address.text ?? ""
         shippingInfo.residential = residential.text ?? ""
         shippingInfo.zipCode = zipCode.text ?? ""
+        shippingInfo.city = city.text ?? ""
     }
     
     @objc func dismissKeyboard() {

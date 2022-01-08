@@ -13,6 +13,9 @@ struct invoiceData {
     static var orderBy: String = "";
     static var orderDate: String = "";
     static var orderTime: String = "";
+    static var orderDay: String = "";
+    static var orderMonth: String = "";
+    static var orderYear: String = "";
     static var items = [String]();
     static var itemQty = [Int]();
     static var itemPrices = [Double]();

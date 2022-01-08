@@ -46,6 +46,8 @@
 		28CD3B13278716F200B329BF /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 28CD3B12278716F200B329BF /* FirebaseRemoteConfig */; };
 		28CD3B15278718CD00B329BF /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 28CD3B14278718CD00B329BF /* FirebaseStorageCombine-Community */; };
 		28CD3B17278718CD00B329BF /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 28CD3B16278718CD00B329BF /* FirebaseStorageSwift-Beta */; };
+		28CD576027884F4600F99CCA /* generalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CD575F27884F4600F99CCA /* generalFunc.swift */; };
+		28CD576227889FE100F99CCA /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CD576127889FE100F99CCA /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		28AF28FF2785EE8B0026D6F2 /* ItemTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTrackingViewController.swift; sourceTree = "<group>"; };
 		28AF2901278622230026D6F2 /* InvoiceTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTrackingViewController.swift; sourceTree = "<group>"; };
 		28CD3B0F2787162C00B329BF /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		28CD575F27884F4600F99CCA /* generalFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generalFunc.swift; sourceTree = "<group>"; };
+		28CD576127889FE100F99CCA /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,7 @@
 		28534B6927804F7A00CC9120 /* MobileAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				28CD575E27884F1700F99CCA /* GeneralFunctions */,
 				28AF28FE2785EE770026D6F2 /* ItemTracking */,
 				281F2E842784B80E00551F98 /* Firebase */,
 				2815C5C227840B43007795E6 /* Login */,
@@ -251,6 +256,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28CD575E27884F1700F99CCA /* GeneralFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				28CD575F27884F4600F99CCA /* generalFunc.swift */,
+				28CD576127889FE100F99CCA /* TestViewController.swift */,
+			);
+			path = GeneralFunctions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,10 +421,12 @@
 			files = (
 				281F2E862784B81F00551F98 /* Firebase.swift in Sources */,
 				28534BB32780DE0B00CC9120 /* ArticleListController.swift in Sources */,
+				28CD576027884F4600F99CCA /* generalFunc.swift in Sources */,
 				28534BB92782D31900CC9120 /* CreateYourOwnController.swift in Sources */,
 				28AF29002785EE8B0026D6F2 /* ItemTrackingViewController.swift in Sources */,
 				2815C5C127834F5E007795E6 /* GlobalStatus.swift in Sources */,
 				28AF2902278622230026D6F2 /* InvoiceTrackingViewController.swift in Sources */,
+				28CD576227889FE100F99CCA /* TestViewController.swift in Sources */,
 				28534B6F27804F7A00CC9120 /* ViewController.swift in Sources */,
 				2815C5C82784169A007795E6 /* FinalInvoiceViewController.swift in Sources */,
 				28CD3B102787162C00B329BF /* FirestoreManager.swift in Sources */,

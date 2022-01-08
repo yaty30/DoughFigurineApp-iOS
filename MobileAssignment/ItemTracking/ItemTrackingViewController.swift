@@ -15,7 +15,6 @@ class ItemTrackingViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var invoiceSearchBar: UITextField!
     @IBOutlet weak var searchIcon: UIImageView!
     @IBOutlet weak var searchButton: UIButton!
-    @IBOutlet weak var test: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +34,6 @@ class ItemTrackingViewController: UIViewController, UITextFieldDelegate {
                 searchIcon?.alpha = 1
                 searchButton?.isEnabled = true
                 findYourOrder.targetInvoiceNumber = invoiceSearchBar?.text ?? ""
-                test.text = findYourOrder.targetInvoiceNumber
             } else {
                 searchIcon?.alpha = 0.1
                 searchButton?.isEnabled = false
@@ -44,7 +42,7 @@ class ItemTrackingViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func onSearch(_ sender: Any) {
- 
+        findYourOrder.targetInvoiceNumber = invoiceSearchBar?.text ?? ""
     }
     
     @objc func dismissKeyboard() {

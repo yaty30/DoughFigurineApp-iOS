@@ -6,7 +6,19 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct findYourOrder {
     static var targetInvoiceNumber: String = ""
+}
+
+struct invoiceTracking {
+    static var deliverStreet: String = ""
+    static var deliverCountry: String = ""
+    static var deliverAddress: String = ""
+    static var deliverResidential: String = ""
+    static var orderDate: String = ""
+    static var orderDay: String = ""
+    static var orderMonth: String = ""
+    static var deliverCoordinate: CLLocationCoordinate2D? = nil
 }
