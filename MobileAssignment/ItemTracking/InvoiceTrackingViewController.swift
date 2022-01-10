@@ -27,6 +27,7 @@ class InvoiceTrackingViewController: UIViewController, CLLocationManagerDelegate
     @IBOutlet weak var deliverAddress: UILabel!
     @IBOutlet weak var estimatedArrival: UILabel!
     @IBOutlet weak var invoiceNumber: UILabel!
+    @IBOutlet weak var map: MKMapView!
     
     var locationManager = CLLocationManager()
     

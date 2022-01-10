@@ -110,7 +110,7 @@ class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerCont
         invoiceData.orderYear = getSpecificDate("year")
         invoiceData.orderTime = getOrderTimeAndDate(type: "orderTime")
         invoiceData.items.append("Customise Dough Figurine")
-        invoiceData.itemQty.append(1)
+        invoiceData.itemQty.append("1x $399")
         invoiceData.itemPrices.append(399.00)
         invoiceData.totalPrice = 399.00
         

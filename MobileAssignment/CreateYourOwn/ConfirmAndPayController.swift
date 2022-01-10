@@ -9,6 +9,7 @@ import UIKit
 
 class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
+    // Gmail API Key = AIzaSyBiiz6ttTRM7XN4YUhcK4M4-Q53Cha3ZZo
     let db = firebase.db
 
     @IBOutlet weak var applePayButton: UIButton!
@@ -58,9 +59,9 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
         db.document("orders/\(invoiceData.invoiceNumber)").setData([
             "orderBy": currentUserData.currentUser,
             "date": invoiceData.orderDate,
-            "day": invoiceData.orderDay,
-            "month": invoiceData.orderMonth,
-            "year": invoiceData.orderYear,
+            "day": Int(invoiceData.orderDay)!,
+            "month": Int(invoiceData.orderMonth)!,
+            "year": Int(invoiceData.orderYear)!,
             "time": invoiceData.orderTime,
             "itemName": invoiceData.items[0],
             "itemPrice": invoiceData.itemPrices[0],
@@ -107,7 +108,7 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
         orderTime.text = invoiceData.orderTime
         itemName.text = invoiceData.items[0]
         itemPrice.text = "$\(invoiceData.itemPrices[0])"
-        itemQty.text = "\(invoiceData.itemQty[0])x\(Double(invoiceData.itemQty[0]) * invoiceData.itemPrices[0])"
+        itemQty.text = "\(invoiceData.itemQty[0])x\(Double(invoiceData.itemQty[0])! * invoiceData.itemPrices[0])"
         totalPrice.text = "$\(invoiceData.totalPrice)"
     }
     

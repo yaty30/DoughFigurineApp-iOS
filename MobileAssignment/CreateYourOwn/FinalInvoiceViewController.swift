@@ -44,7 +44,7 @@ class FinalInvoiceViewController: UIViewController {
         orderDate.text = invoiceData.orderDate
         orderTime.text = invoiceData.orderTime
         itemName.text = invoiceData.items[0]
-        itemQty.text = "\(invoiceData.itemQty[0])x\(Double(invoiceData.itemQty[0]) * invoiceData.itemPrices[0])"
+        itemQty.text = "\(invoiceData.itemQty[0])x\(Double(invoiceData.itemQty[0])! * invoiceData.itemPrices[0])"
         itemPrice.text = "$\(invoiceData.itemPrices[0])"
         totalPrice.text = "$\(invoiceData.totalPrice)"
         emailAddress.text = invoiceData.emailAddress

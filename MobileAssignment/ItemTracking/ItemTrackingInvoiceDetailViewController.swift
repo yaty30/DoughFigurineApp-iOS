@@ -14,7 +14,19 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
     let db = firebase.db
     let dbref = firebase.ref
     var isInvoiceExist = false
-    
+    var itemQtyText = ""
+    var firstNameText = ""
+    var lastNameText = ""
+    var flat = ""
+    var tower = ""
+    var residentialText = ""
+    var street = ""
+    var county = ""
+    var district = ""
+    var city = ""
+    var country = ""
+
+    @IBOutlet weak var mainView: UIScrollView!
     @IBOutlet weak var invoiceNumber: UILabel!
     @IBOutlet weak var orderDate: UILabel!
     @IBOutlet weak var orderTime: UILabel!
@@ -23,12 +35,12 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
     @IBOutlet weak var itemQty: UILabel!
     @IBOutlet weak var totalPrice: UILabel!
     
-    @IBOutlet weak var firstName: UILabel!
-    @IBOutlet weak var lastName: UILabel!
-    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var flatAndTower: UILabel!
     @IBOutlet weak var residential: UILabel!
-    @IBOutlet weak var city: UILabel!
-    @IBOutlet weak var country: UILabel!
+    @IBOutlet weak var streetName: UILabel!
+    @IBOutlet weak var countyAndDistrict: UILabel!
+    @IBOutlet weak var cityCountry: UILabel!
     @IBOutlet weak var zipCode: UILabel!
     @IBOutlet weak var emailAddress: UILabel!
     @IBOutlet weak var contactNumber: UILabel!
@@ -36,6 +48,11 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
     @IBOutlet weak var frontView: UIImageView!
     @IBOutlet weak var backView: UIImageView!
     @IBOutlet weak var topView: UIImageView!
+    
+    @IBOutlet weak var paymentMethod: UILabel!
+    @IBOutlet weak var paidAmount: UILabel!
+    @IBOutlet weak var paidOn: UILabel!
+    @IBOutlet weak var paidAt: UILabel!
     
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var loadingIcon: UIActivityIndicatorView!
@@ -50,13 +67,14 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
         loadingView.isHidden = false
         loadingIcon.startAnimating()
         noResultFoundView.isHidden = true
-        view.bringSubviewToFront(invoiceTrackingButton)
+//        view.bringSubviewToFront(invoiceTrackingButton)
         
         checkIfDocExist(completion: {})
         
     }
     
     func fetchData(completion: @escaping () -> Void) {
+        invoiceNumber.text = "Invoice #\(findYourOrder.targetInvoiceNumber)"
         fetch("orders", "day", orderDate)
         fetch("orders", "month", orderDate)
         fetch("orders", "date", orderDate)
@@ -67,14 +85,16 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
         fetch("orders", "emailAddress", emailAddress)
         fetch("orders", "itemQty", itemQty)
         
+        getName(completion: {})
+        getAddress(completion: {})
         
-        fetch("shipping", "firstName", firstName)
-        fetch("shipping", "lastName", lastName)
-        fetch("shipping", "address", address)
-        fetch("shipping", "residential", residential)
-        fetch("shipping", "city", city)
-        fetch("shipping", "country", country)
+        fetch("payment", "paidDate", paidOn)
+        fetch("payment", "paidTime", paidAt)
+        fetch("payment", "paidAmount", paidAmount)
+        fetch("payment", "paymenMethod", paymentMethod)
+        
         fetch("shipping", "zipCode", zipCode)
+        fetch("shipping", "contactNumber", contactNumber)
         
         updateInvoiceTracking("orderDay")
         updateInvoiceTracking("orderMonth")
@@ -89,8 +109,8 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
             guard let data = snapshot?.data(), error == nil else { return }
             guard let res = data[field] else { return }
             
-            DispatchQueue.main.async {
-                label.text = field == "itemPrice" || field == "totalPrice" ? "$\(res)" : field == "itemQty" ? "\(res)x $399" : "\(res)"
+            DispatchQueue.main.async { [self] in
+                label.text = field == "itemPrice" || field == "totalPrice" ? "$\(res)" : field == "time" ? "at \(res)" : "\(res)"
                 if(field == "address") {
                     invoiceTracking.deliverAddress = res as! String
                 }
@@ -103,7 +123,18 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
                 if(field == "month") {
                     invoiceTracking.orderMonth = res as! Int
                 }
-                
+                if(field == "firstName") {
+                    self.firstNameText = res as! String
+                }
+                if(field == "lastName") {
+                    self.lastNameText = res as! String
+                }
+                if(field == "paidAmount") {
+                    paidAmount.text = "$\(res)"
+                }
+                if(field == "itemQty") {
+                    itemQtyText = "\(res)x $399"
+                }
             }
         }
     }
@@ -120,6 +151,97 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
             }
         }
     }
+    
+    func getName(completion: @escaping () -> Void) {
+        func fetchNames(_ field: String) {
+            let docRef = db.document("shipping/#\(findYourOrder.targetInvoiceNumber)")
+            docRef.getDocument { snapshot, error in
+                guard let data = snapshot?.data(), error == nil else { return }
+                
+                guard let res = data[field] else { return }
+                
+                DispatchQueue.main.async {
+                    if(field == "firstName") {
+                        self.firstNameText = res as! String
+                    }
+                    if(field == "lastName") {
+                        self.lastNameText = res as! String
+                    }
+                    self.name.text = "\(self.firstNameText) \(self.lastNameText)"
+                }
+            }
+        }
+        
+        if(lastNameText == "") {
+            fetchNames("firstName")
+            fetchNames("lastName")
+        } else {
+            completion()
+        }
+        
+    }
+    
+    func updateCustomerInfo() {
+        name.text = "\(firstNameText) \(lastNameText)"
+        flatAndTower.text = "Flat \(flat), Tower\(tower), \(residentialText)"
+        streetName.text = street
+        countyAndDistrict.text = "\(county), \(district)"
+        cityCountry.text = "\(city), \(country)"
+//        print(";;;;;;")
+    }
+    
+    func getAddress(completion: @escaping () -> Void) {
+        func fetchAddr(_ field: String) {
+            let docRef = db.document("shipping/#\(findYourOrder.targetInvoiceNumber)")
+            docRef.getDocument { snapshot, error in
+                guard let data = snapshot?.data(), error == nil else { return }
+                guard let res = data[field] else { return }
+                
+                DispatchQueue.main.async {
+                    print(res)
+                    if(field == "flat") {
+                        self.flat = res as! String
+                    }
+                    if(field == "tower") {
+                        self.tower = res as! String
+                    }
+                    if(field == "residental") {
+                        self.residentialText = res as! String
+                    }
+                    if(field == "streetName") {
+                        self.street = res as! String
+                    }
+                    if(field == "county") {
+                        self.county = res as! String
+                    }
+                    if(field == "district") {
+                        self.district = res as! String
+                    }
+                    if(field == "city") {
+                        self.city = res as! String
+                    }
+                    if(field == "country") {
+                        self.country = res as! String
+                    }
+                    self.updateCustomerInfo()
+                }
+            }
+        }
+        
+        if(country == "") {
+            fetchAddr("flat")
+            fetchAddr("tower")
+            fetchAddr("residential")
+            fetchAddr("streetName")
+            fetchAddr("county")
+            fetchAddr("district")
+            fetchAddr("city")
+            fetchAddr("country")
+        } else {
+            completion()
+        }
+    }
+    
     
     
     func updateInvoiceTracking(_ field: String) {
@@ -138,6 +260,9 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
                 }
                 if(field == "street") {
                     invoiceTracking.deliverStreet = res as! String
+                }
+                if(field == "country") {
+                    invoiceTracking.deliverCountry = res as! String
                 }
                 if(field == "country") {
                     invoiceTracking.deliverCountry = res as! String
