@@ -26,9 +26,9 @@ struct invoiceData {
 }
 
 struct orderImages {
-    static var frontView: AnyObject = "" as AnyObject;
-    static var backView: AnyObject = "" as AnyObject;
-    static var topView: AnyObject = "" as AnyObject;
+    static var frontView: String = "";
+    static var backView: String = "";
+    static var topView: String = "";
 }
 
 struct orderPayment {

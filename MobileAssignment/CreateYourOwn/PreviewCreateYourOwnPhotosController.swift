@@ -102,31 +102,40 @@ class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerCont
     }
     
     @IBAction func createDraftInvoice(_ sender: Any) {
-        invoiceData.invoiceNumber = generateInvoiceID()
-        invoiceData.orderBy = currentUserData.currentUser
-        invoiceData.orderDate = getOrderTimeAndDate(type: "orderDate")
-        invoiceData.orderDay = getSpecificDate("day")
-        invoiceData.orderMonth = getSpecificDate("month")
-        invoiceData.orderYear = getSpecificDate("year")
-        invoiceData.orderTime = getOrderTimeAndDate(type: "orderTime")
-        invoiceData.items.append("Customise Dough Figurine")
-        invoiceData.itemQty.append("1x $399")
-        invoiceData.itemPrices.append(399.00)
-        invoiceData.totalPrice = 399.00
-        
-        orderPayment.paidAmount = 399.00
-        
-//        orderImages.frontView = frontViewImage.image as AnyObject
-//        orderImages.backView = backViewImage.image as AnyObject
-//        orderImages.topView = topViewImage.image as AnyObject
-        
-//        guard let frontViewImageUP = frontViewImage.image, let frontViewData = frontViewImageUP.pngData() else {
-//            return
-//        }
-//
-//        uploadImage(frontViewData, "#20221221391237_frontView")
-        
+        imageToBase64(converted: {
+            // print("done converting at \(getTimeAndDate(type: "time"))...")
+            // print(orderImages.frontView)
+            invoiceData.invoiceNumber = self.generateInvoiceID()
+            invoiceData.orderBy = currentUserData.currentUser
+            invoiceData.orderDate = self.getOrderTimeAndDate(type: "orderDate")
+            invoiceData.orderDay = self.getSpecificDate("day")
+            invoiceData.orderMonth = self.getSpecificDate("month")
+            invoiceData.orderYear = self.getSpecificDate("year")
+            invoiceData.orderTime = self.getOrderTimeAndDate(type: "orderTime")
+            invoiceData.items.append("Customise Dough Figurine")
+            invoiceData.itemQty.append("1x $399")
+            invoiceData.itemPrices.append(399.00)
+            invoiceData.totalPrice = 399.00
+            
+            orderPayment.paidAmount = 399.00
+    //        uploadImage(frontViewData, "#20221221391237_frontView")
+        })
     }
+    
+    func imageToBase64(converted: @escaping () -> Void) {
+        // print("start converting at \(getTimeAndDate(type: "time"))...")
+        DispatchQueue.main.async {
+            let FVimageData = self.frontViewImage.image!.jpegData(compressionQuality: 0.2)
+            let BVimageData = self.backViewImage.image!.jpegData(compressionQuality: 0.2)
+            let TVimageData = self.topViewImage.image!.jpegData(compressionQuality: 0.2)
+            
+            orderImages.frontView = (FVimageData?.base64EncodedString())!
+            orderImages.backView = (BVimageData?.base64EncodedString())!
+            orderImages.topView = (TVimageData?.base64EncodedString())!
+            converted()
+        }
+    }
+    
     
     func uploadImage(_ data: Data, _ fileName: String) {
         StorageManager.shared.uploadOrderImages(with: data, fileName: fileName, completion: { result in

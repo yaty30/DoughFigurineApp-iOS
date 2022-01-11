@@ -375,7 +375,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's start to prepare the data we need for creating your own figurine" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xxc-g8-dLu">
-                                <rect key="frame" x="28" y="154" width="373" height="72"/>
+                                <rect key="frame" x="28" y="138" width="373" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                 <color key="textColor" red="0.3302532062626849" green="0.34306670962195857" blue="0.40828450520833337" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -392,7 +392,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HdZ-xn-DEz">
-                                <rect key="frame" x="28" y="234" width="428" height="642"/>
+                                <rect key="frame" x="1" y="288" width="428" height="642"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9HX-38-jiv">
@@ -2728,10 +2728,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cAk-Xs-qEa"/>
+        <segue reference="J0f-zQ-gjo"/>
+        <segue reference="0E9-SM-7v9"/>
         <segue reference="S3z-UW-31k"/>
         <segue reference="7Km-8R-7Z0"/>
-        <segue reference="trC-4A-LeT"/>
+        <segue reference="rJJ-Vq-p8v"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="back_icon" width="344" height="344"/>
