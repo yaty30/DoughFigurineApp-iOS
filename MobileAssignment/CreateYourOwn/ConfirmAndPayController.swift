@@ -32,16 +32,22 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var floor: UITextField!
     @IBOutlet weak var tower: UITextField!
     @IBOutlet weak var residential: UITextField!
+    @IBOutlet weak var streetName: UITextField!
     @IBOutlet weak var county: UITextField!
     @IBOutlet weak var district: UITextField!
     @IBOutlet weak var city: UITextField!
     @IBOutlet weak var zipCode: UITextField!
+    @IBOutlet weak var contactNumber: UITextField!
+    
+    @IBOutlet weak var mainview: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.bringSubviewToFront(mainview)
+        
         updateOrderInfo(updated: {})
-        updateShippingInfo()
+        updateShippingInfo(updated: {})
         
         let dismissKeyboard = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
@@ -88,7 +94,8 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
             "county": shippingInfo.county,
             "district": shippingInfo.district,
             "country": shippingInfo.country,
-            "zipCode": shippingInfo.zipCode
+            "zipCode": shippingInfo.zipCode,
+            "contactNumber": invoiceData.contactNumber
         ])
         
         db.document("payment/\(invoiceData.invoiceNumber)").setData([
@@ -110,8 +117,9 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBAction func payButton(_ sender: Any) {
         invoiceData.emailAddress = emailAddress.text ?? ""
         updateOrderInfo(updated: {
-            self.updateShippingInfo()
-            self.saveOrderData()
+            self.updateShippingInfo(updated: {
+                self.saveOrderData()
+            })
         })
     }
     
@@ -129,13 +137,23 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
-    func updateShippingInfo() {
-        shippingInfo.firstName = firstName.text ?? ""
-        shippingInfo.lastName = lastName.text ?? ""
-//        shippingInfo.address = address.text ?? ""
-        shippingInfo.residential = residential.text ?? ""
-        shippingInfo.zipCode = zipCode.text ?? ""
-        shippingInfo.city = city.text ?? ""
+    func updateShippingInfo(updated: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            shippingInfo.firstName = defStr(self.firstName)
+            shippingInfo.lastName = defStr(self.lastName)
+            shippingInfo.flat = defStr(self.flat)
+            shippingInfo.floor = defStr(self.floor)
+            shippingInfo.tower = defStr(self.tower)
+            shippingInfo.residential = defStr(self.residential)
+            shippingInfo.streetName = defStr(self.streetName)
+            shippingInfo.county = defStr(self.county)
+            shippingInfo.district = defStr(self.district)
+            shippingInfo.city = defStr(self.city)
+            shippingInfo.zipCode = defStr(self.zipCode)
+            invoiceData.contactNumber = defStr(self.contactNumber)
+            
+            updated()
+        }
     }
     
     @objc func dismissKeyboard() {

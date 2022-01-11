@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public func getMonthName(_ month: Int) -> String {
     let months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN",
@@ -28,4 +29,8 @@ public func getTimeAndDate(type: String) -> String {
     let result = format.string(from: date)
     
     return "\(result)"
+}
+
+public func defStr(_ textField: UITextField) -> String {
+    return textField.text ?? ""
 }
