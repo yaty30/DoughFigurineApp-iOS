@@ -30,7 +30,3 @@ public func getTimeAndDate(type: String) -> String {
     
     return "\(result)"
 }
-
-public func defStr(_ textField: UITextField) -> String {
-    return textField.text ?? ""
-}

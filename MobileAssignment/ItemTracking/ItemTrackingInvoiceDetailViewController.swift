@@ -18,6 +18,7 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
     var firstNameText = ""
     var lastNameText = ""
     var flat = ""
+    var floor = ""
     var tower = ""
     var residentialText = ""
     var street = ""
@@ -183,7 +184,7 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
     
     func updateCustomerInfo() {
         name.text = "\(firstNameText) \(lastNameText)"
-        flatAndTower.text = "Flat \(flat), Tower\(tower), \(residentialText)"
+        flatAndTower.text = "Flat \(floor)\(flat), Tower\(tower), \(residentialText)"
         streetName.text = street
         countyAndDistrict.text = "\(county), \(district)"
         cityCountry.text = "\(city), \(country)"
@@ -202,10 +203,13 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
                     if(field == "flat") {
                         self.flat = res as! String
                     }
+                    if(field == "floor") {
+                        self.floor = res as! String
+                    }
                     if(field == "tower") {
                         self.tower = res as! String
                     }
-                    if(field == "residental") {
+                    if(field == "residential") {
                         self.residentialText = res as! String
                     }
                     if(field == "streetName") {
@@ -230,6 +234,7 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
         
         if(country == "") {
             fetchAddr("flat")
+            fetchAddr("floor")
             fetchAddr("tower")
             fetchAddr("residential")
             fetchAddr("streetName")

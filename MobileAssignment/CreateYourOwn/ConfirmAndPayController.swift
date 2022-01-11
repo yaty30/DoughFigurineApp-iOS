@@ -93,6 +93,7 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
             "streetName": shippingInfo.streetName,
             "county": shippingInfo.county,
             "district": shippingInfo.district,
+            "city": shippingInfo.city,
             "country": shippingInfo.country,
             "zipCode": shippingInfo.zipCode,
             "contactNumber": invoiceData.contactNumber
@@ -100,8 +101,8 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         db.document("payment/\(invoiceData.invoiceNumber)").setData([
             "paymentID": self.paymentID(),
-            "paidDate": getTimeAndDate(type: "date"),
-            "paidTime": getTimeAndDate(type: "time"),
+            "paidDate": orderPayment.paidDate,
+            "paidTime": orderPayment.paidTime,
             "paymentMethod": orderPayment.paymentMethod,
             "paidAmount": orderPayment.paidAmount,
             "paymentStatus": orderPayment.paymentStatus
@@ -118,7 +119,9 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
         invoiceData.emailAddress = emailAddress.text ?? ""
         updateOrderInfo(updated: {
             self.updateShippingInfo(updated: {
-                self.saveOrderData()
+                self.udpatePaymentInfo(updated: {
+                    self.saveOrderData()
+                })
             })
         })
     }
@@ -139,18 +142,28 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     func updateShippingInfo(updated: @escaping () -> Void) {
         DispatchQueue.main.async {
-            shippingInfo.firstName = defStr(self.firstName)
-            shippingInfo.lastName = defStr(self.lastName)
-            shippingInfo.flat = defStr(self.flat)
-            shippingInfo.floor = defStr(self.floor)
-            shippingInfo.tower = defStr(self.tower)
-            shippingInfo.residential = defStr(self.residential)
-            shippingInfo.streetName = defStr(self.streetName)
-            shippingInfo.county = defStr(self.county)
-            shippingInfo.district = defStr(self.district)
-            shippingInfo.city = defStr(self.city)
-            shippingInfo.zipCode = defStr(self.zipCode)
-            invoiceData.contactNumber = defStr(self.contactNumber)
+            shippingInfo.firstName = self.firstName.text ?? "_"
+            shippingInfo.lastName = self.lastName.text ?? "_"
+            shippingInfo.flat = self.flat.text ?? "_"
+            shippingInfo.floor = self.floor.text ?? "_"
+            shippingInfo.tower = self.tower.text ?? "_"
+            shippingInfo.residential = self.residential.text ?? "_"
+            shippingInfo.streetName = self.streetName.text ?? "_"
+            shippingInfo.county = self.county.text ?? "_"
+            shippingInfo.district = self.district.text ?? "_"
+            shippingInfo.city = self.city.text ?? "_"
+            shippingInfo.zipCode = self.zipCode.text ?? "_"
+            invoiceData.contactNumber = self.contactNumber.text ?? "_"
+            
+            updated()
+        }
+    }
+    
+    func udpatePaymentInfo(updated: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            orderPayment.paidAmount = 399.00
+            orderPayment.paidDate = getTimeAndDate(type: "date")
+            orderPayment.paidTime = getTimeAndDate(type: "time")
             
             updated()
         }
