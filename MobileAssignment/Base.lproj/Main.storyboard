@@ -374,8 +374,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's start to prepare the data we need for creating your own figurine" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xxc-g8-dLu">
+                                <rect key="frame" x="28" y="154" width="373" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="0.3302532062626849" green="0.34306670962195857" blue="0.40828450520833337" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8P-rW-LHU">
+                                <rect key="frame" x="0.0" y="72" width="76" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="BACK"/>
+                                <connections>
+                                    <segue destination="k5P-9r-wkW" kind="modal" identifier="goingBackToPreviousPage" animates="NO" modalPresentationStyle="fullScreen" id="7Km-8R-7Z0"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HdZ-xn-DEz">
-                                <rect key="frame" x="0.0" y="284" width="428" height="642"/>
+                                <rect key="frame" x="28" y="234" width="428" height="642"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9HX-38-jiv">
@@ -531,23 +548,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.90910862002235804" green="0.93263299060971661" blue="0.9790321118903883" alpha="0.65572059075563949" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's start to prepare the data we need for creating your own figurine" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xxc-g8-dLu">
-                                <rect key="frame" x="28" y="154" width="373" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
-                                <color key="textColor" red="0.3302532062626849" green="0.34306670962195857" blue="0.40828450520833337" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8P-rW-LHU">
-                                <rect key="frame" x="0.0" y="72" width="76" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemGray2Color"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="BACK"/>
-                                <connections>
-                                    <segue destination="k5P-9r-wkW" kind="modal" identifier="goingBackToPreviousPage" animates="NO" modalPresentationStyle="fullScreen" id="7Km-8R-7Z0"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nQx-mm-N8m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1960,13 +1960,13 @@
                                                         <rect key="frame" x="37" y="877" width="353" height="325"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fake_delivery_tracking" translatesAutoresizingMaskIntoConstraints="NO" id="z2q-64-AgC">
+                                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hlY-Ga-KSo">
                                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="325"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
                                                                 </userDefinedRuntimeAttributes>
-                                                            </imageView>
+                                                            </mapView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                         <userDefinedRuntimeAttributes>
@@ -2190,6 +2190,7 @@
                         <outlet property="paidAt" destination="sI9-cW-xdF" id="FUb-vs-Zs7"/>
                         <outlet property="paidOn" destination="fcO-ye-fSu" id="w8w-Fs-6Sd"/>
                         <outlet property="paymentMethod" destination="vLU-Kv-a9o" id="Miq-Od-C4a"/>
+                        <outlet property="previewMap" destination="hlY-Ga-KSo" id="39u-sP-geq"/>
                         <outlet property="streetName" destination="2gT-OZ-tXo" id="x8j-TO-3C9"/>
                         <outlet property="totalPrice" destination="5zy-2L-zU4" id="EZ6-kZ-t25"/>
                         <outlet property="zipCode" destination="RWB-WO-ZL1" id="nqS-93-J9l"/>
@@ -2727,10 +2728,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0E9-SM-7v9"/>
+        <segue reference="cAk-Xs-qEa"/>
         <segue reference="S3z-UW-31k"/>
-        <segue reference="Ym0-8C-fxp"/>
-        <segue reference="rJJ-Vq-p8v"/>
+        <segue reference="7Km-8R-7Z0"/>
+        <segue reference="trC-4A-LeT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="back_icon" width="344" height="344"/>

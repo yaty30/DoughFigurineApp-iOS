@@ -8,8 +8,9 @@
 import UIKit
 import CoreData
 import CoreLocation
+import MapKit
 
-class ItemTrackingInvoiceDetailViewController: UIViewController {
+class ItemTrackingInvoiceDetailViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     let db = firebase.db
     let dbref = firebase.ref
@@ -62,6 +63,7 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
     @IBOutlet weak var noResultFoundLabel: UILabel!
     @IBOutlet weak var noResultFoundIcon: UIImageView!
     @IBOutlet weak var invoiceTrackingButton: UIButton!
+    @IBOutlet weak var previewMap: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,33 +77,36 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
     }
     
     func fetchData(completion: @escaping () -> Void) {
-        invoiceNumber.text = "Invoice #\(findYourOrder.targetInvoiceNumber)"
-        fetch("orders", "day", orderDate)
-        fetch("orders", "month", orderDate)
-        fetch("orders", "date", orderDate)
-        fetch("orders", "time", orderTime)
-        fetch("orders", "itemName", itemName)
-        fetch("orders", "itemPrice", itemPrice)
-        fetch("orders", "totalPrice", totalPrice)
-        fetch("orders", "emailAddress", emailAddress)
-        fetch("orders", "itemQty", itemQty)
-        
-        getName(completion: {})
-        getAddress(completion: {})
-        
-        fetch("payment", "paidDate", paidOn)
-        fetch("payment", "paidTime", paidAt)
-        fetch("payment", "paidAmount", paidAmount)
-        fetch("payment", "paymenMethod", paymentMethod)
-        
-        fetch("shipping", "zipCode", zipCode)
-        fetch("shipping", "contactNumber", contactNumber)
-        
-        updateInvoiceTracking("orderDay")
-        updateInvoiceTracking("orderMonth")
-        updateInvoiceTracking("street")
-        updateInvoiceTracking("country")
-        
+        DispatchQueue.main.async {
+            self.invoiceNumber.text = "Invoice #\(findYourOrder.targetInvoiceNumber)"
+            self.fetch("orders", "day", self.orderDate)
+            self.fetch("orders", "month", self.orderDate)
+            self.fetch("orders", "date", self.orderDate)
+            self.fetch("orders", "time", self.orderTime)
+            self.fetch("orders", "itemName", self.itemName)
+            self.fetch("orders", "itemPrice", self.itemPrice)
+            self.fetch("orders", "totalPrice", self.totalPrice)
+            self.fetch("orders", "emailAddress", self.emailAddress)
+            self.fetch("orders", "itemQty", self.itemQty)
+            
+            self.getName(completion: {})
+            self.getAddress(completion: {})
+            
+            self.fetch("payment", "paidDate", self.paidOn)
+            self.fetch("payment", "paidTime", self.paidAt)
+            self.fetch("payment", "paidAmount", self.paidAmount)
+            self.fetch("payment", "paymenMethod", self.paymentMethod)
+            
+            self.fetch("shipping", "zipCode", self.zipCode)
+            self.fetch("shipping", "contactNumber", self.contactNumber)
+            
+            self.updateInvoiceTracking("orderDay")
+            self.updateInvoiceTracking("orderMonth")
+            self.updateInvoiceTracking("street")
+            self.updateInvoiceTracking("country")
+            
+            completion()
+        }
     }
     
     func fetch(_ collection: String, _ field: String, _ label: UILabel) {
@@ -285,10 +290,12 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
                 
                 if let document = document, document.exists {
                     print("...exist")
-                    self.fetchData(completion: {})
-                    DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 0.8...1.6)) {
-                        self.loadingView.isHidden = true
-                    }
+                    self.fetchData(completion: {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...1.6)) {
+                            self.loadingView.isHidden = true
+                            self.mapCreate(done: {})
+                        }
+                    })
                     
                 } else {
                     self.loadingView.isHidden = true
@@ -299,4 +306,24 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
             }
         }
     }
+    
+    func mapCreate(done: @escaping () -> Void) {
+        previewMap.removeAnnotations(previewMap.annotations)
+        LocationManager.shared.findLocation(with: "\(invoiceTrackingAddress.street)") { [weak self] locations in
+            DispatchQueue.main.async {
+                let pin = MKPointAnnotation()
+                pin.coordinate = locations[0].Coordinates!
+
+                pin.title = "Shipping Address"
+                self!.previewMap.addAnnotation(pin)
+
+                let region = MKCoordinateRegion(center: locations[0].Coordinates!, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+                self!.previewMap.setRegion(region, animated: true)
+
+
+                done()
+            }
+        }
+    }
+    
 }
