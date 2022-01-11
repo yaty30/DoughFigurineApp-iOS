@@ -29,6 +29,15 @@
         }
       },
       {
+        "package": "FloatingPanel",
+        "repositoryURL": "https://github.com/scenee/FloatingPanel.git",
+        "state": {
+          "branch": null,
+          "revision": "0fbbbc8d99b4dfe58bb1dd704d14b45f35b46584",
+          "version": "2.5.1"
+        }
+      },
+      {
         "package": "GoogleAppMeasurement",
         "repositoryURL": "https://github.com/google/GoogleAppMeasurement.git",
         "state": {

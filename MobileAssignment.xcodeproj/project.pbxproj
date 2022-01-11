@@ -48,6 +48,9 @@
 		28CD3B17278718CD00B329BF /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 28CD3B16278718CD00B329BF /* FirebaseStorageSwift-Beta */; };
 		28CD576027884F4600F99CCA /* generalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CD575F27884F4600F99CCA /* generalFunc.swift */; };
 		28CD576227889FE100F99CCA /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CD576127889FE100F99CCA /* TestViewController.swift */; };
+		28FC6C3F278D8CEA007E3BD5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC6C3E278D8CEA007E3BD5 /* LocationManager.swift */; };
+		28FC6C42278D8DC1007E3BD5 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 28FC6C41278D8DC1007E3BD5 /* FloatingPanel */; };
+		28FC6C44278D8F79007E3BD5 /* TrackingInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC6C43278D8F78007E3BD5 /* TrackingInformationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,8 @@
 		28CD3B0F2787162C00B329BF /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		28CD575F27884F4600F99CCA /* generalFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generalFunc.swift; sourceTree = "<group>"; };
 		28CD576127889FE100F99CCA /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		28FC6C3E278D8CEA007E3BD5 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		28FC6C43278D8F78007E3BD5 /* TrackingInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +119,7 @@
 				281F2E772784B75600551F98 /* FirebaseCrashlytics in Frameworks */,
 				281F2E832784B75600551F98 /* FirebaseStorage in Frameworks */,
 				28CD3B17278718CD00B329BF /* FirebaseStorageSwift-Beta in Frameworks */,
+				28FC6C42278D8DC1007E3BD5 /* FloatingPanel in Frameworks */,
 				281F2E7F2784B75600551F98 /* FirebaseInstallations in Frameworks */,
 				281F2E732784B75600551F98 /* FirebaseAnalytics in Frameworks */,
 				281F2E792784B75600551F98 /* FirebaseDatabase in Frameworks */,
@@ -191,6 +197,7 @@
 		28534B6927804F7A00CC9120 /* MobileAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				28FC6C39278D8C39007E3BD5 /* Location */,
 				28CD575E27884F1700F99CCA /* GeneralFunctions */,
 				28AF28FE2785EE770026D6F2 /* ItemTracking */,
 				281F2E842784B80E00551F98 /* Firebase */,
@@ -247,6 +254,7 @@
 				28AF28FF2785EE8B0026D6F2 /* ItemTrackingViewController.swift */,
 				28AF2901278622230026D6F2 /* InvoiceTrackingViewController.swift */,
 				2855746F2786B44500527CCB /* ItemTrackingInvoiceDetailViewController.swift */,
+				28FC6C43278D8F78007E3BD5 /* TrackingInformationViewController.swift */,
 			);
 			path = ItemTracking;
 			sourceTree = "<group>";
@@ -265,6 +273,14 @@
 				28CD576127889FE100F99CCA /* TestViewController.swift */,
 			);
 			path = GeneralFunctions;
+			sourceTree = "<group>";
+		};
+		28FC6C39278D8C39007E3BD5 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				28FC6C3E278D8CEA007E3BD5 /* LocationManager.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +312,7 @@
 				28CD3B12278716F200B329BF /* FirebaseRemoteConfig */,
 				28CD3B14278718CD00B329BF /* FirebaseStorageCombine-Community */,
 				28CD3B16278718CD00B329BF /* FirebaseStorageSwift-Beta */,
+				28FC6C41278D8DC1007E3BD5 /* FloatingPanel */,
 			);
 			productName = MobileAssignment;
 			productReference = 28534B6727804F7A00CC9120 /* MobileAssignment.app */;
@@ -373,6 +390,7 @@
 				2815C5BC278329E6007795E6 /* XCRemoteSwiftPackageReference "iPaymentButton" */,
 				281F2E712784B75600551F98 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				28CD3B0B2786F40F00B329BF /* XCRemoteSwiftPackageReference "swift-extras-base64" */,
+				28FC6C40278D8DC1007E3BD5 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
 			);
 			productRefGroup = 28534B6827804F7A00CC9120 /* Products */;
 			projectDirPath = "";
@@ -426,6 +444,7 @@
 				28AF29002785EE8B0026D6F2 /* ItemTrackingViewController.swift in Sources */,
 				2815C5C127834F5E007795E6 /* GlobalStatus.swift in Sources */,
 				28AF2902278622230026D6F2 /* InvoiceTrackingViewController.swift in Sources */,
+				28FC6C44278D8F79007E3BD5 /* TrackingInformationViewController.swift in Sources */,
 				28CD576227889FE100F99CCA /* TestViewController.swift in Sources */,
 				28534B6F27804F7A00CC9120 /* ViewController.swift in Sources */,
 				2815C5C82784169A007795E6 /* FinalInvoiceViewController.swift in Sources */,
@@ -433,6 +452,7 @@
 				28534B6B27804F7A00CC9120 /* AppDelegate.swift in Sources */,
 				28534BAB27809E0400CC9120 /* ArticleList.swift in Sources */,
 				28534B7527804F7A00CC9120 /* MobileAssignment.xcdatamodeld in Sources */,
+				28FC6C3F278D8CEA007E3BD5 /* LocationManager.swift in Sources */,
 				28534B6D27804F7A00CC9120 /* SceneDelegate.swift in Sources */,
 				2815C5BB27832974007795E6 /* ConfirmAndPayController.swift in Sources */,
 				2815C5B927830528007795E6 /* PreviewCreateYourOwnPhotosController.swift in Sources */,
@@ -811,6 +831,14 @@
 				minimumVersion = 0.7.0;
 			};
 		};
+		28FC6C40278D8DC1007E3BD5 /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scenee/FloatingPanel.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -873,6 +901,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 281F2E712784B75600551F98 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageSwift-Beta";
+		};
+		28FC6C41278D8DC1007E3BD5 /* FloatingPanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28FC6C40278D8DC1007E3BD5 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
+			productName = FloatingPanel;
 		};
 /* End XCSwiftPackageProductDependency section */
 
