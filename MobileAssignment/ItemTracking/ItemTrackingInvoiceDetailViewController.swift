@@ -202,30 +202,39 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
                     print(res)
                     if(field == "flat") {
                         self.flat = res as! String
+                        invoiceTrackingAddress.flat = res as! String
                     }
                     if(field == "floor") {
                         self.floor = res as! String
+                        invoiceTrackingAddress.floor = res as! String
                     }
                     if(field == "tower") {
                         self.tower = res as! String
+                        invoiceTrackingAddress.tower = res as! String
                     }
                     if(field == "residential") {
                         self.residentialText = res as! String
+                        invoiceTrackingAddress.residential = res as! String
                     }
                     if(field == "streetName") {
                         self.street = res as! String
+                        invoiceTrackingAddress.street = res as! String
                     }
                     if(field == "county") {
                         self.county = res as! String
+                        invoiceTrackingAddress.county = res as! String
                     }
                     if(field == "district") {
                         self.district = res as! String
+                        invoiceTrackingAddress.district = res as! String
                     }
                     if(field == "city") {
                         self.city = res as! String
+                        invoiceTrackingAddress.city = res as! String
                     }
                     if(field == "country") {
                         self.country = res as! String
+                        invoiceTrackingAddress.country = res as! String
                     }
                     self.updateCustomerInfo()
                 }
@@ -262,15 +271,6 @@ class ItemTrackingInvoiceDetailViewController: UIViewController {
                 }
                 if(field == "orderMonth"){
                     invoiceTracking.orderMonth = res as! Int
-                }
-                if(field == "street") {
-                    invoiceTracking.deliverStreet = res as! String
-                }
-                if(field == "country") {
-                    invoiceTracking.deliverCountry = res as! String
-                }
-                if(field == "country") {
-                    invoiceTracking.deliverCountry = res as! String
                 }
             }
         }

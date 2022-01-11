@@ -69,21 +69,6 @@ class TrackingInformationViewController: UIViewController {
         return label
     }()
     
-    // Shipping Destination
-    private let destinationData: UILabel = {
-        let label = UILabel()
-        label.text = "address...."
-        label.font = .systemFont(ofSize: 21, weight: .bold)
-        return label
-    }()
-    
-    private let destinationText: UILabel = {
-        let label = UILabel()
-        label.text = "Your Deliver Address"
-        label.font = .systemFont(ofSize: 17, weight: .regular)
-        return label
-    }()
-    
     // Distance from devliver
     private let distanceData: UILabel = {
         let km = getDistanceInKM(invoiceTracking.deliverPoint,
@@ -100,6 +85,32 @@ class TrackingInformationViewController: UIViewController {
         label.font = .systemFont(ofSize: 17, weight: .regular)
         return label
     }()
+    
+    // Shipping Destination
+    private let destinationData: UILabel = {
+        let address = UILabel()
+        
+        let flatAndResidential = "Flat \(invoiceTrackingAddress.floor)\(invoiceTrackingAddress.flat), Tower \(invoiceTrackingAddress.tower), \(invoiceTrackingAddress.residential)"
+        let street = invoiceTrackingAddress.street
+        let countyAndDistrict = "\(invoiceTrackingAddress.county), \(invoiceTrackingAddress.district)"
+        let cityAndCountry = "\(invoiceTrackingAddress.city), \(invoiceTrackingAddress.country)"
+        let zipCode = invoiceTrackingAddress.zipCode
+        
+        address.text = "\(flatAndResidential)\n\(street)\n\(countyAndDistrict)\n\(cityAndCountry)\n\(zipCode)"
+        address.font = .systemFont(ofSize: 18, weight: .semibold)
+        address.lineBreakMode = .byWordWrapping
+        address.numberOfLines = 6
+        
+        return address
+    }()
+    
+    private let destinationText: UILabel = {
+        let label = UILabel()
+        label.text = "Your Deliver Address"
+        label.font = .systemFont(ofSize: 17, weight: .regular)
+        return label
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -12,21 +12,12 @@ import MapKit
 import FloatingPanel
 
 class InvoiceTrackingViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
-
-    let db = firebase.db
-    var distanceInKM = 0.00
-    let fullAddress = "\(invoiceTracking.deliverResidential), \(invoiceTracking.deliverAddress), \(invoiceTracking.deliverCountry)"
-    var orderMonth = ""
-    var orderDay = ""
-    var destination: CLLocationCoordinate2D? = nil
     
     @IBOutlet weak var informationView: UIView!
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        invoiceNumber.text = "Invoice #\(findYourOrder.targetInvoiceNumber)"
         
         mapCreate(done: {
             let panel = FloatingPanelController()
@@ -38,10 +29,17 @@ class InvoiceTrackingViewController: UIViewController, CLLocationManagerDelegate
     
     func mapCreate(done: @escaping () -> Void) {
         mapView.removeAnnotations(mapView.annotations)
-        LocationManager.shared.findLocation(with: "Chateau de peak") { [weak self] locations in
+        LocationManager.shared.findLocation(with: "\(invoiceTrackingAddress.street)") { [weak self] locations in
             DispatchQueue.main.async {
                 let pin = MKPointAnnotation()
-                pin.coordinate = locations[0].Coordinates!
+                
+                
+                // --- maybe its the problem of Apple map, some places can be searched on the app,
+                    pin.coordinate = locations[0].Coordinates!
+                // but cannot be translated to coordinates from address string. ---
+                // for example, like my place 23 Tong Chun St, Tseung Kwan O, it shows the incorrect point of map, however, it works on Google Maps precisely, yet Google map API costs 200 usd per month.
+                
+                
                 pin.title = "Shipping Address"
                 self!.mapView.addAnnotation(pin)
                 
@@ -50,16 +48,9 @@ class InvoiceTrackingViewController: UIViewController, CLLocationManagerDelegate
                 
                 invoiceTracking.destinationPoint = CLLocation(latitude: locations[0].Coordinates!.latitude, longitude: locations[0].Coordinates!.longitude)
                 
-                print(invoiceTracking.destinationPoint)
-                
                 done()
             }
         }
     }
     
-//    var placemark: CLPlacemark!
-//
-//    func getCoordinateFrom(address: String, completion: @escaping(_ coordinate: CLLocationCoordinate2D?, _ error: Error?) -> () ) {
-//        CLGeocoder().geocodeAddressString(address) { completion($0?.first?.location?.coordinate, $1) }
-//    }
 }
