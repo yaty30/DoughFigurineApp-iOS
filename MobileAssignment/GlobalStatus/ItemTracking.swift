@@ -21,4 +21,6 @@ struct invoiceTracking {
     static var orderDay: Int = 0
     static var orderMonth: Int = 0
     static var deliverCoordinate: CLLocationCoordinate2D? = nil
+    static let deliverPoint = CLLocation(latitude: 22.507022312898645, longitude: 114.17998710790208)
+    static var destinationPoint: CLLocation? = CLLocation(latitude: 22.507022312898645, longitude: 114.17998710790208)
 }
