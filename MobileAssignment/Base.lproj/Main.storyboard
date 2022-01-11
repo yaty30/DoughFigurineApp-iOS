@@ -2531,19 +2531,28 @@
                                                         <rect key="frame" x="37" y="877" width="353" height="325"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fake_delivery_tracking" translatesAutoresizingMaskIntoConstraints="NO" id="mRz-RS-TdL">
+                                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ANg-Vn-Rhl">
                                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="325"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
                                                                 </userDefinedRuntimeAttributes>
-                                                            </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTU-Hb-Awa">
+                                                            </mapView>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRH-t1-Nod" userLabel="Loading View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="325"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title=""/>
-                                                            </button>
+                                                                <subviews>
+                                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="usY-hp-eQN">
+                                                                        <rect key="frame" x="166" y="152" width="20" height="20"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    </activityIndicatorView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" red="0.91390507686974909" green="0.91273389418439521" blue="0.93319153845912273" alpha="0.96449168628414739" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                         <userDefinedRuntimeAttributes>
@@ -2710,6 +2719,7 @@
                         <outlet property="itemName" destination="cfh-Jh-A0N" id="Zni-07-SzW"/>
                         <outlet property="itemPrice" destination="UNB-6u-koe" id="y63-Dq-AwB"/>
                         <outlet property="itemQty" destination="W83-I9-9AO" id="dql-uo-WIA"/>
+                        <outlet property="loadingView" destination="pRH-t1-Nod" id="9Ks-8Y-QdB"/>
                         <outlet property="name" destination="RFj-TW-2Mz" id="4Ga-oA-VHJ"/>
                         <outlet property="orderDate" destination="SuK-jK-key" id="rKs-lB-vu7"/>
                         <outlet property="orderTime" destination="hYC-LL-tIZ" id="Hvh-k0-kRV"/>
@@ -2717,6 +2727,7 @@
                         <outlet property="paidAt" destination="CYZ-p0-Bqw" id="1xj-4k-3w8"/>
                         <outlet property="paidOn" destination="V7M-eq-Vhb" id="sV6-8B-u2l"/>
                         <outlet property="paymentMethod" destination="z5b-pR-2CM" id="XT4-Ak-31r"/>
+                        <outlet property="previewMap" destination="ANg-Vn-Rhl" id="sVR-uQ-66O"/>
                         <outlet property="streetName" destination="saX-eF-MZ8" id="SqO-aq-ukc"/>
                         <outlet property="totalPrice" destination="z0q-l2-sTe" id="Akk-Ij-cfj"/>
                         <outlet property="zipCode" destination="UYZ-d5-br9" id="YwB-wr-TLR"/>
@@ -2746,7 +2757,6 @@
         <image name="distance_icon" width="344" height="344"/>
         <image name="email_icon" width="344" height="344"/>
         <image name="estimated_arrival_date_icon" width="344" height="344"/>
-        <image name="fake_delivery_tracking" width="330" height="506"/>
         <image name="gallery_hero" width="6016" height="4016"/>
         <image name="intersaction_station_icon" width="344" height="344"/>
         <image name="item_tracking_hero" width="6016" height="4016"/>

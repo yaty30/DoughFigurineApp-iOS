@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import CoreLocation
+import CoreData
+import MapKit
 
 class FinalInvoiceViewController: UIViewController {
     
@@ -34,6 +37,8 @@ class FinalInvoiceViewController: UIViewController {
 //    @IBOutlet weak var paidOn: UILabel!
 //    @IBOutlet weak var paidAt: UILabel!
     
+    @IBOutlet weak var previewMap: MKMapView!
+    @IBOutlet weak var loadingView: UIView!
     
     @IBOutlet weak var invoiceNumber: UILabel!
     @IBOutlet weak var orderDate: UILabel!
@@ -65,6 +70,10 @@ class FinalInvoiceViewController: UIViewController {
         getShippingInfo()
         getPaymentInfo()
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...1.6)) {
+            self.loadingView.isHidden = true
+            self.mapCreate(done: {})
+        }
     }
     
     func getInvoiceInfo() {
@@ -99,6 +108,25 @@ class FinalInvoiceViewController: UIViewController {
         paidAmount.text = "$\(orderPayment.paidAmount)"
         paidOn.text = invoiceData.orderDate
         paidAt.text = invoiceData.orderTime
+    }
+    
+    func mapCreate(done: @escaping () -> Void) {
+        previewMap.removeAnnotations(previewMap.annotations)
+        LocationManager.shared.findLocation(with: shippingInfo.streetName) { [weak self] locations in
+            DispatchQueue.main.async {
+                let pin = MKPointAnnotation()
+                pin.coordinate = locations[0].Coordinates!
+                pin.title = "Shipping Address"
+                self!.previewMap.addAnnotation(pin)
+                
+                let region = MKCoordinateRegion(center: locations[0].Coordinates!, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+                self!.previewMap.setRegion(region, animated: true)
+                
+                invoiceTracking.destinationPoint = CLLocation(latitude: locations[0].Coordinates!.latitude, longitude: locations[0].Coordinates!.longitude)
+                
+                done()
+            }
+        }
     }
 
 }
