@@ -23,7 +23,7 @@ public func randomString() -> String {
 public func getTimeAndDate(type: String) -> String {
     let date = Date()
     let format = DateFormatter()
-    format.dateFormat = type == "paidDate" ? "yyyy-MM-dd" : "HH:mm:ss"
+    format.dateFormat = type == "date" ? "yyyy-MM-dd" : "HH:mm:ss"
     
     let result = format.string(from: date)
     

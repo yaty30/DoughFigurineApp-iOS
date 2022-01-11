@@ -19,47 +19,56 @@ class FinalInvoiceViewController: UIViewController {
     @IBOutlet weak var itemQty: UILabel!
     @IBOutlet weak var itemPrice: UILabel!
     @IBOutlet weak var totalPrice: UILabel!
+    
+    @IBOutlet weak var name: UILabel!
     @IBOutlet weak var emailAddress: UILabel!
-    
-    @IBOutlet weak var firstName: UILabel!
-    @IBOutlet weak var lastName: UILabel!
-    @IBOutlet weak var address: UILabel!
-    @IBOutlet weak var residential: UILabel!
-    @IBOutlet weak var city: UILabel!
-    @IBOutlet weak var country: UILabel!
-    @IBOutlet weak var zipCode: UILabel!
     @IBOutlet weak var contactNumber: UILabel!
+    @IBOutlet weak var flatAndTower: UILabel!
+    @IBOutlet weak var streetName: UILabel!
+    @IBOutlet weak var countyAndDistrict: UILabel!
+    @IBOutlet weak var cityAndCountry: UILabel!
+    @IBOutlet weak var zipCode: UILabel!
     
-
+    
+    @IBOutlet weak var paymentMethod: UILabel!
+    @IBOutlet weak var paidAmount: UILabel!
+    @IBOutlet weak var paidOn: UILabel!
+    @IBOutlet weak var paidAt: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         getInvoiceInfo()
         getShippingInfo()
+        getPaymentInfo()
+        
     }
     
     func getInvoiceInfo() {
-        invoiceNumber.text = invoiceData.invoiceNumber
-        orderBy.text = invoiceData.orderBy
+        invoiceNumber.text = "Invoice \(invoiceData.invoiceNumber)"
         orderDate.text = invoiceData.orderDate
-        orderTime.text = invoiceData.orderTime
+        orderTime.text = "at \(invoiceData.orderTime)"
         itemName.text = invoiceData.items[0]
-        itemQty.text = "\(invoiceData.itemQty[0])x\(Double(invoiceData.itemQty[0])! * invoiceData.itemPrices[0])"
+        itemQty.text = "\(invoiceData.itemQty[0])x $\(invoiceData.itemPrices[0])"
         itemPrice.text = "$\(invoiceData.itemPrices[0])"
         totalPrice.text = "$\(invoiceData.totalPrice)"
-        emailAddress.text = invoiceData.emailAddress
     }
     
     func getShippingInfo() {
-        firstName.text = shippingInfo.firstName
-        lastName.text = shippingInfo.lastName
-        address.text = shippingInfo.address
-        residential.text = shippingInfo.residential
-        city.text = shippingInfo.city
+        name.text = "\(shippingInfo.firstName) \(shippingInfo.lastName)"
+        emailAddress.text = invoiceData.emailAddress
+        contactNumber.text = invoiceData.contactNumber
+        flatAndTower.text = "Flat \(shippingInfo.floor)\(shippingInfo.flat) \(shippingInfo.tower != "" ? ", Tower \(shippingInfo.tower)" : "")"
+        streetName.text = shippingInfo.streetName
+        countyAndDistrict.text = "\(shippingInfo.county), \(shippingInfo.country)"
         zipCode.text = shippingInfo.zipCode
-        // contactNumber.text = shippingInfo.contactNumber
-        country.text = shippingInfo.country
     }
     
+    func getPaymentInfo() {
+        paymentMethod.text = orderPayment.paymentMethod
+        paidAmount.text = "\(orderPayment.paidAmount)"
+        paidOn.text = orderPayment.paidDate
+        paidAt.text = orderPayment.paidTime
+    }
 
 }

@@ -11,6 +11,7 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     // Gmail API Key = AIzaSyBiiz6ttTRM7XN4YUhcK4M4-Q53Cha3ZZo
     let db = firebase.db
+    var isEmailEditing = false
 
     @IBOutlet weak var applePayButton: UIButton!
 //    @IBOutlet weak var invoiceID: UILabel!
@@ -26,15 +27,20 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
-    @IBOutlet weak var address: UITextField!
+    
+    @IBOutlet weak var flat: UITextField!
+    @IBOutlet weak var floor: UITextField!
+    @IBOutlet weak var tower: UITextField!
     @IBOutlet weak var residential: UITextField!
+    @IBOutlet weak var county: UITextField!
+    @IBOutlet weak var district: UITextField!
     @IBOutlet weak var city: UITextField!
     @IBOutlet weak var zipCode: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateOrderInfo()
+        updateOrderInfo(updated: {})
         updateShippingInfo()
         
         let dismissKeyboard = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
@@ -47,6 +53,7 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         countryPicker.delegate = self
         countryPicker.dataSource = self
+        
         view.bringSubviewToFront(countryPicker)
     }
     
@@ -73,17 +80,23 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
         db.document("shipping/\(invoiceData.invoiceNumber)").setData([
             "firstName": shippingInfo.firstName,
             "lastName": shippingInfo.lastName,
-            "address": shippingInfo.address,
+            "flat": shippingInfo.flat,
+            "floor": shippingInfo.floor,
+            "tower": shippingInfo.tower,
             "residential": shippingInfo.residential,
+            "streetName": shippingInfo.streetName,
+            "county": shippingInfo.county,
+            "district": shippingInfo.district,
             "country": shippingInfo.country,
             "zipCode": shippingInfo.zipCode
         ])
         
         db.document("payment/\(invoiceData.invoiceNumber)").setData([
-            "paymentID": orderPayment.paymentID,
-            "paidDate": orderPayment.paidDate,
-            "paidTime": orderPayment.paidTime,
+            "paymentID": self.paymentID(),
+            "paidDate": getTimeAndDate(type: "date"),
+            "paidTime": getTimeAndDate(type: "time"),
             "paymentMethod": orderPayment.paymentMethod,
+            "paidAmount": orderPayment.paidAmount,
             "paymentStatus": orderPayment.paymentStatus
         ])
     
@@ -96,38 +109,33 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     @IBAction func payButton(_ sender: Any) {
         invoiceData.emailAddress = emailAddress.text ?? ""
-        updateOrderInfo()
-        updateShippingInfo()
-        saveOrderData()
+        updateOrderInfo(updated: {
+            self.updateShippingInfo()
+            self.saveOrderData()
+        })
     }
     
-    func updateOrderInfo() {
-        // invoiceID.text = self.generateInvoiceID()
-        orderBy.text = currentUserData.currentUser
-        orderDate.text = invoiceData.orderDate
-        orderTime.text = invoiceData.orderTime
-        itemName.text = invoiceData.items[0]
-        itemPrice.text = "$\(invoiceData.itemPrices[0])"
-        itemQty.text = "\(invoiceData.itemQty[0])x\(Double(invoiceData.itemQty[0])! * invoiceData.itemPrices[0])"
-        totalPrice.text = "$\(invoiceData.totalPrice)"
+    func updateOrderInfo(updated: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            // invoiceID.text = self.generateInvoiceID()
+            self.orderDate.text = invoiceData.orderDate
+            self.orderTime.text = invoiceData.orderTime
+            self.itemName.text = invoiceData.items[0]
+            self.itemPrice.text = "$\(invoiceData.itemPrices[0])"
+            self.itemQty.text = "\(invoiceData.itemQty[0])x\(Double(invoiceData.itemQty[0]) ?? 1 * invoiceData.itemPrices[0])"
+            self.totalPrice.text = "$\(invoiceData.totalPrice)"
+            
+            updated()
+        }
     }
     
     func updateShippingInfo() {
         shippingInfo.firstName = firstName.text ?? ""
         shippingInfo.lastName = lastName.text ?? ""
-        shippingInfo.address = address.text ?? ""
+//        shippingInfo.address = address.text ?? ""
         shippingInfo.residential = residential.text ?? ""
         shippingInfo.zipCode = zipCode.text ?? ""
         shippingInfo.city = city.text ?? ""
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.firstName = textField
-        self.lastName = textField
-        self.address = textField
-        self.residential = textField
-        self.city = textField
-        self.zipCode = textField
     }
     
     @objc func dismissKeyboard() {
@@ -135,12 +143,15 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     @objc private func keyboardWillShow(notification: NSNotification) {
-        self.firstName.enablesReturnKeyAutomatically
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            // let bottomSpace = (self.view.frame.height + 491) - (applePayButton.frame.origin.y + applePayButton.frame.height)
-            self.view.frame.origin.y -= keyboardFrame.cgRectValue.height
+            self.view.frame.origin.y -= self.view.frame.origin.y < 0 ? 0 : 310
+//            print("type of ", type(of: self.view.frame.origin.y))
+//            print(self.view.frame.origin.y)
+//            print(self.view.frame.origin.y == -310.0)
         }
     }
+    
+    
 
     @objc private func keyboardWillHide() {
         self.view.frame.origin.y = 0
