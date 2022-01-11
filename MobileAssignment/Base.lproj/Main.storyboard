@@ -792,37 +792,37 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tseung Kwan O" borderStyle="roundedRect" placeholder="County*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wd4-SA-TF6">
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="The Peak" borderStyle="roundedRect" placeholder="County*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wd4-SA-TF6">
                                                                 <rect key="frame" x="15" y="299" width="311" height="34"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Monterey Place" borderStyle="roundedRect" placeholder="Residential*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbz-7L-WcX">
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Chateau De Peak" borderStyle="roundedRect" placeholder="Residential*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbz-7L-WcX">
                                                                 <rect key="frame" x="15" y="189" width="311" height="34"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" borderStyle="roundedRect" placeholder="Floor*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fyu-SF-c6O">
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="Floor*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fyu-SF-c6O">
                                                                 <rect key="frame" x="122" y="134" width="97" height="34"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2A" borderStyle="roundedRect" placeholder="Tower" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XGo-Co-zZv">
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="A" borderStyle="roundedRect" placeholder="Tower" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XGo-Co-zZv">
                                                                 <rect key="frame" x="229" y="134" width="97" height="34"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="23 Tong Chun Street" borderStyle="roundedRect" placeholder="Street number and name*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bfu-FI-bko">
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="8 Mount Kellett" borderStyle="roundedRect" placeholder="Street number and name*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bfu-FI-bko">
                                                                 <rect key="frame" x="15" y="244" width="311" height="34"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New Territories" borderStyle="roundedRect" placeholder="District*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8DC-Gy-Qkh">
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hong Kong Island" borderStyle="roundedRect" placeholder="District*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8DC-Gy-Qkh">
                                                                 <rect key="frame" x="15" y="356" width="138" height="34"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1772,7 +1772,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="777"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fiH-4d-qdg">
-                                                <rect key="frame" x="0.0" y="0.0" width="428" height="1580"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="428" height="2000"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Plb-Wz-Qym" userLabel="Customer">
                                                         <rect key="frame" x="35" y="348" width="358" height="502"/>
@@ -1974,7 +1974,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANH-jS-IMf" userLabel="Order Payment">
-                                                        <rect key="frame" x="35" y="1235" width="358" height="286"/>
+                                                        <rect key="frame" x="35" y="1665" width="358" height="286"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AMOUNT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xo-M5-n8E">
@@ -2056,8 +2056,80 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="1580" id="Qg0-3S-Po0"/>
+                                                    <constraint firstAttribute="height" constant="2000" id="JS6-kZ-nOc"/>
                                                 </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="Rnv-qL-Guh" userLabel="Feature View">
+                                                <rect key="frame" x="37" y="1235" width="353" height="396"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YWY-ea-UYP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="396"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mfn-iz-DZ3" userLabel="Horizontal Scroll View">
+                                                                <rect key="frame" x="0.0" y="0.0" width="990" height="396"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aTf-dl-iaN">
+                                                                        <rect key="frame" x="8" y="47" width="301" height="300"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowOpacity" value="0.2"/>
+                                                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                                                <size key="value" width="0.0" height="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.shadowRadius" value="3"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BJg-bU-Q3e">
+                                                                        <rect key="frame" x="667" y="46" width="300" height="301"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Gq-mG-cYf">
+                                                                        <rect key="frame" x="335" y="46" width="301" height="301"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="990" id="UDJ-oO-P26"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="mfn-iz-DZ3" firstAttribute="top" secondItem="YWY-ea-UYP" secondAttribute="top" id="4Zq-he-iD7"/>
+                                                            <constraint firstItem="mfn-iz-DZ3" firstAttribute="leading" secondItem="YWY-ea-UYP" secondAttribute="leading" id="AXU-1b-JAp"/>
+                                                            <constraint firstItem="mfn-iz-DZ3" firstAttribute="leading" secondItem="YWY-ea-UYP" secondAttribute="leading" id="Kl5-L0-ALx"/>
+                                                            <constraint firstAttribute="trailing" secondItem="mfn-iz-DZ3" secondAttribute="trailing" id="j6a-Ol-veI"/>
+                                                            <constraint firstItem="mfn-iz-DZ3" firstAttribute="top" secondItem="YWY-ea-UYP" secondAttribute="top" id="k6A-fV-NYv"/>
+                                                            <constraint firstAttribute="bottom" secondItem="mfn-iz-DZ3" secondAttribute="bottom" id="oBd-5U-pVJ"/>
+                                                            <constraint firstAttribute="bottom" secondItem="mfn-iz-DZ3" secondAttribute="bottom" id="pmv-Rx-sHU"/>
+                                                            <constraint firstAttribute="trailing" secondItem="mfn-iz-DZ3" secondAttribute="trailing" id="zrO-WJ-gGb"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </scrollView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="YWY-ea-UYP" firstAttribute="leading" secondItem="Rnv-qL-Guh" secondAttribute="leading" id="JEF-17-pF0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="YWY-ea-UYP" secondAttribute="bottom" id="RVz-zO-fgy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="YWY-ea-UYP" secondAttribute="trailing" id="UuT-Zp-2lJ"/>
+                                                    <constraint firstItem="YWY-ea-UYP" firstAttribute="top" secondItem="Rnv-qL-Guh" secondAttribute="top" id="YmF-iK-KdR"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cF5-Dr-FNA">
                                                 <rect key="frame" x="37" y="875" width="353" height="325"/>
@@ -2072,10 +2144,18 @@
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="fiH-4d-qdg" firstAttribute="leading" secondItem="LM5-YL-OgP" secondAttribute="leading" id="5Tf-Mg-gJQ"/>
+                                            <constraint firstItem="fiH-4d-qdg" firstAttribute="leading" secondItem="LM5-YL-OgP" secondAttribute="leading" id="7i7-4P-VBP"/>
                                             <constraint firstAttribute="trailing" secondItem="fiH-4d-qdg" secondAttribute="trailing" id="EF7-Oo-K8w"/>
                                             <constraint firstItem="fiH-4d-qdg" firstAttribute="leading" secondItem="LM5-YL-OgP" secondAttribute="leading" id="Khc-0Z-LSx"/>
                                             <constraint firstAttribute="bottom" secondItem="fiH-4d-qdg" secondAttribute="bottom" id="NKh-Yv-JDg"/>
+                                            <constraint firstAttribute="bottom" secondItem="fiH-4d-qdg" secondAttribute="bottom" id="PbM-9J-QKt"/>
                                             <constraint firstItem="fiH-4d-qdg" firstAttribute="top" secondItem="LM5-YL-OgP" secondAttribute="top" id="VDI-PZ-aPD"/>
+                                            <constraint firstAttribute="trailing" secondItem="fiH-4d-qdg" secondAttribute="trailing" id="cse-jf-Ghp"/>
+                                            <constraint firstAttribute="bottom" secondItem="fiH-4d-qdg" secondAttribute="bottom" id="mQC-ep-wDn"/>
+                                            <constraint firstItem="fiH-4d-qdg" firstAttribute="top" secondItem="LM5-YL-OgP" secondAttribute="top" id="v2Z-H2-ctl"/>
+                                            <constraint firstAttribute="trailing" secondItem="fiH-4d-qdg" secondAttribute="trailing" id="vxu-VN-Lbo"/>
+                                            <constraint firstItem="fiH-4d-qdg" firstAttribute="top" secondItem="LM5-YL-OgP" secondAttribute="top" id="yCg-6Z-SFp"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
@@ -2169,11 +2249,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="backView" destination="0Gq-mG-cYf" id="vAN-c3-Fdq"/>
                         <outlet property="cityCountry" destination="o0M-cx-Z0v" id="FXV-wn-5Ho"/>
                         <outlet property="contactNumber" destination="Eqb-ZV-3cZ" id="KzX-qS-YeC"/>
                         <outlet property="countyAndDistrict" destination="qc8-dE-RZa" id="kKn-mW-Ee0"/>
                         <outlet property="emailAddress" destination="pLO-gA-Xvh" id="o1V-Vk-BPT"/>
                         <outlet property="flatAndTower" destination="zLa-jP-cvt" id="YQB-pr-I73"/>
+                        <outlet property="frontView" destination="aTf-dl-iaN" id="9cL-TK-fz8"/>
                         <outlet property="invoiceNumber" destination="I4g-Ph-1hz" id="acs-AT-1vw"/>
                         <outlet property="itemName" destination="dvI-RL-T2r" id="rfi-k5-QXk"/>
                         <outlet property="itemPrice" destination="VPS-AI-95c" id="UIM-JX-hdO"/>
@@ -2192,6 +2274,7 @@
                         <outlet property="paymentMethod" destination="vLU-Kv-a9o" id="Miq-Od-C4a"/>
                         <outlet property="previewMap" destination="hlY-Ga-KSo" id="39u-sP-geq"/>
                         <outlet property="streetName" destination="2gT-OZ-tXo" id="x8j-TO-3C9"/>
+                        <outlet property="topView" destination="BJg-bU-Q3e" id="Z3Y-yG-gmg"/>
                         <outlet property="totalPrice" destination="5zy-2L-zU4" id="EZ6-kZ-t25"/>
                         <outlet property="zipCode" destination="RWB-WO-ZL1" id="nqS-93-J9l"/>
                     </connections>
@@ -2538,7 +2621,7 @@
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </mapView>
-                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRH-t1-Nod" userLabel="Loading View">
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRH-t1-Nod">
                                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="325"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <subviews>
@@ -2719,7 +2802,7 @@
                         <outlet property="itemName" destination="cfh-Jh-A0N" id="Zni-07-SzW"/>
                         <outlet property="itemPrice" destination="UNB-6u-koe" id="y63-Dq-AwB"/>
                         <outlet property="itemQty" destination="W83-I9-9AO" id="dql-uo-WIA"/>
-                        <outlet property="loadingView" destination="pRH-t1-Nod" id="9Ks-8Y-QdB"/>
+                        <outlet property="loadingView" destination="pRH-t1-Nod" id="aqE-tY-zb7"/>
                         <outlet property="name" destination="RFj-TW-2Mz" id="4Ga-oA-VHJ"/>
                         <outlet property="orderDate" destination="SuK-jK-key" id="rKs-lB-vu7"/>
                         <outlet property="orderTime" destination="hYC-LL-tIZ" id="Hvh-k0-kRV"/>
@@ -2742,8 +2825,8 @@
         <segue reference="J0f-zQ-gjo"/>
         <segue reference="0E9-SM-7v9"/>
         <segue reference="S3z-UW-31k"/>
-        <segue reference="7Km-8R-7Z0"/>
-        <segue reference="rJJ-Vq-p8v"/>
+        <segue reference="Ym0-8C-fxp"/>
+        <segue reference="9oT-uY-TIo"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="back_icon" width="344" height="344"/>

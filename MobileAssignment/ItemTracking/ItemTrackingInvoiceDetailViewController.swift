@@ -62,7 +62,6 @@ class ItemTrackingInvoiceDetailViewController: UIViewController, CLLocationManag
     @IBOutlet weak var noResultFoundView: UIView!
     @IBOutlet weak var noResultFoundLabel: UILabel!
     @IBOutlet weak var noResultFoundIcon: UIImageView!
-    @IBOutlet weak var invoiceTrackingButton: UIButton!
     @IBOutlet weak var previewMap: MKMapView!
     
     override func viewDidLoad() {
@@ -99,6 +98,10 @@ class ItemTrackingInvoiceDetailViewController: UIViewController, CLLocationManag
             
             self.fetch("shipping", "zipCode", self.zipCode)
             self.fetch("shipping", "contactNumber", self.contactNumber)
+            
+            self.fetchImages("frontView", self.frontView)
+            self.fetchImages("backView", self.backView)
+            self.fetchImages("topView", self.topView)
             
             self.updateInvoiceTracking("orderDay")
             self.updateInvoiceTracking("orderMonth")
@@ -153,7 +156,9 @@ class ItemTrackingInvoiceDetailViewController: UIViewController, CLLocationManag
             guard let res = data[field] else { return }
             
             DispatchQueue.main.async {
-                uiimage.image = res as? UIImage
+                let base64str = res as? String ?? ""
+                let imageData = Data(base64Encoded: base64str)
+                uiimage.image = UIImage(data: imageData!)
             }
         }
     }
@@ -291,7 +296,7 @@ class ItemTrackingInvoiceDetailViewController: UIViewController, CLLocationManag
                 if let document = document, document.exists {
                     print("...exist")
                     self.fetchData(completion: {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...1.6)) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1.6...2.1)) {
                             self.loadingView.isHidden = true
                             self.mapCreate(done: {})
                         }
@@ -312,6 +317,7 @@ class ItemTrackingInvoiceDetailViewController: UIViewController, CLLocationManag
         LocationManager.shared.findLocation(with: "\(invoiceTrackingAddress.street)") { [weak self] locations in
             DispatchQueue.main.async {
                 let pin = MKPointAnnotation()
+                print(locations)
                 pin.coordinate = locations[0].Coordinates!
 
                 pin.title = "Shipping Address"

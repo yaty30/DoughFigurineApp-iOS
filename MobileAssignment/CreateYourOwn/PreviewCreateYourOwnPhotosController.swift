@@ -9,6 +9,7 @@ import UIKit
 
 class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
+    let db = firebase.db
     
     @IBOutlet weak var frontViewImage: UIImageView!
     @IBOutlet weak var backViewImage: UIImageView!
@@ -137,15 +138,19 @@ class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerCont
     }
     
     
-    func uploadImage(_ data: Data, _ fileName: String) {
-        StorageManager.shared.uploadOrderImages(with: data, fileName: fileName, completion: { result in
-            switch result {
-            case .success(let downloadUrl):
-                print(downloadUrl)
-            case .failure(let error):
-                print("err: \(error)")
-            }
-        })
-    }
+    
+//    func checkRepeatingID(completion: @escaping (String) -> Void) {
+//        let docRef = db.collection("orders").document("#\(findYourOrder.targetInvoiceNumber)")
+//        DispatchQueue.main.async {
+//            docRef.getDocument { (document, error) in
+//
+//                if let document = document, document.exists {
+//                    completion("exist")
+//                } else {
+//                    completion("exist")
+//                }
+//            }
+//        }
+//    }
 }
 
