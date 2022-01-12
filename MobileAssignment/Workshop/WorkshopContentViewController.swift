@@ -42,6 +42,7 @@ class WorkshopContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        workshopContent.timeslot = []
         fetch(done: {})
     }
     

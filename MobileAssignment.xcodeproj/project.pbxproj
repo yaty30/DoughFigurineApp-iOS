@@ -55,6 +55,8 @@
 		28DC0B60278EF82100C5E404 /* WorkshopSignupInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B5F278EF82100C5E404 /* WorkshopSignupInvoiceViewController.swift */; };
 		28DC0B62278F04CB00C5E404 /* WorkshopReservationSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B61278F04CB00C5E404 /* WorkshopReservationSearchResultViewController.swift */; };
 		28DC0B64278F0C7100C5E404 /* WorkshopReservationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B63278F0C7100C5E404 /* WorkshopReservationSearchViewController.swift */; };
+		28DC0B67278F56C000C5E404 /* ArticleContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B66278F56C000C5E404 /* ArticleContentViewController.swift */; };
+		28DC0B69278F5C1C00C5E404 /* ArticleStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B68278F5C1C00C5E404 /* ArticleStatus.swift */; };
 		28FC6C3F278D8CEA007E3BD5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC6C3E278D8CEA007E3BD5 /* LocationManager.swift */; };
 		28FC6C42278D8DC1007E3BD5 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 28FC6C41278D8DC1007E3BD5 /* FloatingPanel */; };
 		28FC6C44278D8F79007E3BD5 /* TrackingInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC6C43278D8F78007E3BD5 /* TrackingInformationViewController.swift */; };
@@ -118,6 +120,8 @@
 		28DC0B5F278EF82100C5E404 /* WorkshopSignupInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopSignupInvoiceViewController.swift; sourceTree = "<group>"; };
 		28DC0B61278F04CB00C5E404 /* WorkshopReservationSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopReservationSearchResultViewController.swift; sourceTree = "<group>"; };
 		28DC0B63278F0C7100C5E404 /* WorkshopReservationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopReservationSearchViewController.swift; sourceTree = "<group>"; };
+		28DC0B66278F56C000C5E404 /* ArticleContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleContentViewController.swift; sourceTree = "<group>"; };
+		28DC0B68278F5C1C00C5E404 /* ArticleStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStatus.swift; sourceTree = "<group>"; };
 		28FC6C3E278D8CEA007E3BD5 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		28FC6C43278D8F78007E3BD5 /* TrackingInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +171,7 @@
 				2815C5C527841034007795E6 /* CreateYourOwnInvoiceStatus.swift */,
 				285574712786B5F200527CCB /* ItemTracking.swift */,
 				28DC0B5B278EDE7700C5E404 /* WorkshopStatus.swift */,
+				28DC0B68278F5C1C00C5E404 /* ArticleStatus.swift */,
 			);
 			path = GlobalStatus;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 		28534B6927804F7A00CC9120 /* MobileAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				28DC0B65278F568C00C5E404 /* Article */,
 				28DC0B56278EC6F900C5E404 /* Workshop */,
 				28FC6C39278D8C39007E3BD5 /* Location */,
 				28CD575E27884F1700F99CCA /* GeneralFunctions */,
@@ -302,6 +308,14 @@
 				28DC0B63278F0C7100C5E404 /* WorkshopReservationSearchViewController.swift */,
 			);
 			path = Workshop;
+			sourceTree = "<group>";
+		};
+		28DC0B65278F568C00C5E404 /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				28DC0B66278F56C000C5E404 /* ArticleContentViewController.swift */,
+			);
+			path = Article;
 			sourceTree = "<group>";
 		};
 		28FC6C39278D8C39007E3BD5 /* Location */ = {
@@ -483,10 +497,12 @@
 				28534B6B27804F7A00CC9120 /* AppDelegate.swift in Sources */,
 				28534BAB27809E0400CC9120 /* ArticleList.swift in Sources */,
 				28DC0B58278EC71700C5E404 /* WorkshopListViewController.swift in Sources */,
+				28DC0B67278F56C000C5E404 /* ArticleContentViewController.swift in Sources */,
 				28534B7527804F7A00CC9120 /* MobileAssignment.xcdatamodeld in Sources */,
 				28FC6C3F278D8CEA007E3BD5 /* LocationManager.swift in Sources */,
 				28534B6D27804F7A00CC9120 /* SceneDelegate.swift in Sources */,
 				28DC0B60278EF82100C5E404 /* WorkshopSignupInvoiceViewController.swift in Sources */,
+				28DC0B69278F5C1C00C5E404 /* ArticleStatus.swift in Sources */,
 				2815C5BB27832974007795E6 /* ConfirmAndPayController.swift in Sources */,
 				2815C5B927830528007795E6 /* PreviewCreateYourOwnPhotosController.swift in Sources */,
 				28DC0B5A278EC72C00C5E404 /* WorkshopContentViewController.swift in Sources */,
