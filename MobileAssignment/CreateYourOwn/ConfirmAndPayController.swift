@@ -181,8 +181,6 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
 //            print(self.view.frame.origin.y == -310.0)
         }
     }
-    
-    
 
     @objc private func keyboardWillHide() {
         self.view.frame.origin.y = 0

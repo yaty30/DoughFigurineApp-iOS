@@ -23,4 +23,20 @@ struct workshopContent {
     static var ticketFeeCaption: String = ""
     static var ticketDescriptionOne: String = ""
     static var ticketDescriptionTwo: String = ""
+    static var timeslot = [String]()
+}
+
+struct workshopSignup {
+    static var workshop: String = ""
+    static var firstname: String = ""
+    static var lastname: String = ""
+    static var tel: String = ""
+    static var emailAddress: String = ""
+    static var timeslot: String = "10:00 am" // default value of picker
+    static var pax: String = ""
+    static var workshopSignupID: String = ""
+}
+
+struct workshopResevationSearch {
+    static var id: String = ""
 }

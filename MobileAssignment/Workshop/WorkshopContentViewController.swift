@@ -37,7 +37,6 @@ class WorkshopContentViewController: UIViewController {
     @IBOutlet weak var ticketDescriptionOne: UILabel!
     @IBOutlet weak var ticketDescriptionTwo: UILabel!
     
-    
     @IBOutlet weak var language: UILabel!
     
     override func viewDidLoad() {
@@ -101,6 +100,9 @@ class WorkshopContentViewController: UIViewController {
             let arr = res as? NSArray
             DispatchQueue.main.async {
                 label.text = "\(arr![index])"
+                if(field == "times") {
+                    workshopContent.timeslot.append(arr![index] as! String)
+                }
             }
         }
     }
@@ -132,11 +134,12 @@ class WorkshopContentViewController: UIViewController {
                 pin.title = "Workshop Venue"
                 self!.venueMap.addAnnotation(pin)
 
-                let region = MKCoordinateRegion(center: locations[0].Coordinates!, span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+                let region = MKCoordinateRegion(center: locations[0].Coordinates!, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
                 self!.venueMap.setRegion(region, animated: true)
 
                 done()
             }
         }
     }
+    
 }

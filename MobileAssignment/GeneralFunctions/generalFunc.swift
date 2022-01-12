@@ -22,6 +22,11 @@ public func randomString() -> String {
     return String((0..<4).map{ _ in letters.randomElement()! })
 }
 
+public func randomNumbers() -> String {
+    let alphas = "0123456789"
+    return String((0..<4).map{ _ in alphas.randomElement()! })
+}
+
 public func getTimeAndDate(type: String) -> String {
     let date = Date()
     let format = DateFormatter()

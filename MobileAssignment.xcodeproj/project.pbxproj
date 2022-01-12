@@ -51,6 +51,10 @@
 		28DC0B58278EC71700C5E404 /* WorkshopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B57278EC71700C5E404 /* WorkshopListViewController.swift */; };
 		28DC0B5A278EC72C00C5E404 /* WorkshopContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B59278EC72C00C5E404 /* WorkshopContentViewController.swift */; };
 		28DC0B5C278EDE7700C5E404 /* WorkshopStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B5B278EDE7700C5E404 /* WorkshopStatus.swift */; };
+		28DC0B5E278EEE6E00C5E404 /* WorkshopSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B5D278EEE6D00C5E404 /* WorkshopSignUpViewController.swift */; };
+		28DC0B60278EF82100C5E404 /* WorkshopSignupInvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B5F278EF82100C5E404 /* WorkshopSignupInvoiceViewController.swift */; };
+		28DC0B62278F04CB00C5E404 /* WorkshopReservationSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B61278F04CB00C5E404 /* WorkshopReservationSearchResultViewController.swift */; };
+		28DC0B64278F0C7100C5E404 /* WorkshopReservationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B63278F0C7100C5E404 /* WorkshopReservationSearchViewController.swift */; };
 		28FC6C3F278D8CEA007E3BD5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC6C3E278D8CEA007E3BD5 /* LocationManager.swift */; };
 		28FC6C42278D8DC1007E3BD5 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 28FC6C41278D8DC1007E3BD5 /* FloatingPanel */; };
 		28FC6C44278D8F79007E3BD5 /* TrackingInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC6C43278D8F78007E3BD5 /* TrackingInformationViewController.swift */; };
@@ -110,6 +114,10 @@
 		28DC0B57278EC71700C5E404 /* WorkshopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopListViewController.swift; sourceTree = "<group>"; };
 		28DC0B59278EC72C00C5E404 /* WorkshopContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopContentViewController.swift; sourceTree = "<group>"; };
 		28DC0B5B278EDE7700C5E404 /* WorkshopStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopStatus.swift; sourceTree = "<group>"; };
+		28DC0B5D278EEE6D00C5E404 /* WorkshopSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopSignUpViewController.swift; sourceTree = "<group>"; };
+		28DC0B5F278EF82100C5E404 /* WorkshopSignupInvoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopSignupInvoiceViewController.swift; sourceTree = "<group>"; };
+		28DC0B61278F04CB00C5E404 /* WorkshopReservationSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopReservationSearchResultViewController.swift; sourceTree = "<group>"; };
+		28DC0B63278F0C7100C5E404 /* WorkshopReservationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopReservationSearchViewController.swift; sourceTree = "<group>"; };
 		28FC6C3E278D8CEA007E3BD5 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		28FC6C43278D8F78007E3BD5 /* TrackingInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -288,6 +296,10 @@
 			children = (
 				28DC0B57278EC71700C5E404 /* WorkshopListViewController.swift */,
 				28DC0B59278EC72C00C5E404 /* WorkshopContentViewController.swift */,
+				28DC0B5D278EEE6D00C5E404 /* WorkshopSignUpViewController.swift */,
+				28DC0B5F278EF82100C5E404 /* WorkshopSignupInvoiceViewController.swift */,
+				28DC0B61278F04CB00C5E404 /* WorkshopReservationSearchResultViewController.swift */,
+				28DC0B63278F0C7100C5E404 /* WorkshopReservationSearchViewController.swift */,
 			);
 			path = Workshop;
 			sourceTree = "<group>";
@@ -456,9 +468,11 @@
 			files = (
 				281F2E862784B81F00551F98 /* Firebase.swift in Sources */,
 				28534BB32780DE0B00CC9120 /* ArticleListController.swift in Sources */,
+				28DC0B62278F04CB00C5E404 /* WorkshopReservationSearchResultViewController.swift in Sources */,
 				28CD576027884F4600F99CCA /* generalFunc.swift in Sources */,
 				28534BB92782D31900CC9120 /* CreateYourOwnController.swift in Sources */,
 				28AF29002785EE8B0026D6F2 /* ItemTrackingViewController.swift in Sources */,
+				28DC0B5E278EEE6E00C5E404 /* WorkshopSignUpViewController.swift in Sources */,
 				2815C5C127834F5E007795E6 /* GlobalStatus.swift in Sources */,
 				28AF2902278622230026D6F2 /* InvoiceTrackingViewController.swift in Sources */,
 				28FC6C44278D8F79007E3BD5 /* TrackingInformationViewController.swift in Sources */,
@@ -472,9 +486,11 @@
 				28534B7527804F7A00CC9120 /* MobileAssignment.xcdatamodeld in Sources */,
 				28FC6C3F278D8CEA007E3BD5 /* LocationManager.swift in Sources */,
 				28534B6D27804F7A00CC9120 /* SceneDelegate.swift in Sources */,
+				28DC0B60278EF82100C5E404 /* WorkshopSignupInvoiceViewController.swift in Sources */,
 				2815C5BB27832974007795E6 /* ConfirmAndPayController.swift in Sources */,
 				2815C5B927830528007795E6 /* PreviewCreateYourOwnPhotosController.swift in Sources */,
 				28DC0B5A278EC72C00C5E404 /* WorkshopContentViewController.swift in Sources */,
+				28DC0B64278F0C7100C5E404 /* WorkshopReservationSearchViewController.swift in Sources */,
 				2815C5C627841034007795E6 /* CreateYourOwnInvoiceStatus.swift in Sources */,
 				28DC0B5C278EDE7700C5E404 /* WorkshopStatus.swift in Sources */,
 				285574702786B44500527CCB /* ItemTrackingInvoiceDetailViewController.swift in Sources */,
