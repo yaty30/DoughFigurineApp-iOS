@@ -63,14 +63,20 @@ class FinalInvoiceViewController: UIViewController {
     @IBOutlet weak var paidOn: UILabel!
     @IBOutlet weak var paidAt: UILabel!
     
+    @IBOutlet weak var outterLoadingView: UIView!
+    @IBOutlet weak var outterLoading: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        outterLoading.startAnimating()
 
         getInvoiceInfo()
         getShippingInfo()
         getPaymentInfo()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...1.6)) {
+            self.outterLoadingView.isHidden = true
             self.loadingView.isHidden = true
             self.mapCreate(done: {})
         }

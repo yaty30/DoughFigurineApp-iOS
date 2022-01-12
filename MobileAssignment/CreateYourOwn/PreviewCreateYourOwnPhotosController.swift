@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class PreviewCreateYourOwnPhotosController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     let db = firebase.db
     
@@ -38,13 +38,63 @@ class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerCont
     
     @IBAction func retakeImage(_ sender: Any) {
         currentButtonIndex = (sender as AnyObject).tag
-        let picker = UIImagePickerController()
-        picker.sourceType = .camera
-        picker.delegate = self
-        print("...")
-        present(picker, animated: true )
+        self.getImageActionSheet()
     }
 
+//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+//        picker.dismiss(animated: true, completion: nil)
+//    }
+//
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//
+//        picker.dismiss(animated: true, completion: nil)
+//        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+//
+//        if(currentButtonIndex == 0) {
+//            frontViewImage.image = image
+//        } else if(currentButtonIndex == 1) {
+//            backViewImage.image = image
+//        } else if(currentButtonIndex == 2) {
+//            topViewImage.image = image
+//        } else { print("Incorrect button index") }
+//
+//    }
+    
+    func getImageActionSheet() {
+        let title = currentButtonIndex == 0 ? "Front View" : currentButtonIndex == 1 ? "Back View" : "Top View"
+
+        let actionSheet = UIAlertController(title: title, message: "How will you like to select the \(title) picture?", preferredStyle: .actionSheet)
+
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: { [weak self] _ in
+
+            self?.presentCamera()
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Choose Photo from Library", style: .default, handler: { [weak self] _ in
+
+            self?.presentPhotoPicker()
+
+        }))
+
+        present(actionSheet, animated: true)
+    }
+    
+    func presentCamera() {
+        let camera = UIImagePickerController()
+        camera.sourceType = .camera
+        camera.delegate = self
+        camera.allowsEditing = true
+        present(camera, animated: true )
+    }
+    
+    func presentPhotoPicker() {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        picker.allowsEditing = true
+        present(picker, animated: true )
+    }
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
@@ -52,7 +102,7 @@ class PreviewCreateYourOwnPhotosController: UIViewController,  UIImagePickerCont
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         picker.dismiss(animated: true, completion: nil)
-        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
         
         if(currentButtonIndex == 0) {
             frontViewImage.image = image

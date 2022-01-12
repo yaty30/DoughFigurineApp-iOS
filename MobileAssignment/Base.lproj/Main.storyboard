@@ -2632,6 +2632,17 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JGd-OH-3JA">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gJ9-Zn-EmQ">
+                                        <rect key="frame" x="204" y="453" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h81-tP-ieX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2640,6 +2651,8 @@
                         <outlet property="contactNumber" destination="gVn-T1-UhK" id="kj6-kr-Efb"/>
                         <outlet property="emailAddress" destination="MOU-1i-6JF" id="6DP-pB-wee"/>
                         <outlet property="name" destination="mjJ-gH-Yhh" id="MQF-e0-UXK"/>
+                        <outlet property="outterLoading" destination="gJ9-Zn-EmQ" id="LBR-gH-EqF"/>
+                        <outlet property="outterLoadingView" destination="JGd-OH-3JA" id="III-68-mVH"/>
                         <outlet property="pax" destination="cXT-fD-m5R" id="UkI-OL-sAU"/>
                         <outlet property="signupDate" destination="yNs-Xr-SJ2" id="75d-Ce-YR8"/>
                         <outlet property="signupID" destination="SCp-TE-Leb" id="1UN-v3-jvG"/>
@@ -3684,6 +3697,17 @@
                                     <segue destination="gqo-2B-zBr" kind="modal" modalPresentationStyle="fullScreen" id="rJJ-Vq-p8v"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efM-qX-qbQ">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="xec-t0-yTw">
+                                        <rect key="frame" x="204" y="453" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h3e-wZ-aOC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -3702,6 +3726,8 @@
                         <outlet property="name" destination="RFj-TW-2Mz" id="4Ga-oA-VHJ"/>
                         <outlet property="orderDate" destination="SuK-jK-key" id="rKs-lB-vu7"/>
                         <outlet property="orderTime" destination="hYC-LL-tIZ" id="Hvh-k0-kRV"/>
+                        <outlet property="outterLoading" destination="xec-t0-yTw" id="hoh-qW-Kcl"/>
+                        <outlet property="outterLoadingView" destination="efM-qX-qbQ" id="Wcb-hH-tRe"/>
                         <outlet property="paidAmount" destination="iyf-gr-WVY" id="7Qa-gP-sUQ"/>
                         <outlet property="paidAt" destination="CYZ-p0-Bqw" id="1xj-4k-3w8"/>
                         <outlet property="paidOn" destination="V7M-eq-Vhb" id="sV6-8B-u2l"/>
@@ -3714,7 +3740,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yJ-8v-1dR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5114" y="-760"/>
+            <point key="canvasLocation" x="5112.6168224299063" y="-760.0431965442765"/>
         </scene>
         <!--Workshop Reservation Search Result View Controller-->
         <scene sceneID="EUA-dW-LoR">
@@ -4127,12 +4153,12 @@
     <inferredMetricsTieBreakers>
         <segue reference="0fs-bp-z5F"/>
         <segue reference="hwE-y8-Vxk"/>
-        <segue reference="mTg-zw-ugl"/>
+        <segue reference="4Px-CK-E1b"/>
         <segue reference="RT6-BM-Qkm"/>
         <segue reference="cAk-Xs-qEa"/>
         <segue reference="rdp-yv-2wg"/>
         <segue reference="bLw-Ev-GvK"/>
-        <segue reference="qDk-RB-YeS"/>
+        <segue reference="rJJ-Vq-p8v"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="article_big_2" width="924" height="1324"/>

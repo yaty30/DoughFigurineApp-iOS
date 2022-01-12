@@ -26,8 +26,13 @@ class WorkshopSignupInvoiceViewController: UIViewController {
     @IBOutlet weak var signupDate: UILabel!
     @IBOutlet weak var signupTime: UILabel!
     
+    @IBOutlet weak var outterLoadingView: UIView!
+    @IBOutlet weak var outterLoading: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        outterLoading.startAnimating()
 
         print(workshopSignup.workshopSignupID)
         fetch()
@@ -46,6 +51,8 @@ class WorkshopSignupInvoiceViewController: UIViewController {
         
         fetchSignupRecord("signupDate", signupDate)
         fetchSignupRecord("signupTime", signupTime)
+        
+        outterLoadingView.isHidden = true
     }
     
     func fetchSignupRecord(_ field: String, _ label: UILabel) {
