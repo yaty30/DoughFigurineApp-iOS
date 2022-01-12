@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gqo-2B-zBr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gqo-2B-zBr">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,6 +11,10 @@
         <scene sceneID="Wl6-gz-rT1">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="gqo-2B-zBr" customClass="ViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NcG-4k-B2i"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xbj-gz-qcr"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rFk-N7-Jem">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -233,7 +236,7 @@
                                                 <rect key="frame" x="27" y="10" width="374" height="227"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S5y-Ut-NPk">
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5y-Ut-NPk">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="227"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xF5-gZ-CTL" userLabel="Horizontal Scroll View">
@@ -392,6 +395,7 @@
                                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                                 <connections>
                                                     <action selector="smallArticle:" destination="gqo-2B-zBr" eventType="touchUpInside" id="n8z-El-RqV"/>
+                                                    <segue destination="ihX-OC-kX6" kind="modal" modalPresentationStyle="fullScreen" id="RBi-30-kzk"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNH-Ka-wV5" userLabel="big article 2">
@@ -435,7 +439,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="NpJ-Ux-LFF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="m93-sI-ONs"/>
@@ -453,6 +456,10 @@
         <scene sceneID="0DT-aQ-7c4">
             <objects>
                 <viewController id="8NS-5O-imY" customClass="LoginViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mj7-lg-jsJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="5rP-xC-MBC"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qNf-6I-xeY">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -496,7 +503,6 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="jPK-39-qeA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
@@ -513,6 +519,10 @@
         <scene sceneID="TlU-ob-9oG">
             <objects>
                 <viewController id="k5P-9r-wkW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lws-IL-hsy"/>
+                        <viewControllerLayoutGuide type="bottom" id="ACK-XH-kLF"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1jJ-jj-pVM">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -581,7 +591,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Huh-Mz-rsw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <toolbarItems/>
@@ -596,6 +605,10 @@
         <scene sceneID="yG8-NS-AcZ">
             <objects>
                 <viewController id="e2T-7Y-cJY" customClass="CreateYourOwnController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qDw-n4-w4G"/>
+                        <viewControllerLayoutGuide type="bottom" id="O22-ei-LRu"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mBC-EG-oO8">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -775,7 +788,6 @@
                                 <color key="backgroundColor" red="0.90980392156862744" green="0.93333333333333335" blue="0.98039215686274506" alpha="0.65572059075563949" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="nQx-mm-N8m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="YVI-fT-gpw"/>
@@ -800,6 +812,10 @@
         <scene sceneID="FAG-nO-T4W">
             <objects>
                 <viewController id="MFJ-Qh-7wL" customClass="ConfirmAndPayController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ifa-X3-0DB"/>
+                        <viewControllerLayoutGuide type="bottom" id="ls4-kC-WiD"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6GV-9S-Ka7">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1112,7 +1128,6 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="s8Q-d2-6uQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9Vx-te-X6W" firstAttribute="width" secondItem="6GV-9S-Ka7" secondAttribute="width" id="0ca-hz-hB6"/>
@@ -1152,6 +1167,10 @@
         <scene sceneID="B3u-L9-Lgg">
             <objects>
                 <viewController id="9D3-8m-BHv" customClass="ConfirmAndPayController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Edl-MJ-fDf"/>
+                        <viewControllerLayoutGuide type="bottom" id="JLv-Bz-4hS"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="smX-Ip-KdW">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1185,7 +1204,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="S1e-5q-yy9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
@@ -1197,6 +1215,10 @@
         <scene sceneID="Dbo-Gb-6Pc">
             <objects>
                 <viewController id="FUK-Ve-tSP" customClass="PreviewCreateYourOwnPhotosController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h9x-bf-NM4"/>
+                        <viewControllerLayoutGuide type="bottom" id="lb8-xC-xlL"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="udo-QL-U2o">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1436,7 +1458,6 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="a9w-Jm-aKM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
@@ -1456,6 +1477,10 @@
         <scene sceneID="cpD-Fe-Zva">
             <objects>
                 <viewController id="eoN-ce-osi" customClass="InvoiceTrackingViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KPS-ba-yso"/>
+                        <viewControllerLayoutGuide type="bottom" id="dXh-Nl-ezT"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="26J-Yd-KhQ">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1477,7 +1502,6 @@
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="inB-4M-V91"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
@@ -1492,6 +1516,10 @@
         <scene sceneID="UNC-r5-6Qv">
             <objects>
                 <viewController id="ocw-hK-cxI" customClass="TrackingInformationViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gIz-Z9-m8e"/>
+                        <viewControllerLayoutGuide type="bottom" id="e5h-pN-jhy"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aof-Uu-tci">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1627,7 +1655,6 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="pfc-pG-QDp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
@@ -1639,6 +1666,10 @@
         <scene sceneID="Lvz-QE-IKm">
             <objects>
                 <viewController id="yhJ-gW-UKf" customClass="ArticleContentViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6wm-7m-uqs"/>
+                        <viewControllerLayoutGuide type="bottom" id="aVU-nD-jGa"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DBY-sE-4HJ">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1837,7 +1868,6 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="50c-Ks-OTo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
@@ -1863,11 +1893,15 @@
         <scene sceneID="QSo-Vh-mB9">
             <objects>
                 <viewController id="ihX-OC-kX6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tam-BR-1bY"/>
+                        <viewControllerLayoutGuide type="bottom" id="1lh-Bf-Eml"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ctb-fs-Kek">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="VOw-lt-dTr" userLabel="Information View">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" id="VOw-lt-dTr" userLabel="Information View">
                                 <rect key="frame" x="0.0" y="-1" width="428" height="927"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -2003,18 +2037,21 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Oi0-PM-dW9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kHc-NS-NEI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="333.64485981308411" y="680.99352051835854"/>
+            <point key="canvasLocation" x="426" y="719"/>
         </scene>
         <!--Item Tracking View Controller-->
         <scene sceneID="hQf-G1-c23">
             <objects>
                 <viewController id="obP-P4-jv5" customClass="ItemTrackingViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IY9-fl-HOC"/>
+                        <viewControllerLayoutGuide type="bottom" id="gbb-yq-lZP"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jZ7-TS-jdi">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2090,7 +2127,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Pti-SL-LjC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
@@ -2108,6 +2144,10 @@
         <scene sceneID="yfC-M5-cLB">
             <objects>
                 <viewController id="Met-Nx-KlF" customClass="WorkshopListViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pQq-hU-zWq"/>
+                        <viewControllerLayoutGuide type="bottom" id="CCz-Ja-aOI"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kOu-6X-oHc">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2292,7 +2332,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Ule-4y-viQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Lsw-Qo-fxT"/>
@@ -2305,6 +2344,10 @@
         <scene sceneID="hu0-d7-PHK">
             <objects>
                 <viewController id="KP7-aH-maA" customClass="WorkshopReservationSearchViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rwU-eI-SrI"/>
+                        <viewControllerLayoutGuide type="bottom" id="f9b-RZ-lLx"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dha-JU-Qxd">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2382,7 +2425,6 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="2OY-a9-UpP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="DXN-1q-UPy"/>
@@ -2400,6 +2442,10 @@
         <scene sceneID="eh7-uV-nnT">
             <objects>
                 <viewController id="3MG-zC-C7M" customClass="WorkshopContentViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qyk-Y1-cIq"/>
+                        <viewControllerLayoutGuide type="bottom" id="GET-Ea-6IH"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hpW-3g-WSg">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2536,7 +2582,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZF-0P-bLk">
                                                                 <rect key="frame" x="15" y="138" width="363" height="269"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <mutableString key="text">The traditional craft of dough figure sculpting is fun to learn. Join our workshop and try your hand at traditional modelling techniques and create a 10cm-high miniature warrior inspired by the lead character of the Xiqu Centre’s experimental Cantonese opera production Wenguang Explores the Valley. Using coloured dough, and guided by veteran master craftsman Moses Law Chung-man, you will learn how to bring your figures to life by delicately shaping clothes, accessories, headwear and even facial expressions and gestures. </mutableString>
+                                                                <string key="text">The traditional craft of dough figure sculpting is fun to learn. Join our workshop and try your hand at traditional modelling techniques and create a 10cm-high miniature warrior inspired by the lead character of the Xiqu Centre’s experimental Cantonese opera production Wenguang Explores the Valley. Using coloured dough, and guided by veteran master craftsman Moses Law Chung-man, you will learn how to bring your figures to life by delicately shaping clothes, accessories, headwear and even facial expressions and gestures. </string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2687,7 +2733,6 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="xks-OV-jfg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
@@ -2718,6 +2763,10 @@
         <scene sceneID="zll-xT-uoz">
             <objects>
                 <viewController id="vJ2-iS-kcL" customClass="WorkshopSignUpViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yG3-nw-3Kz"/>
+                        <viewControllerLayoutGuide type="bottom" id="EGf-wl-5vy"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pae-B3-6Rc">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2792,7 +2841,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="ptb-3c-yPG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
@@ -2813,6 +2861,10 @@
         <scene sceneID="jcq-Bm-hqS">
             <objects>
                 <viewController id="pSB-9g-fdK" customClass="WorkshopSignupInvoiceViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2eS-qG-3Z9"/>
+                        <viewControllerLayoutGuide type="bottom" id="0O6-ox-5Mh"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="P2f-ED-SXN">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3006,7 +3058,6 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="h81-tP-ieX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
@@ -3031,6 +3082,10 @@
         <scene sceneID="2ba-GY-4in">
             <objects>
                 <viewController storyboardIdentifier="invoiceSearchResultViewController" id="z3k-ge-WG1" customClass="ItemTrackingInvoiceDetailViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yGb-QP-ukq"/>
+                        <viewControllerLayoutGuide type="bottom" id="rI9-Xq-EId"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Z2t-LX-gnG">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3516,7 +3571,6 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="v4N-qj-WGJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
@@ -3558,6 +3612,10 @@
         <scene sceneID="hGS-M9-1lA">
             <objects>
                 <viewController id="gFF-5G-08r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bfW-9u-44i"/>
+                        <viewControllerLayoutGuide type="bottom" id="G1K-T3-YNn"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7nJ-8W-2xn">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3574,7 +3632,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="HMU-JR-3ps"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
@@ -3586,6 +3643,10 @@
         <scene sceneID="7AD-EY-hHg">
             <objects>
                 <viewController id="JEu-kZ-qQA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Eb1-x4-Bvu"/>
+                        <viewControllerLayoutGuide type="bottom" id="Atf-Ym-Fht"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NM5-BE-Bdx">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3673,7 +3734,6 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="azc-HS-00N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
@@ -3685,6 +3745,10 @@
         <scene sceneID="2dC-bb-h4B">
             <objects>
                 <viewController id="cnr-zN-z9i" customClass="FinalInvoiceViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Vv-E8-ffL"/>
+                        <viewControllerLayoutGuide type="bottom" id="JCi-Kq-UgO"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XPq-i9-nld">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4071,7 +4135,6 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="h3e-wZ-aOC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
@@ -4108,6 +4171,10 @@
         <scene sceneID="EUA-dW-LoR">
             <objects>
                 <viewController id="SeF-TX-7a8" customClass="WorkshopReservationSearchResultViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M4u-1v-j4X"/>
+                        <viewControllerLayoutGuide type="bottom" id="U0O-5w-kYb"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KUP-Zy-mLi">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4482,7 +4549,6 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="HTz-gk-zEb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>

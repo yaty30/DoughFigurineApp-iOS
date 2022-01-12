@@ -1,0 +1,954 @@
+
+/* Class = "UILabel"; text = "Xiqu Centre Studio"; ObjectID = "0A1-d6-yx2"; */
+"0A1-d6-yx2.text" = "Xiqu Centre Studio";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "0GM-ig-q9R"; */
+"0GM-ig-q9R.text" = "___________________________________";
+
+/* Class = "UILabel"; text = "order_date"; ObjectID = "0Vt-Qn-aHo"; */
+"0Vt-Qn-aHo.text" = "order_date";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0ia-gz-5iV"; */
+"0ia-gz-5iV.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Date: 0000-00-00"; ObjectID = "0jZ-XX-Vki"; */
+"0jZ-XX-Vki.text" = "Date: 0000-00-00";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "15t-aS-ZYd"; */
+"15t-aS-ZYd.text" = "___________________________________";
+
+/* Class = "UILabel"; text = "HK$250 per person_dev"; ObjectID = "1DO-dk-TdZ"; */
+"1DO-dk-TdZ.text" = "HK$250 per person_dev";
+
+/* Class = "UILabel"; text = "Find Your Reseveration"; ObjectID = "1wY-BH-7m5"; */
+"1wY-BH-7m5.text" = "Find Your Reseveration";
+
+/* Class = "UILabel"; text = "00:00 am"; ObjectID = "1zr-RH-RQp"; */
+"1zr-RH-RQp.text" = "00:00 am";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2So-Q3-u6b"; */
+"2So-Q3-u6b.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "AMOUNT"; ObjectID = "2Xo-M5-n8E"; */
+"2Xo-M5-n8E.text" = "AMOUNT";
+
+/* Class = "UILabel"; text = "23 Tong Chung Street_dev"; ObjectID = "2gT-OZ-tXo"; */
+"2gT-OZ-tXo.text" = "23 Tong Chung Street_dev";
+
+/* Class = "UILabel"; text = "Customer"; ObjectID = "3dJ-te-DxY"; */
+"3dJ-te-DxY.text" = "Customer";
+
+/* Class = "UILabel"; text = "00:00 am"; ObjectID = "3dg-4z-XRx"; */
+"3dg-4z-XRx.text" = "00:00 am";
+
+/* Class = "UILabel"; text = "Total(HKD)"; ObjectID = "45s-4K-3Ui"; */
+"45s-4K-3Ui.text" = "Total(HKD)";
+
+/* Class = "UILabel"; text = "Law Chung-man is an artist of dough figurine crafting, namely the art of sculpting dolls made of steamed flour doughs. This traditional art is believed to have more than two thousand years in China and was recognized as the country’s National Intangible Cultural Heritage in 2008."; ObjectID = "4Fz-JW-IXZ"; */
+"4Fz-JW-IXZ.text" = "Law Chung-man is an artist of dough figurine crafting, namely the art of sculpting dolls made of steamed flour doughs. This traditional art is believed to have more than two thousand years in China and was recognized as the country’s National Intangible Cultural Heritage in 2008.";
+
+/* Class = "UILabel"; text = "Pax"; ObjectID = "4Ol-xT-eAQ"; */
+"4Ol-xT-eAQ.text" = "Pax";
+
+/* Class = "UILabel"; text = "Deliver within"; ObjectID = "4aG-We-go2"; */
+"4aG-We-go2.text" = "Deliver within";
+
+/* Class = "UILabel"; text = "Tak a picture of the object from the top"; ObjectID = "4dI-Qf-Oru"; */
+"4dI-Qf-Oru.text" = "Tak a picture of the object from the top";
+
+/* Class = "UILabel"; text = "Date and time"; ObjectID = "5K6-VH-Xhb"; */
+"5K6-VH-Xhb.text" = "Date and time";
+
+/* Class = "UILabel"; text = "Figurines"; ObjectID = "5ur-HP-JhJ"; */
+"5ur-HP-JhJ.text" = "Figurines";
+
+/* Class = "UILabel"; text = "total"; ObjectID = "5zy-2L-zU4"; */
+"5zy-2L-zU4.text" = "total";
+
+/* Class = "UILabel"; text = "Tickets"; ObjectID = "6Og-zS-gvO"; */
+"6Og-zS-gvO.text" = "Tickets";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6Vs-Az-NXi"; */
+"6Vs-Az-NXi.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6pS-Cm-OnY"; */
+"6pS-Cm-OnY.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Creating a customise dough figurine by uploading a photo or picture and we will send it to the dough figure craftman to craft out the dough figure you want."; ObjectID = "7sP-OP-jCc"; */
+"7sP-OP-jCc.text" = "Creating a customise dough figurine by uploading a photo or picture and we will send it to the dough figure craftman to craft out the dough figure you want.";
+
+/* Class = "UITextField"; placeholder = "District*"; ObjectID = "8DC-Gy-Qkh"; */
+"8DC-Gy-Qkh.placeholder" = "District*";
+
+/* Class = "UITextField"; text = "Hong Kong Island"; ObjectID = "8DC-Gy-Qkh"; */
+"8DC-Gy-Qkh.text" = "Hong Kong Island";
+
+/* Class = "UILabel"; text = "Paid at"; ObjectID = "8I2-5Q-Wv0"; */
+"8I2-5Q-Wv0.text" = "Paid at";
+
+/* Class = "UIButton"; configuration.title = " NO"; ObjectID = "8IY-sr-kdb"; */
+"8IY-sr-kdb.configuration.title" = " NO";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8IY-sr-kdb"; */
+"8IY-sr-kdb.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Order Date:"; ObjectID = "8Lp-aY-opW"; */
+"8Lp-aY-opW.text" = "Order Date:";
+
+/* Class = "UILabel"; text = "Approximately 3 hours _dev"; ObjectID = "8s3-oE-GTy"; */
+"8s3-oE-GTy.text" = "Approximately 3 hours _dev";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "8v9-yv-GD0"; */
+"8v9-yv-GD0.text" = "___________________________________";
+
+/* Class = "UILabel"; text = "coming up soon"; ObjectID = "94Q-em-NDd"; */
+"94Q-em-NDd.text" = "coming up soon";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "9Tg-n1-sRl"; */
+"9Tg-n1-sRl.text" = "0";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "9ZZ-Go-UZe"; */
+"9ZZ-Go-UZe.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Learn traditional dough modelling techniques and create your own mini Chinese opera warrior."; ObjectID = "9yY-jT-TJX"; */
+"9yY-jT-TJX.text" = "Learn traditional dough modelling techniques and create your own mini Chinese opera warrior.";
+
+/* Class = "UILabel"; text = "Order Time:"; ObjectID = "A0x-H3-8hA"; */
+"A0x-H3-8hA.text" = "Order Time:";
+
+/* Class = "UILabel"; text = "James Yip_dev"; ObjectID = "AUO-qz-KmT"; */
+"AUO-qz-KmT.text" = "James Yip_dev";
+
+/* Class = "UILabel"; text = "Workshop: Mini Dough Warrior"; ObjectID = "AY3-Zv-YRP"; */
+"AY3-Zv-YRP.text" = "Workshop: Mini Dough Warrior";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "AsX-6E-YeI"; */
+"AsX-6E-YeI.text" = "Language";
+
+/* Class = "UILabel"; text = "Article Title"; ObjectID = "Axn-bj-LF6"; */
+"Axn-bj-LF6.text" = "Article Title";
+
+/* Class = "UILabel"; text = "00:00 am"; ObjectID = "B68-SR-KUX"; */
+"B68-SR-KUX.text" = "00:00 am";
+
+/* Class = "UILabel"; text = "order_time"; ObjectID = "BBO-wB-6xf"; */
+"BBO-wB-6xf.text" = "order_time";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "BQE-vl-bXe"; */
+"BQE-vl-bXe.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Yes, I'm sure"; ObjectID = "Bi4-cL-tn6"; */
+"Bi4-cL-tn6.configuration.title" = "Yes, I'm sure";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Bi4-cL-tn6"; */
+"Bi4-cL-tn6.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Invoice #0000000"; ObjectID = "Bu9-Gc-a9f"; */
+"Bu9-Gc-a9f.text" = "Invoice #0000000";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "Buk-58-DmW"; */
+"Buk-58-DmW.text" = "___________________________________";
+
+/* Class = "UILabel"; text = "Law Chung-man"; ObjectID = "C6K-Ug-jdN"; */
+"C6K-Ug-jdN.text" = "Law Chung-man";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "CXe-Cd-Y8X"; */
+"CXe-Cd-Y8X.text" = "___________________________________";
+
+/* Class = "UILabel"; text = "23:59:59"; ObjectID = "CYZ-p0-Bqw"; */
+"CYZ-p0-Bqw.text" = "23:59:59";
+
+/* Class = "UILabel"; text = "Sign up time"; ObjectID = "Cps-4i-IwW"; */
+"Cps-4i-IwW.text" = "Sign up time";
+
+/* Class = "UIButton"; configuration.title = "Find my workshop reservation"; ObjectID = "CxB-fw-exX"; */
+"CxB-fw-exX.configuration.title" = "Find my workshop reservation";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "CxB-fw-exX"; */
+"CxB-fw-exX.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Sign up info"; ObjectID = "DdX-hI-pKa"; */
+"DdX-hI-pKa.text" = "Sign up info";
+
+/* Class = "UILabel"; text = "Workshop: Mini Dough Warrior"; ObjectID = "E54-x9-s6X"; */
+"E54-x9-s6X.text" = "Workshop: Mini Dough Warrior";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "E9n-ag-oyZ"; */
+"E9n-ag-oyZ.text" = "___________________________________";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "E9x-gY-uZn"; */
+"E9x-gY-uZn.text" = "___________________________________";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "EKP-pt-MSZ"; */
+"EKP-pt-MSZ.text" = "___________________________________";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ELf-Lo-dwE"; */
+"ELf-Lo-dwE.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "EM2-hp-BDG"; */
+"EM2-hp-BDG.text" = "___________________________________";
+
+/* Class = "UILabel"; text = "Your Deliver Address"; ObjectID = "ERw-Az-b9V"; */
+"ERw-Az-b9V.text" = "Your Deliver Address";
+
+/* Class = "UILabel"; text = "5123 4123_dev"; ObjectID = "Eqb-ZV-3cZ"; */
+"Eqb-ZV-3cZ.text" = "5123 4123_dev";
+
+/* Class = "UILabel"; text = "Customise Dough Figurine"; ObjectID = "FXl-8e-REU"; */
+"FXl-8e-REU.text" = "Customise Dough Figurine";
+
+/* Class = "UITextField"; placeholder = "Floor*"; ObjectID = "Fyu-SF-c6O"; */
+"Fyu-SF-c6O.placeholder" = "Floor*";
+
+/* Class = "UITextField"; text = "1"; ObjectID = "Fyu-SF-c6O"; */
+"Fyu-SF-c6O.text" = "1";
+
+/* Class = "UILabel"; text = "Workshop: Mini Dough Warrior"; ObjectID = "G2N-vq-tSR"; */
+"G2N-vq-tSR.text" = "Workshop: Mini Dough Warrior";
+
+/* Class = "UILabel"; text = "Studio 3, Xiqu Centre_dev"; ObjectID = "GHy-J2-DqZ"; */
+"GHy-J2-DqZ.text" = "Studio 3, Xiqu Centre_dev";
+
+/* Class = "UIButton"; configuration.title = "cancel"; ObjectID = "GW7-vQ-eW3"; */
+"GW7-vQ-eW3.configuration.title" = "cancel";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "GW7-vQ-eW3"; */
+"GW7-vQ-eW3.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Customer"; ObjectID = "H8k-Ak-c0V"; */
+"H8k-Ak-c0V.text" = "Customer";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "HB6-XU-epv"; */
+"HB6-XU-epv.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Are you sure you wan to CANCEL the order?"; ObjectID = "HL2-JU-WQd"; */
+"HL2-JU-WQd.text" = "Are you sure you wan to CANCEL the order?";
+
+/* Class = "UITextField"; placeholder = "Last name*"; ObjectID = "HRy-eJ-JUT"; */
+"HRy-eJ-JUT.placeholder" = "Last name*";
+
+/* Class = "UITextField"; text = "Yip"; ObjectID = "HRy-eJ-JUT"; */
+"HRy-eJ-JUT.text" = "Yip";
+
+/* Class = "UILabel"; text = "distance_km"; ObjectID = "Haa-oU-WQ5"; */
+"Haa-oU-WQ5.text" = "distance_km";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "HlF-0X-vdH"; */
+"HlF-0X-vdH.text" = "___________________________________";
+
+/* Class = "UILabel"; text = "Invoice #0000000"; ObjectID = "I4g-Ph-1hz"; */
+"I4g-Ph-1hz.text" = "Invoice #0000000";
+
+/* Class = "UILabel"; text = "The 3-hour workshop includes modelling techniques requiring fine motor skills and is recommended for participants aged 12 or above only. Ticket holders of aged under 12 must be accompanied by an adult (maximum 1 adult per child). Each pair of participants (1 adult and 1 child) would receive one set of material only._dev"; ObjectID = "ICy-8W-BTy"; */
+"ICy-8W-BTy.text" = "The 3-hour workshop includes modelling techniques requiring fine motor skills and is recommended for participants aged 12 or above only. Ticket holders of aged under 12 must be accompanied by an adult (maximum 1 adult per child). Each pair of participants (1 adult and 1 child) would receive one set of material only._dev";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "IJF-h4-v9i"; */
+"IJF-h4-v9i.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "coming up soon"; ObjectID = "IU9-uS-NU8"; */
+"IU9-uS-NU8.text" = "coming up soon";
+
+/* Class = "UILabel"; text = "Sign up time"; ObjectID = "Ig0-Nx-yCO"; */
+"Ig0-Nx-yCO.text" = "Sign up time";
+
+/* Class = "UILabel"; text = "Order Summary"; ObjectID = "Ixs-VP-kTB"; */
+"Ixs-VP-kTB.text" = "Order Summary";
+
+/* Class = "UILabel"; text = "Artist of Dough Figurine Crafting"; ObjectID = "JBG-tP-aCF"; */
+"JBG-tP-aCF.text" = "Artist of Dough Figurine Crafting";
+
+/* Class = "UILabel"; text = "Each registered participant will receive one set of materials only. Finished products can be taken home. Tools are for use at the venue only._dev"; ObjectID = "JKe-6f-ZPn"; */
+"JKe-6f-ZPn.text" = "Each registered participant will receive one set of materials only. Finished products can be taken home. Tools are for use at the venue only._dev";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "JjU-tM-s6v"; */
+"JjU-tM-s6v.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Last name*"; ObjectID = "K2u-xG-eOr"; */
+"K2u-xG-eOr.placeholder" = "Last name*";
+
+/* Class = "UITextField"; text = "Yip"; ObjectID = "K2u-xG-eOr"; */
+"K2u-xG-eOr.text" = "Yip";
+
+/* Class = "UILabel"; text = "$399.00"; ObjectID = "Kjs-bD-nlT"; */
+"Kjs-bD-nlT.text" = "$399.00";
+
+/* Class = "UILabel"; text = "Find Your Order"; ObjectID = "KqS-Rw-dIV"; */
+"KqS-Rw-dIV.text" = "Find Your Order";
+
+/* Class = "UITextField"; placeholder = "Mobile number*"; ObjectID = "Kvf-9X-PbB"; */
+"Kvf-9X-PbB.placeholder" = "Mobile number*";
+
+/* Class = "UITextField"; text = "5222 1234"; ObjectID = "Kvf-9X-PbB"; */
+"Kvf-9X-PbB.text" = "5222 1234";
+
+/* Class = "UILabel"; text = "Search Button"; ObjectID = "LC7-z1-h90"; */
+"LC7-z1-h90.text" = "Search Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "LCR-lb-7JW"; */
+"LCR-lb-7JW.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Continue"; ObjectID = "LEd-Pt-rc3"; */
+"LEd-Pt-rc3.configuration.title" = "Continue";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "LEd-Pt-rc3"; */
+"LEd-Pt-rc3.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "AMOUNT"; ObjectID = "LMg-Mj-Xri"; */
+"LMg-Mj-Xri.text" = "AMOUNT";
+
+/* Class = "UILabel"; text = "Front View"; ObjectID = "LUK-UY-SPT"; */
+"LUK-UY-SPT.text" = "Front View";
+
+/* Class = "UILabel"; text = "5123 4123"; ObjectID = "M6K-xZ-iuA"; */
+"M6K-xZ-iuA.text" = "5123 4123";
+
+/* Class = "UILabel"; text = "josueyat318@gmail.com"; ObjectID = "MOU-1i-6JF"; */
+"MOU-1i-6JF.text" = "josueyat318@gmail.com";
+
+/* Class = "UILabel"; text = "ITEM"; ObjectID = "NE8-zO-wzo"; */
+"NE8-zO-wzo.text" = "ITEM";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "NqK-U7-S7c"; */
+"NqK-U7-S7c.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "NuP-9q-qt6"; */
+"NuP-9q-qt6.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Method"; ObjectID = "OAl-bm-Cha"; */
+"OAl-bm-Cha.text" = "Method";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "OFh-AT-9tZ"; */
+"OFh-AT-9tZ.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Input your invoice number"; ObjectID = "Odk-tF-Fs3"; */
+"Odk-tF-Fs3.placeholder" = "Input your invoice number";
+
+/* Class = "UILabel"; text = "13.11.2022"; ObjectID = "OiS-kJ-rQz"; */
+"OiS-kJ-rQz.text" = "13.11.2022";
+
+/* Class = "UILabel"; text = "Workshop: Mini Dough Warrior"; ObjectID = "P2u-vG-6sJ"; */
+"P2u-vG-6sJ.text" = "Workshop: Mini Dough Warrior";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "P5x-bC-IZe"; */
+"P5x-bC-IZe.text" = "___________________________________";
+
+/* Class = "UITextField"; placeholder = "City*"; ObjectID = "PAf-e6-64Z"; */
+"PAf-e6-64Z.placeholder" = "City*";
+
+/* Class = "UITextField"; text = "Hong Kong"; ObjectID = "PAf-e6-64Z"; */
+"PAf-e6-64Z.text" = "Hong Kong";
+
+/* Class = "UILabel"; text = "Distance from deliver"; ObjectID = "PGU-dm-GDT"; */
+"PGU-dm-GDT.text" = "Distance from deliver";
+
+/* Class = "UILabel"; text = "Cultural Affairs Bureau"; ObjectID = "PIm-Q7-q1Y"; */
+"PIm-Q7-q1Y.text" = "Cultural Affairs Bureau";
+
+/* Class = "UILabel"; text = "at 23:59 PM"; ObjectID = "PO9-o5-yu7"; */
+"PO9-o5-yu7.text" = "at 23:59 PM";
+
+/* Class = "UILabel"; text = "Paragraph 2"; ObjectID = "PSm-im-eq6"; */
+"PSm-im-eq6.text" = "Paragraph 2";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "Pg3-7C-els"; */
+"Pg3-7C-els.text" = "___________________________________";
+
+/* Class = "UITextField"; placeholder = "Send the invoice to my email address"; ObjectID = "QQM-EI-vAY"; */
+"QQM-EI-vAY.placeholder" = "Send the invoice to my email address";
+
+/* Class = "UITextField"; text = "josueyat318@gmail.com"; ObjectID = "QQM-EI-vAY"; */
+"QQM-EI-vAY.text" = "josueyat318@gmail.com";
+
+/* Class = "UILabel"; text = "10:00am_dev"; ObjectID = "QnK-UO-GFc"; */
+"QnK-UO-GFc.text" = "10:00am_dev";
+
+/* Class = "UILabel"; text = "James Yip_dev"; ObjectID = "RFj-TW-2Mz"; */
+"RFj-TW-2Mz.text" = "James Yip_dev";
+
+/* Class = "UILabel"; text = "00000_dev"; ObjectID = "RWB-WO-ZL1"; */
+"RWB-WO-ZL1.text" = "00000_dev";
+
+/* Class = "UILabel"; text = "address.........................................................."; ObjectID = "RbL-Xz-VvO"; */
+"RbL-Xz-VvO.text" = "address..........................................................";
+
+/* Class = "UILabel"; text = "WS0000"; ObjectID = "SCp-TE-Leb"; */
+"SCp-TE-Leb.text" = "WS0000";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SDg-dz-9na"; */
+"SDg-dz-9na.text" = "Label";
+
+/* Class = "UILabel"; text = "Order Summary"; ObjectID = "SHa-E3-0zM"; */
+"SHa-E3-0zM.text" = "Order Summary";
+
+/* Class = "UILabel"; text = "Info"; ObjectID = "SQb-xa-AGH"; */
+"SQb-xa-AGH.text" = "Info";
+
+/* Class = "UILabel"; text = "13 November 2022 (Saturday)_dev"; ObjectID = "SSj-xL-rSZ"; */
+"SSj-xL-rSZ.text" = "13 November 2022 (Saturday)_dev";
+
+/* Class = "UILabel"; text = "Source:"; ObjectID = "Shw-r9-Xgo"; */
+"Shw-r9-Xgo.text" = "Source:";
+
+/* Class = "UILabel"; text = "2022"; ObjectID = "SoV-YY-MiD"; */
+"SoV-YY-MiD.text" = "2022";
+
+/* Class = "UILabel"; text = "$399"; ObjectID = "Su4-je-B5h"; */
+"Su4-je-B5h.text" = "$399";
+
+/* Class = "UILabel"; text = "2 Jan 2022"; ObjectID = "SuK-jK-key"; */
+"SuK-jK-key.text" = "2 Jan 2022";
+
+/* Class = "UILabel"; text = "Paragraph title 1"; ObjectID = "TDw-5D-pyT"; */
+"TDw-5D-pyT.text" = "Paragraph title 1";
+
+/* Class = "UITextField"; placeholder = "Email address*"; ObjectID = "TQb-v4-cuB"; */
+"TQb-v4-cuB.placeholder" = "Email address*";
+
+/* Class = "UITextField"; text = "josueyat318@gmail.com"; ObjectID = "TQb-v4-cuB"; */
+"TQb-v4-cuB.text" = "josueyat318@gmail.com";
+
+/* Class = "UILabel"; text = "Tak a picture of the back of the object"; ObjectID = "TUq-gu-T4Y"; */
+"TUq-gu-T4Y.text" = "Tak a picture of the back of the object";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "TcZ-ZP-9as"; */
+"TcZ-ZP-9as.text" = "___________________________________";
+
+/* Class = "UILabel"; text = "itemPrice"; ObjectID = "UNB-6u-koe"; */
+"UNB-6u-koe.text" = "itemPrice";
+
+/* Class = "UILabel"; text = "00000_dev"; ObjectID = "UYZ-d5-br9"; */
+"UYZ-d5-br9.text" = "00000_dev";
+
+/* Class = "UILabel"; text = "Customer"; ObjectID = "Ua6-gs-w4X"; */
+"Ua6-gs-w4X.text" = "Customer";
+
+/* Class = "UILabel"; text = "Back Button"; ObjectID = "Ua8-bg-9Ak"; */
+"Ua8-bg-9Ak.text" = "Back Button";
+
+/* Class = "UILabel"; text = "Sign up date"; ObjectID = "Umf-vD-LJo"; */
+"Umf-vD-LJo.text" = "Sign up date";
+
+/* Class = "UILabel"; text = "2022-12-31"; ObjectID = "V7M-eq-Vhb"; */
+"V7M-eq-Vhb.text" = "2022-12-31";
+
+/* Class = "UILabel"; text = "Cantonese_dev"; ObjectID = "VBA-KY-Y6n"; */
+"VBA-KY-Y6n.text" = "Cantonese_dev";
+
+/* Class = "UILabel"; text = "$250"; ObjectID = "VBU-ro-XJS"; */
+"VBU-ro-XJS.text" = "$250";
+
+/* Class = "UILabel"; text = "itemPrice"; ObjectID = "VPS-AI-95c"; */
+"VPS-AI-95c.text" = "itemPrice";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "VQP-YL-LsD"; */
+"VQP-YL-LsD.text" = "___________________________________";
+
+/* Class = "UILabel"; text = "AMOUNT"; ObjectID = "VXt-5y-yvo"; */
+"VXt-5y-yvo.text" = "AMOUNT";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Va5-Qv-7cc"; */
+"Va5-Qv-7cc.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "VlJ-e6-3Ob"; */
+"VlJ-e6-3Ob.text" = "___________________________________";
+
+/* Class = "UILabel"; text = "Top View"; ObjectID = "Vmb-P7-JWt"; */
+"Vmb-P7-JWt.text" = "Top View";
+
+/* Class = "UILabel"; text = "qty"; ObjectID = "W83-I9-9AO"; */
+"W83-I9-9AO.text" = "qty";
+
+/* Class = "UIButton"; configuration.title = "cancel order"; ObjectID = "WEN-Pa-bTT"; */
+"WEN-Pa-bTT.configuration.title" = "cancel order";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "WEN-Pa-bTT"; */
+"WEN-Pa-bTT.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "1x $399"; ObjectID = "WTr-hE-4EI"; */
+"WTr-hE-4EI.text" = "1x $399";
+
+/* Class = "UILabel"; text = "the School of Arts of Peking University"; ObjectID = "WVn-WI-CpF"; */
+"WVn-WI-CpF.text" = "the School of Arts of Peking University";
+
+/* Class = "UITextField"; placeholder = "County*"; ObjectID = "Wd4-SA-TF6"; */
+"Wd4-SA-TF6.placeholder" = "County*";
+
+/* Class = "UITextField"; text = "The Peak"; ObjectID = "Wd4-SA-TF6"; */
+"Wd4-SA-TF6.text" = "The Peak";
+
+/* Class = "UILabel"; text = "APRIL 17, 2019 BY ALICE TSE"; ObjectID = "WpR-hQ-FRL"; */
+"WpR-hQ-FRL.text" = "APRIL 17, 2019 BY ALICE TSE";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "XFF-Gt-LSM"; */
+"XFF-Gt-LSM.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Tower"; ObjectID = "XGo-Co-zZv"; */
+"XGo-Co-zZv.placeholder" = "Tower";
+
+/* Class = "UITextField"; text = "A"; ObjectID = "XGo-Co-zZv"; */
+"XGo-Co-zZv.text" = "A";
+
+/* Class = "UILabel"; text = "MAKING FIGURINES WITH DOUGH"; ObjectID = "XJV-NL-InX"; */
+"XJV-NL-InX.text" = "MAKING FIGURINES WITH DOUGH";
+
+/* Class = "UILabel"; text = "Order Summary"; ObjectID = "Xea-gz-jZG"; */
+"Xea-gz-jZG.text" = "Order Summary";
+
+/* Class = "UILabel"; text = "Let's start to prepare the data we need for creating your own figurine"; ObjectID = "Xxc-g8-dLu"; */
+"Xxc-g8-dLu.text" = "Let's start to prepare the data we need for creating your own figurine";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "Y1P-lU-2RJ"; */
+"Y1P-lU-2RJ.text" = "___________________________________";
+
+/* Class = "UILabel"; text = "Dough Sculpture"; ObjectID = "YC7-6Z-5TV"; */
+"YC7-6Z-5TV.text" = "Dough Sculpture";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "YTu-T6-EId"; */
+"YTu-T6-EId.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "The traditional craft of dough figure sculpting is fun to learn. Join our workshop and try your hand at traditional modelling techniques and create a 10cm-high miniature warrior inspired by the lead character of the Xiqu Centre’s experimental Cantonese opera production Wenguang Explores the Valley. Using coloured dough, and guided by veteran master craftsman Moses Law Chung-man, you will learn how to bring your figures to life by delicately shaping clothes, accessories, headwear and even facial expressions and gestures. "; ObjectID = "YZF-0P-bLk"; */
+"YZF-0P-bLk.text" = "The traditional craft of dough figure sculpting is fun to learn. Join our workshop and try your hand at traditional modelling techniques and create a 10cm-high miniature warrior inspired by the lead character of the Xiqu Centre’s experimental Cantonese opera production Wenguang Explores the Valley. Using coloured dough, and guided by veteran master craftsman Moses Law Chung-man, you will learn how to bring your figures to life by delicately shaping clothes, accessories, headwear and even facial expressions and gestures. ";
+
+/* Class = "UILabel"; text = "Payment"; ObjectID = "YeS-70-Gki"; */
+"YeS-70-Gki.text" = "Payment";
+
+/* Class = "UILabel"; text = "Country"; ObjectID = "Z0g-3n-5Ze"; */
+"Z0g-3n-5Ze.text" = "Country";
+
+/* Class = "UILabel"; text = "Workshop"; ObjectID = "ZC3-TE-f0a"; */
+"ZC3-TE-f0a.text" = "Workshop";
+
+/* Class = "UILabel"; text = "Customise Dough Figurine"; ObjectID = "ZED-Du-J19"; */
+"ZED-Du-J19.text" = "Customise Dough Figurine";
+
+/* Class = "UILabel"; text = "Workshop: Mini Dough Warrior_dev"; ObjectID = "ZIS-DC-RGC"; */
+"ZIS-DC-RGC.text" = "Workshop: Mini Dough Warrior_dev";
+
+/* Class = "UILabel"; text = "Paid at"; ObjectID = "ZN9-y0-sSJ"; */
+"ZN9-y0-sSJ.text" = "Paid at";
+
+/* Class = "UILabel"; text = "00:00 am"; ObjectID = "ZxB-G8-R3E"; */
+"ZxB-G8-R3E.text" = "00:00 am";
+
+/* Class = "UILabel"; text = "Sign up info"; ObjectID = "a1h-q9-R7g"; */
+"a1h-q9-R7g.text" = "Sign up info";
+
+/* Class = "UITextField"; placeholder = "First name*"; ObjectID = "aPJ-yj-KLl"; */
+"aPJ-yj-KLl.placeholder" = "First name*";
+
+/* Class = "UITextField"; text = "James"; ObjectID = "aPJ-yj-KLl"; */
+"aPJ-yj-KLl.text" = "James";
+
+/* Class = "UILabel"; text = "Overview"; ObjectID = "afI-jJ-iaz"; */
+"afI-jJ-iaz.text" = "Overview";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "ahy-N5-fkY"; */
+"ahy-N5-fkY.text" = "___________________________________";
+
+/* Class = "UILabel"; text = "Shipping"; ObjectID = "awT-QT-RxJ"; */
+"awT-QT-RxJ.text" = "Shipping";
+
+/* Class = "UILabel"; text = "ITEM"; ObjectID = "bAc-hI-us8"; */
+"bAc-hI-us8.text" = "ITEM";
+
+/* Class = "UITextField"; placeholder = "Street number and name*"; ObjectID = "bfu-FI-bko"; */
+"bfu-FI-bko.placeholder" = "Street number and name*";
+
+/* Class = "UITextField"; text = "8 Mount Kellett"; ObjectID = "bfu-FI-bko"; */
+"bfu-FI-bko.text" = "8 Mount Kellett";
+
+/* Class = "UILabel"; text = "Sign up ID"; ObjectID = "bgS-Td-Kj4"; */
+"bgS-Td-Kj4.text" = "Sign up ID";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "c0H-Rc-gOr"; */
+"c0H-Rc-gOr.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Shipping Address"; ObjectID = "c4z-np-vre"; */
+"c4z-np-vre.text" = "Shipping Address";
+
+/* Class = "UILabel"; text = "It requires years for artists to master sculpting facial expressions and gestures. Artists often created characters from famous Chinese folk tales or novels such as “Journey to the West” and “Romance of the Three Kingdoms”. However, modern elements may be added nowadays to attract people. For example, Mr. Law demonstrated how to make a mouse inspired from the Disney Movie “Ratatouille”."; ObjectID = "cCi-mM-CxK"; */
+"cCi-mM-CxK.text" = "It requires years for artists to master sculpting facial expressions and gestures. Artists often created characters from famous Chinese folk tales or novels such as “Journey to the West” and “Romance of the Three Kingdoms”. However, modern elements may be added nowadays to attract people. For example, Mr. Law demonstrated how to make a mouse inspired from the Disney Movie “Ratatouille”.";
+
+/* Class = "UILabel"; text = "Mini Dough Warrior"; ObjectID = "cDW-K5-HqK"; */
+"cDW-K5-HqK.text" = "Mini Dough Warrior";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cF5-Dr-FNA"; */
+"cF5-Dr-FNA.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "cNo-8D-DPZ"; */
+"cNo-8D-DPZ.text" = "___________________________________";
+
+/* Class = "UILabel"; text = "13.11.2022"; ObjectID = "cTk-jm-MwF"; */
+"cTk-jm-MwF.text" = "13.11.2022";
+
+/* Class = "UILabel"; text = "Total(HKD)"; ObjectID = "cXB-0w-df3"; */
+"cXB-0w-df3.text" = "Total(HKD)";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "cXT-fD-m5R"; */
+"cXT-fD-m5R.text" = "0";
+
+/* Class = "UILabel"; text = "itemName"; ObjectID = "cfh-Jh-A0N"; */
+"cfh-Jh-A0N.text" = "itemName";
+
+/* Class = "UILabel"; text = "Intersaction Station"; ObjectID = "con-0x-kjA"; */
+"con-0x-kjA.text" = "Intersaction Station";
+
+/* Class = "UIButton"; configuration.title = "LOGIN"; ObjectID = "coy-bz-mhq"; */
+"coy-bz-mhq.configuration.title" = "LOGIN";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "coy-bz-mhq"; */
+"coy-bz-mhq.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Paragraph 3"; ObjectID = "cp4-vn-CS9"; */
+"cp4-vn-CS9.text" = "Paragraph 3";
+
+/* Class = "UILabel"; text = "1 JAN"; ObjectID = "crz-r9-cSA"; */
+"crz-r9-cSA.text" = "1 JAN";
+
+/* Class = "UILabel"; text = "Tickets available from 24 September 2021 (Friday) at 10:00am._dev"; ObjectID = "cwp-Zk-B9z"; */
+"cwp-Zk-B9z.text" = "Tickets available from 24 September 2021 (Friday) at 10:00am._dev";
+
+/* Class = "UILabel"; text = "Hong Kong, Hong Kong_dev"; ObjectID = "d2b-cr-68Y"; */
+"d2b-cr-68Y.text" = "Hong Kong, Hong Kong_dev";
+
+/* Class = "UILabel"; text = "Payment"; ObjectID = "dUQ-CU-G6d"; */
+"dUQ-CU-G6d.text" = "Payment";
+
+/* Class = "UILabel"; text = "Workshop time"; ObjectID = "dWF-3p-YYa"; */
+"dWF-3p-YYa.text" = "Workshop time";
+
+/* Class = "UILabel"; text = "itemName"; ObjectID = "dvI-RL-T2r"; */
+"dvI-RL-T2r.text" = "itemName";
+
+/* Class = "UILabel"; text = "ITEM"; ObjectID = "dwG-k1-NP6"; */
+"dwG-k1-NP6.text" = "ITEM";
+
+/* Class = "UILabel"; text = "Cannot find reservation"; ObjectID = "eB6-bw-jYh"; */
+"eB6-bw-jYh.text" = "Cannot find reservation";
+
+/* Class = "UILabel"; text = "paidAmount"; ObjectID = "eOE-ED-AFv"; */
+"eOE-ED-AFv.text" = "paidAmount";
+
+/* Class = "UITextField"; placeholder = "First name*"; ObjectID = "edf-0B-n8o"; */
+"edf-0B-n8o.placeholder" = "First name*";
+
+/* Class = "UITextField"; text = "James"; ObjectID = "edf-0B-n8o"; */
+"edf-0B-n8o.text" = "James";
+
+/* Class = "UILabel"; text = "0000-00-00"; ObjectID = "ejX-Q3-JR7"; */
+"ejX-Q3-JR7.text" = "0000-00-00";
+
+/* Class = "UILabel"; text = "Enchanting Dough "; ObjectID = "f3L-J6-hqG"; */
+"f3L-J6-hqG.text" = "Enchanting Dough ";
+
+/* Class = "UIButton"; configuration.title = "Continue"; ObjectID = "fF7-sp-uaZ"; */
+"fF7-sp-uaZ.configuration.title" = "Continue";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "fF7-sp-uaZ"; */
+"fF7-sp-uaZ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "josueyat318@gmail.com"; ObjectID = "fOY-sF-riY"; */
+"fOY-sF-riY.text" = "josueyat318@gmail.com";
+
+/* Class = "UILabel"; text = "Author: ---------------------"; ObjectID = "fbF-T8-UxT"; */
+"fbF-T8-UxT.text" = "Author: ---------------------";
+
+/* Class = "UILabel"; text = "2022-12-31"; ObjectID = "fcO-ye-fSu"; */
+"fcO-ye-fSu.text" = "2022-12-31";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "frT-C1-na1"; */
+"frT-C1-na1.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Done"; ObjectID = "ftd-jr-J7v"; */
+"ftd-jr-J7v.configuration.title" = "Done";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ftd-jr-J7v"; */
+"ftd-jr-J7v.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Search and track here"; ObjectID = "fzK-vM-i4F"; */
+"fzK-vM-i4F.text" = "Search and track here";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gG7-1C-3Fc"; */
+"gG7-1C-3Fc.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Sign up date"; ObjectID = "gIt-UK-du8"; */
+"gIt-UK-du8.text" = "Sign up date";
+
+/* Class = "UILabel"; text = "AMOUNT"; ObjectID = "gSf-8S-NkX"; */
+"gSf-8S-NkX.text" = "AMOUNT";
+
+/* Class = "UILabel"; text = "5123 4123"; ObjectID = "gVn-T1-UhK"; */
+"gVn-T1-UhK.text" = "5123 4123";
+
+/* Class = "UILabel"; text = "station_name"; ObjectID = "glh-YY-Uk9"; */
+"glh-YY-Uk9.text" = "station_name";
+
+/* Class = "UITextField"; placeholder = "Zip code"; ObjectID = "gpz-RR-QgM"; */
+"gpz-RR-QgM.placeholder" = "Zip code";
+
+/* Class = "UITextField"; text = "00000"; ObjectID = "gpz-RR-QgM"; */
+"gpz-RR-QgM.text" = "00000";
+
+/* Class = "UILabel"; text = "Back View"; ObjectID = "gyw-lA-sFO"; */
+"gyw-lA-sFO.text" = "Back View";
+
+/* Class = "UILabel"; text = "Workshop"; ObjectID = "hWd-Nu-RSD"; */
+"hWd-Nu-RSD.text" = "Workshop";
+
+/* Class = "UILabel"; text = "at 23:59 PM"; ObjectID = "hYC-LL-tIZ"; */
+"hYC-LL-tIZ.text" = "at 23:59 PM";
+
+/* Class = "UITextField"; placeholder = "Residential*"; ObjectID = "hbz-7L-WcX"; */
+"hbz-7L-WcX.placeholder" = "Residential*";
+
+/* Class = "UITextField"; text = "Chateau De Peak"; ObjectID = "hbz-7L-WcX"; */
+"hbz-7L-WcX.text" = "Chateau De Peak";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "hu5-Hl-rqw"; */
+"hu5-Hl-rqw.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Mobile number*"; ObjectID = "iIh-Bu-THq"; */
+"iIh-Bu-THq.placeholder" = "Mobile number*";
+
+/* Class = "UITextField"; text = "5"; ObjectID = "iIh-Bu-THq"; */
+"iIh-Bu-THq.text" = "5";
+
+/* Class = "UILabel"; text = "Estimated arrival"; ObjectID = "iYZ-C9-1EA"; */
+"iYZ-C9-1EA.text" = "Estimated arrival";
+
+/* Class = "UILabel"; text = "Payment"; ObjectID = "idK-sg-1sL"; */
+"idK-sg-1sL.text" = "Payment";
+
+/* Class = "UILabel"; text = "LOGIN"; ObjectID = "ih2-Yd-XzS"; */
+"ih2-Yd-XzS.text" = "LOGIN";
+
+/* Class = "UILabel"; text = "WS0000"; ObjectID = "ivE-GD-8Hy"; */
+"ivE-GD-8Hy.text" = "WS0000";
+
+/* Class = "UILabel"; text = "paidAmount"; ObjectID = "iyf-gr-WVY"; */
+"iyf-gr-WVY.text" = "paidAmount";
+
+/* Class = "UILabel"; text = "James Yip_dev"; ObjectID = "jL8-4y-nrL"; */
+"jL8-4y-nrL.text" = "James Yip_dev";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "jdQ-cA-SWm"; */
+"jdQ-cA-SWm.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "qty"; ObjectID = "k0Y-69-A2o"; */
+"k0Y-69-A2o.text" = "qty";
+
+/* Class = "UILabel"; text = "Paragraph 1"; ObjectID = "k5r-mp-C5b"; */
+"k5r-mp-C5b.text" = "Paragraph 1";
+
+/* Class = "UILabel"; text = "Method"; ObjectID = "kQD-Yd-cus"; */
+"kQD-Yd-cus.text" = "Method";
+
+/* Class = "UITextField"; placeholder = "Flat*"; ObjectID = "kfz-rc-B1r"; */
+"kfz-rc-B1r.placeholder" = "Flat*";
+
+/* Class = "UITextField"; text = "C"; ObjectID = "kfz-rc-B1r"; */
+"kfz-rc-B1r.text" = "C";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "klB-X4-df7"; */
+"klB-X4-df7.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Customer"; ObjectID = "lQz-2C-Zw4"; */
+"lQz-2C-Zw4.text" = "Customer";
+
+/* Class = "UILabel"; text = "TRADITIONAL DOUG FIGURINE"; ObjectID = "lhr-Lt-Olu"; */
+"lhr-Lt-Olu.text" = "TRADITIONAL DOUG FIGURINE";
+
+/* Class = "UILabel"; text = "James Yip_dev"; ObjectID = "mjJ-gH-Yhh"; */
+"mjJ-gH-Yhh.text" = "James Yip_dev";
+
+/* Class = "UILabel"; text = "AMOUNT"; ObjectID = "mkC-nm-fm2"; */
+"mkC-nm-fm2.text" = "AMOUNT";
+
+/* Class = "UILabel"; text = "Paragraph title 2"; ObjectID = "mrq-hf-xP5"; */
+"mrq-hf-xP5.text" = "Paragraph title 2";
+
+/* Class = "UILabel"; text = "Shipping Address"; ObjectID = "mxx-OP-BCo"; */
+"mxx-OP-BCo.text" = "Shipping Address";
+
+/* Class = "UILabel"; text = "Method"; ObjectID = "n7v-X8-70B"; */
+"n7v-X8-70B.text" = "Method";
+
+/* Class = "UILabel"; text = "Paid on"; ObjectID = "nQD-4d-SsZ"; */
+"nQD-4d-SsZ.text" = "Paid on";
+
+/* Class = "UILabel"; text = "xxxxxxxxxxxxxxx"; ObjectID = "nUZ-NO-56c"; */
+"nUZ-NO-56c.text" = "xxxxxxxxxxxxxxx";
+
+/* Class = "UITextField"; placeholder = "e.g. 0721"; ObjectID = "naH-aS-I9U"; */
+"naH-aS-I9U.placeholder" = "e.g. 0721";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "nkC-Zg-Xu0"; */
+"nkC-Zg-Xu0.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "nnI-Zc-FUX"; */
+"nnI-Zc-FUX.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Hong Kong, Hong Kong_dev"; ObjectID = "o0M-cx-Z0v"; */
+"o0M-cx-Z0v.text" = "Hong Kong, Hong Kong_dev";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "o8f-wm-n0T"; */
+"o8f-wm-n0T.text" = "___________________________________";
+
+/* Class = "UILabel"; text = "Time"; ObjectID = "oC4-oG-Ynb"; */
+"oC4-oG-Ynb.text" = "Time";
+
+/* Class = "UILabel"; text = "Paragraph title 3"; ObjectID = "oP8-b1-VU3"; */
+"oP8-b1-VU3.text" = "Paragraph title 3";
+
+/* Class = "UITextField"; placeholder = "Contact number*"; ObjectID = "osh-rJ-2Fm"; */
+"osh-rJ-2Fm.placeholder" = "Contact number*";
+
+/* Class = "UITextField"; text = "5222 3041"; ObjectID = "osh-rJ-2Fm"; */
+"osh-rJ-2Fm.text" = "5222 3041";
+
+/* Class = "UILabel"; text = "josueyat318@gmail.com_dev"; ObjectID = "pLO-gA-Xvh"; */
+"pLO-gA-Xvh.text" = "josueyat318@gmail.com_dev";
+
+/* Class = "UILabel"; text = "Paid on"; ObjectID = "pe0-tA-Qe7"; */
+"pe0-tA-Qe7.text" = "Paid on";
+
+/* Class = "UILabel"; text = "Search your workshop reservation here"; ObjectID = "prn-jQ-QKP"; */
+"prn-jQ-QKP.text" = "Search your workshop reservation here";
+
+/* Class = "UILabel"; text = "Tseung Kwan O, NT_dev"; ObjectID = "qA4-Zv-xeV"; */
+"qA4-Zv-xeV.text" = "Tseung Kwan O, NT_dev";
+
+/* Class = "UILabel"; text = "Tseung Kwan O, NT_dev"; ObjectID = "qc8-dE-RZa"; */
+"qc8-dE-RZa.text" = "Tseung Kwan O, NT_dev";
+
+/* Class = "UILabel"; text = "Info"; ObjectID = "qoc-Hv-bS1"; */
+"qoc-Hv-bS1.text" = "Info";
+
+/* Class = "UILabel"; text = "Flat 3C, Tower 2A, Monterey Place_dev"; ObjectID = "qyf-0B-Sm9"; */
+"qyf-0B-Sm9.text" = "Flat 3C, Tower 2A, Monterey Place_dev";
+
+/* Class = "UILabel"; text = "Pay at location"; ObjectID = "rD6-Sh-44M"; */
+"rD6-Sh-44M.text" = "Pay at location";
+
+/* Class = "UILabel"; text = "Total(HKD)"; ObjectID = "s2T-sp-rE1"; */
+"s2T-sp-rE1.text" = "Total(HKD)";
+
+/* Class = "UILabel"; text = "5123 4123"; ObjectID = "s4R-QJ-hoc"; */
+"s4R-QJ-hoc.text" = "5123 4123";
+
+/* Class = "UILabel"; text = "Cannot find invoice"; ObjectID = "sDp-YM-gRI"; */
+"sDp-YM-gRI.text" = "Cannot find invoice";
+
+/* Class = "UILabel"; text = "23:59:59"; ObjectID = "sI9-cW-xdF"; */
+"sI9-cW-xdF.text" = "23:59:59";
+
+/* Class = "UILabel"; text = "2:30pm_dev"; ObjectID = "sIr-LQ-x8O"; */
+"sIr-LQ-x8O.text" = "2:30pm_dev";
+
+/* Class = "UILabel"; text = "Tak a Front View picture of the object"; ObjectID = "sMg-CW-qHa"; */
+"sMg-CW-qHa.text" = "Tak a Front View picture of the object";
+
+/* Class = "UILabel"; text = "23 Tong Chung Street_dev"; ObjectID = "saX-eF-MZ8"; */
+"saX-eF-MZ8.text" = "23 Tong Chung Street_dev";
+
+/* Class = "UILabel"; text = "Workshop time"; ObjectID = "ssb-cu-18l"; */
+"ssb-cu-18l.text" = "Workshop time";
+
+/* Class = "UILabel"; text = "(Materials and tools included)_dev"; ObjectID = "tM9-iQ-rlF"; */
+"tM9-iQ-rlF.text" = "(Materials and tools included)_dev";
+
+/* Class = "UIButton"; configuration.title = "more"; ObjectID = "tnJ-6F-UVU"; */
+"tnJ-6F-UVU.configuration.title" = "more";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tnJ-6F-UVU"; */
+"tnJ-6F-UVU.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Venue"; ObjectID = "uQc-wl-q4j"; */
+"uQc-wl-q4j.text" = "Venue";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uSI-HW-src"; */
+"uSI-HW-src.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Close Button"; ObjectID = "uep-nm-bHM"; */
+"uep-nm-bHM.text" = "Close Button";
+
+/* Class = "UILabel"; text = "3 days"; ObjectID = "ujG-ry-JV1"; */
+"ujG-ry-JV1.text" = "3 days";
+
+/* Class = "UILabel"; text = "location"; ObjectID = "uyz-BR-UaR"; */
+"uyz-BR-UaR.text" = "location";
+
+/* Class = "UIButton"; configuration.title = "BACK"; ObjectID = "v8P-rW-LHU"; */
+"v8P-rW-LHU.configuration.title" = "BACK";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "v8P-rW-LHU"; */
+"v8P-rW-LHU.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "v8r-BA-65h"; */
+"v8r-BA-65h.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Credit Card (Visa card)"; ObjectID = "vLU-Kv-a9o"; */
+"vLU-Kv-a9o.text" = "Credit Card (Visa card)";
+
+/* Class = "UILabel"; text = "Pax"; ObjectID = "w0m-HV-U0T"; */
+"w0m-HV-U0T.text" = "Pax";
+
+/* Class = "UILabel"; text = "xxxxxxxxxxxxxxx"; ObjectID = "wKh-wu-4gf"; */
+"wKh-wu-4gf.text" = "xxxxxxxxxxxxxxx";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "wNH-Ka-wV5"; */
+"wNH-Ka-wV5.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "x53-hu-wWH"; */
+"x53-hu-wWH.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Order Confirmation"; ObjectID = "xVU-S3-TLs"; */
+"xVU-S3-TLs.text" = "Order Confirmation";
+
+/* Class = "UILabel"; text = "Dough Figurine"; ObjectID = "xnb-qU-a3y"; */
+"xnb-qU-a3y.text" = "Dough Figurine";
+
+/* Class = "UILabel"; text = "Sign up ID"; ObjectID = "xrH-8W-oRc"; */
+"xrH-8W-oRc.text" = "Sign up ID";
+
+/* Class = "UILabel"; text = "AMOUNT"; ObjectID = "xsO-hW-GVm"; */
+"xsO-hW-GVm.text" = "AMOUNT";
+
+/* Class = "UILabel"; text = "0000-00-00"; ObjectID = "yNs-Xr-SJ2"; */
+"yNs-Xr-SJ2.text" = "0000-00-00";
+
+/* Class = "UIButton"; configuration.title = "sign up now"; ObjectID = "ySg-IS-ih2"; */
+"ySg-IS-ih2.configuration.title" = "sign up now";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ySg-IS-ih2"; */
+"ySg-IS-ih2.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "___________________________________"; ObjectID = "yiC-zi-XNT"; */
+"yiC-zi-XNT.text" = "___________________________________";
+
+/* Class = "UIButton"; configuration.title = "PAY NOW"; ObjectID = "yzA-X9-1q7"; */
+"yzA-X9-1q7.configuration.title" = "PAY NOW";
+
+/* Class = "UILabel"; text = "total"; ObjectID = "z0q-l2-sTe"; */
+"z0q-l2-sTe.text" = "total";
+
+/* Class = "UILabel"; text = "Credit Card (Visa card)"; ObjectID = "z5b-pR-2CM"; */
+"z5b-pR-2CM.text" = "Credit Card (Visa card)";
+
+/* Class = "UILabel"; text = "Venue"; ObjectID = "z97-4L-Xxp"; */
+"z97-4L-Xxp.text" = "Venue";
+
+/* Class = "UITextField"; text = "WS"; ObjectID = "zAI-sM-96u"; */
+"zAI-sM-96u.text" = "WS";
+
+/* Class = "UILabel"; text = "Flat 3C, Tower 2A, Monterey Place_dev"; ObjectID = "zLa-jP-cvt"; */
+"zLa-jP-cvt.text" = "Flat 3C, Tower 2A, Monterey Place_dev";
+
+/* Class = "UILabel"; text = "josueyat318@gmail.com"; ObjectID = "zOA-rC-Kfm"; */
+"zOA-rC-Kfm.text" = "josueyat318@gmail.com";
+
+/* Class = "UILabel"; text = "2 Jan 2022"; ObjectID = "zdn-Ha-rN7"; */
+"zdn-Ha-rN7.text" = "2 Jan 2022";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "zyO-y5-AWc"; */
+"zyO-y5-AWc.normalTitle" = "Button";
