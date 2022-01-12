@@ -48,6 +48,9 @@
 		28CD3B17278718CD00B329BF /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 28CD3B16278718CD00B329BF /* FirebaseStorageSwift-Beta */; };
 		28CD576027884F4600F99CCA /* generalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CD575F27884F4600F99CCA /* generalFunc.swift */; };
 		28CD576227889FE100F99CCA /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CD576127889FE100F99CCA /* TestViewController.swift */; };
+		28DC0B58278EC71700C5E404 /* WorkshopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B57278EC71700C5E404 /* WorkshopListViewController.swift */; };
+		28DC0B5A278EC72C00C5E404 /* WorkshopContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B59278EC72C00C5E404 /* WorkshopContentViewController.swift */; };
+		28DC0B5C278EDE7700C5E404 /* WorkshopStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B5B278EDE7700C5E404 /* WorkshopStatus.swift */; };
 		28FC6C3F278D8CEA007E3BD5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC6C3E278D8CEA007E3BD5 /* LocationManager.swift */; };
 		28FC6C42278D8DC1007E3BD5 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 28FC6C41278D8DC1007E3BD5 /* FloatingPanel */; };
 		28FC6C44278D8F79007E3BD5 /* TrackingInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC6C43278D8F78007E3BD5 /* TrackingInformationViewController.swift */; };
@@ -104,6 +107,9 @@
 		28CD3B0F2787162C00B329BF /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		28CD575F27884F4600F99CCA /* generalFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generalFunc.swift; sourceTree = "<group>"; };
 		28CD576127889FE100F99CCA /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		28DC0B57278EC71700C5E404 /* WorkshopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopListViewController.swift; sourceTree = "<group>"; };
+		28DC0B59278EC72C00C5E404 /* WorkshopContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopContentViewController.swift; sourceTree = "<group>"; };
+		28DC0B5B278EDE7700C5E404 /* WorkshopStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopStatus.swift; sourceTree = "<group>"; };
 		28FC6C3E278D8CEA007E3BD5 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		28FC6C43278D8F78007E3BD5 /* TrackingInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +158,7 @@
 				2815C5C027834F5E007795E6 /* GlobalStatus.swift */,
 				2815C5C527841034007795E6 /* CreateYourOwnInvoiceStatus.swift */,
 				285574712786B5F200527CCB /* ItemTracking.swift */,
+				28DC0B5B278EDE7700C5E404 /* WorkshopStatus.swift */,
 			);
 			path = GlobalStatus;
 			sourceTree = "<group>";
@@ -197,6 +204,7 @@
 		28534B6927804F7A00CC9120 /* MobileAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				28DC0B56278EC6F900C5E404 /* Workshop */,
 				28FC6C39278D8C39007E3BD5 /* Location */,
 				28CD575E27884F1700F99CCA /* GeneralFunctions */,
 				28AF28FE2785EE770026D6F2 /* ItemTracking */,
@@ -273,6 +281,15 @@
 				28CD576127889FE100F99CCA /* TestViewController.swift */,
 			);
 			path = GeneralFunctions;
+			sourceTree = "<group>";
+		};
+		28DC0B56278EC6F900C5E404 /* Workshop */ = {
+			isa = PBXGroup;
+			children = (
+				28DC0B57278EC71700C5E404 /* WorkshopListViewController.swift */,
+				28DC0B59278EC72C00C5E404 /* WorkshopContentViewController.swift */,
+			);
+			path = Workshop;
 			sourceTree = "<group>";
 		};
 		28FC6C39278D8C39007E3BD5 /* Location */ = {
@@ -451,12 +468,15 @@
 				28CD3B102787162C00B329BF /* FirestoreManager.swift in Sources */,
 				28534B6B27804F7A00CC9120 /* AppDelegate.swift in Sources */,
 				28534BAB27809E0400CC9120 /* ArticleList.swift in Sources */,
+				28DC0B58278EC71700C5E404 /* WorkshopListViewController.swift in Sources */,
 				28534B7527804F7A00CC9120 /* MobileAssignment.xcdatamodeld in Sources */,
 				28FC6C3F278D8CEA007E3BD5 /* LocationManager.swift in Sources */,
 				28534B6D27804F7A00CC9120 /* SceneDelegate.swift in Sources */,
 				2815C5BB27832974007795E6 /* ConfirmAndPayController.swift in Sources */,
 				2815C5B927830528007795E6 /* PreviewCreateYourOwnPhotosController.swift in Sources */,
+				28DC0B5A278EC72C00C5E404 /* WorkshopContentViewController.swift in Sources */,
 				2815C5C627841034007795E6 /* CreateYourOwnInvoiceStatus.swift in Sources */,
+				28DC0B5C278EDE7700C5E404 /* WorkshopStatus.swift in Sources */,
 				285574702786B44500527CCB /* ItemTrackingInvoiceDetailViewController.swift in Sources */,
 				2815C5C427840B59007795E6 /* LoginViewController.swift in Sources */,
 				285574722786B5F200527CCB /* ItemTracking.swift in Sources */,
