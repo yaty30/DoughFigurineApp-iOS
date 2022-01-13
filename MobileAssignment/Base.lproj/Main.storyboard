@@ -923,7 +923,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1x $399" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTr-hE-4EI">
-                                                                <rect key="frame" x="24" y="240" width="49" height="16"/>
+                                                                <rect key="frame" x="24" y="240" width="115" height="16"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                 <color key="textColor" systemColor="systemGray2Color"/>
@@ -937,7 +937,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$399.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjs-bD-nlT">
-                                                                <rect key="frame" x="249" y="188" width="80" height="28"/>
+                                                                <rect key="frame" x="206" y="188" width="123" height="28"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                 <color key="textColor" red="0.1962919917" green="0.2039079301" blue="0.24267131149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1155,8 +1155,8 @@
                         <outlet property="flat" destination="kfz-rc-B1r" id="Fyf-zB-iA6"/>
                         <outlet property="floor" destination="Fyu-SF-c6O" id="niG-BZ-r9C"/>
                         <outlet property="itemName" destination="FXl-8e-REU" id="Tc2-Rl-eaz"/>
-                        <outlet property="itemPrice" destination="WTr-hE-4EI" id="xgr-aL-Euh"/>
-                        <outlet property="itemQty" destination="Kjs-bD-nlT" id="deu-gT-mWG"/>
+                        <outlet property="itemPrice" destination="Kjs-bD-nlT" id="skJ-Lo-hDm"/>
+                        <outlet property="itemQty" destination="WTr-hE-4EI" id="7TR-Ac-uer"/>
                         <outlet property="lastName" destination="K2u-xG-eOr" id="855-qG-Zmn"/>
                         <outlet property="mainview" destination="9Vx-te-X6W" id="fOm-I6-Pg9"/>
                         <outlet property="orderDate" destination="0Vt-Qn-aHo" id="YO1-Pc-q1P"/>
@@ -3905,7 +3905,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="itemPrice" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNB-6u-koe">
-                                                                <rect key="frame" x="253" y="134" width="80" height="28"/>
+                                                                <rect key="frame" x="186" y="134" width="147" height="28"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                 <color key="textColor" red="0.1962919917" green="0.2039079301" blue="0.24267131149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -4158,7 +4158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yJ-8v-1dR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4286" y="-760"/>
+            <point key="canvasLocation" x="4285.5140186915887" y="-760.0431965442765"/>
         </scene>
         <!--Workshop Reservation Search Result View Controller-->
         <scene sceneID="EUA-dW-LoR">
@@ -4578,7 +4578,7 @@
         <segue reference="RT6-BM-Qkm"/>
         <segue reference="rdp-yv-2wg"/>
         <segue reference="bLw-Ev-GvK"/>
-        <segue reference="Obs-1w-CP5"/>
+        <segue reference="rJJ-Vq-p8v"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="article_big_2" width="924" height="1324"/>

@@ -138,7 +138,7 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
             self.orderTime.text = invoiceData.orderTime
             self.itemName.text = invoiceData.items[0]
             self.itemPrice.text = "$\(invoiceData.itemPrices[0])"
-            self.itemQty.text = "\(invoiceData.itemQty[0])x\(Double(invoiceData.itemQty[0]) ?? 1 * invoiceData.itemPrices[0])"
+            self.itemQty.text = invoiceData.itemQty[0]
             self.totalPrice.text = "$\(invoiceData.totalPrice)"
             
             updated()
@@ -180,7 +180,7 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     @objc private func keyboardWillShow(notification: NSNotification) {
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            self.view.frame.origin.y -= self.view.frame.origin.y < 0 ? 0 : 310
+            self.view.frame.origin.y -= self.view.frame.origin.y < 0 ? 0 : 295
 //            print("type of ", type(of: self.view.frame.origin.y))
 //            print(self.view.frame.origin.y)
 //            print(self.view.frame.origin.y == -310.0)
