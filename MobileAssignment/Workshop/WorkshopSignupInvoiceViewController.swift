@@ -37,6 +37,10 @@ class WorkshopSignupInvoiceViewController: UIViewController {
         print(workshopSignup.workshopSignupID)
         fetch()
         getName(completion: {})
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1.3...1.7)) {
+            self.outterLoadingView.isHidden = true
+        }
     }
     
     func fetch() {
@@ -52,7 +56,6 @@ class WorkshopSignupInvoiceViewController: UIViewController {
         fetchSignupRecord("signupDate", signupDate)
         fetchSignupRecord("signupTime", signupTime)
         
-        outterLoadingView.isHidden = true
     }
     
     func fetchSignupRecord(_ field: String, _ label: UILabel) {

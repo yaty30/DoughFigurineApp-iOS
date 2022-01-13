@@ -85,7 +85,8 @@ class WorkshopSignUpViewController: UIViewController, UIPickerViewDataSource, UI
             "signupTime": getTimeAndDate(type: "time"),
             "venue": "Xiqu Centre, 88 Austin Road West",
             "address": "88 Austin Road West, Tsim Sha Tsiu",
-            "ticketFee": "\(paxInt! * 250)/people",
+            "ticketFee": 250,
+            "totalFee": "\(paxInt! * 250)"
         ])
     }
     

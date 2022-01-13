@@ -33,6 +33,7 @@ class WorkshopReservationSearchResultViewController: UIViewController {
     
     @IBOutlet weak var venue: UILabel!
     @IBOutlet weak var ticketFee: UILabel!
+    @IBOutlet weak var totalFee: UILabel!
     
     @IBOutlet weak var venueMap: MKMapView!
     @IBOutlet weak var loadingView: UIView!
@@ -68,6 +69,7 @@ class WorkshopReservationSearchResultViewController: UIViewController {
             self.fetchSignupRecord("address", self.venue)
             self.fetchSignupRecord("venue", self.venue)
             self.fetchSignupRecord("ticketFee", self.ticketFee)
+            self.fetchSignupRecord("totalFee", self.totalFee)
             
             done()
         }
@@ -87,7 +89,7 @@ class WorkshopReservationSearchResultViewController: UIViewController {
                         self.mapCreate(done: {})
                     }
                 }
-                label.text = field == "ticketFee" ? "$\(res)" : "\(res)"
+                label.text = field == "ticketFee" || field == "totalFee" ? "$\(res)" : "\(res)"
             }
         }
     }
