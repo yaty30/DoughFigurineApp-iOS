@@ -40,6 +40,8 @@
 		28534BB92782D31900CC9120 /* CreateYourOwnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534BB82782D31900CC9120 /* CreateYourOwnController.swift */; };
 		285574702786B44500527CCB /* ItemTrackingInvoiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2855746F2786B44500527CCB /* ItemTrackingInvoiceDetailViewController.swift */; };
 		285574722786B5F200527CCB /* ItemTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285574712786B5F200527CCB /* ItemTracking.swift */; };
+		28A8A24327904ABA006F612B /* LastOrderWorkshopItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A8A24127904ABA006F612B /* LastOrderWorkshopItem+CoreDataClass.swift */; };
+		28A8A24427904ABA006F612B /* LastOrderWorkshopItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A8A24227904ABA006F612B /* LastOrderWorkshopItem+CoreDataProperties.swift */; };
 		28AF29002785EE8B0026D6F2 /* ItemTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AF28FF2785EE8B0026D6F2 /* ItemTrackingViewController.swift */; };
 		28AF2902278622230026D6F2 /* InvoiceTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AF2901278622230026D6F2 /* InvoiceTrackingViewController.swift */; };
 		28CD3B102787162C00B329BF /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CD3B0F2787162C00B329BF /* FirestoreManager.swift */; };
@@ -118,6 +120,8 @@
 		28534BB82782D31900CC9120 /* CreateYourOwnController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateYourOwnController.swift; sourceTree = "<group>"; };
 		2855746F2786B44500527CCB /* ItemTrackingInvoiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTrackingInvoiceDetailViewController.swift; sourceTree = "<group>"; };
 		285574712786B5F200527CCB /* ItemTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTracking.swift; sourceTree = "<group>"; };
+		28A8A24127904ABA006F612B /* LastOrderWorkshopItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LastOrderWorkshopItem+CoreDataClass.swift"; path = "../../LastOrderWorkshopItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		28A8A24227904ABA006F612B /* LastOrderWorkshopItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LastOrderWorkshopItem+CoreDataProperties.swift"; path = "../../LastOrderWorkshopItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		28AF28FF2785EE8B0026D6F2 /* ItemTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTrackingViewController.swift; sourceTree = "<group>"; };
 		28AF2901278622230026D6F2 /* InvoiceTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTrackingViewController.swift; sourceTree = "<group>"; };
 		28CD3B0F2787162C00B329BF /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 		28534B6927804F7A00CC9120 /* MobileAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				28A8A23627904847006F612B /* CoreData */,
 				28DC0B65278F568C00C5E404 /* Article */,
 				28DC0B56278EC6F900C5E404 /* Workshop */,
 				28FC6C39278D8C39007E3BD5 /* Location */,
@@ -290,6 +295,15 @@
 				2815C5C72784169A007795E6 /* FinalInvoiceViewController.swift */,
 			);
 			path = CreateYourOwn;
+			sourceTree = "<group>";
+		};
+		28A8A23627904847006F612B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				28A8A24127904ABA006F612B /* LastOrderWorkshopItem+CoreDataClass.swift */,
+				28A8A24227904ABA006F612B /* LastOrderWorkshopItem+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		28AF28FE2785EE770026D6F2 /* ItemTracking */ = {
@@ -557,6 +571,7 @@
 				2815C5C82784169A007795E6 /* FinalInvoiceViewController.swift in Sources */,
 				28CD3B102787162C00B329BF /* FirestoreManager.swift in Sources */,
 				28534B6B27804F7A00CC9120 /* AppDelegate.swift in Sources */,
+				28A8A24327904ABA006F612B /* LastOrderWorkshopItem+CoreDataClass.swift in Sources */,
 				28534BAB27809E0400CC9120 /* ArticleList.swift in Sources */,
 				28DC0B58278EC71700C5E404 /* WorkshopListViewController.swift in Sources */,
 				28DC0B67278F56C000C5E404 /* ArticleContentViewController.swift in Sources */,
@@ -571,6 +586,7 @@
 				28DC0B64278F0C7100C5E404 /* WorkshopReservationSearchViewController.swift in Sources */,
 				2815C5C627841034007795E6 /* CreateYourOwnInvoiceStatus.swift in Sources */,
 				28DC0B5C278EDE7700C5E404 /* WorkshopStatus.swift in Sources */,
+				28A8A24427904ABA006F612B /* LastOrderWorkshopItem+CoreDataProperties.swift in Sources */,
 				285574702786B44500527CCB /* ItemTrackingInvoiceDetailViewController.swift in Sources */,
 				2815C5C427840B59007795E6 /* LoginViewController.swift in Sources */,
 				285574722786B5F200527CCB /* ItemTracking.swift in Sources */,
@@ -1091,6 +1107,7 @@
 			currentVersion = 28534B7427804F7A00CC9120 /* MobileAssignment.xcdatamodel */;
 			path = MobileAssignment.xcdatamodeld;
 			sourceTree = "<group>";
+			usesTabs = 0;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */

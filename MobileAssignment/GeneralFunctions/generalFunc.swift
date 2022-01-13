@@ -118,6 +118,16 @@ public func getRequest(apiURL: String) {
     task.resume()
 }
 
+// Core Data
+func getLastOrderNumber() {
+    do {
+        let item = try context?.fetch(LastOrderWorkshopItem.fetchRequest())
+        
+    } catch {
+        // error
+    }
+}
+
 
 
 

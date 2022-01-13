@@ -15,6 +15,9 @@ class ItemTrackingViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var invoiceSearchBar: UITextField!
     @IBOutlet weak var searchIcon: UIImageView!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var lastOrderNumberFromCore: UILabel!
+    
+    let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,8 @@ class ItemTrackingViewController: UIViewController, UITextFieldDelegate {
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
+        lastOrderNumberFromCore.text = ""
     }
     
     @IBAction func searchBarDidChanged(_ sender: Any) {

@@ -2087,11 +2087,19 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last order:  #000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqG-gO-9gC">
+                                <rect key="frame" x="47" y="303" width="303" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="invoiceSearchBar" destination="Odk-tF-Fs3" id="1M2-92-HVP"/>
+                        <outlet property="lastOrderNumberFromCore" destination="oqG-gO-9gC" id="W7A-k6-9gR"/>
                         <outlet property="searchBarIconView" destination="wgK-xT-voa" id="bob-jX-H2s"/>
                         <outlet property="searchButton" destination="LCR-lb-7JW" id="NjC-3q-h5z"/>
                         <outlet property="searchIcon" destination="JuG-W5-f3Q" id="Pe5-LX-70e"/>
@@ -2099,7 +2107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7y-cD-d6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1476" y="154"/>
+            <point key="canvasLocation" x="1474.7663551401868" y="153.56371490280779"/>
         </scene>
         <!--Workshop List View Controller-->
         <scene sceneID="yfC-M5-cLB">
@@ -4562,7 +4570,7 @@
         <segue reference="RT6-BM-Qkm"/>
         <segue reference="rdp-yv-2wg"/>
         <segue reference="bLw-Ev-GvK"/>
-        <segue reference="zUY-aj-Rtg"/>
+        <segue reference="Obs-1w-CP5"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="article_big_2" width="924" height="1324"/>
