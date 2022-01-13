@@ -88,4 +88,30 @@ class WorkshopSignUpViewController: UIViewController, UIPickerViewDataSource, UI
     @IBAction func sigup(_ sender: Any) {
         signupWorkshop()
     }
+    
+    
+    @IBAction func onCancel(_ sender: Any) {
+        self.cancelOrder()
+    }
+    
+    func cancelOrder() {
+        let actionSheet = UIAlertController(title: "Reservation cancellation", message: "Are you sure you want to CANCEL the workshop booking?", preferredStyle: .actionSheet)
+
+        actionSheet.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [weak self] _ in
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextVC = storyBoard.instantiateViewController(withIdentifier: "WorkshopHomePage") as! WorkshopListViewController
+            
+            nextVC.modalPresentationStyle = .fullScreen
+            self!.present(nextVC, animated:true, completion:nil)
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "No", style: .default, handler: { [] _ in
+            print("dismissed")
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "dismiss", style: .cancel, handler: nil))
+        
+        
+        present(actionSheet, animated: true)
+    }
 }

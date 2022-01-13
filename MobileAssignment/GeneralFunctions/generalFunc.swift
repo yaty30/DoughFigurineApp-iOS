@@ -65,4 +65,3 @@ public func getEstimatedArrival(_ deliverPoint: CLLocation, _ destination: CLLoc
     
     return res
 }
-

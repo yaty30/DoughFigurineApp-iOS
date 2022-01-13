@@ -1160,54 +1160,6 @@
             </objects>
             <point key="canvasLocation" x="3400.934579439252" y="-760.0431965442765"/>
         </scene>
-        <!--Confirm And Pay Controller-->
-        <scene sceneID="B3u-L9-Lgg">
-            <objects>
-                <viewController id="9D3-8m-BHv" customClass="ConfirmAndPayController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Edl-MJ-fDf"/>
-                        <viewControllerLayoutGuide type="bottom" id="JLv-Bz-4hS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="smX-Ip-KdW">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you sure you wan to CANCEL the order?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HL2-JU-WQd">
-                                <rect key="frame" x="47" y="282" width="335" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IY-sr-kdb">
-                                <rect key="frame" x="100" y="414" width="228" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title=" NO"/>
-                                <connections>
-                                    <segue destination="MFJ-Qh-7wL" kind="modal" animates="NO" modalPresentationStyle="fullScreen" id="0E9-SM-7v9">
-                                        <segue key="commit" inheritsFrom="parent" id="1Yt-yx-dSC"/>
-                                        <segue key="preview" inheritsFrom="commit" id="DQO-Rl-9jA"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bi4-cL-tn6">
-                                <rect key="frame" x="104" y="539" width="221" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Yes, I'm sure"/>
-                                <connections>
-                                    <segue destination="gqo-2B-zBr" kind="modal" modalPresentationStyle="fullScreen" id="9oT-uY-TIo"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kOX-mi-0DZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4314" y="-812"/>
-        </scene>
         <!--Preview Create Your Own Photos Controller-->
         <scene sceneID="Dbo-Gb-6Pc">
             <objects>
@@ -2143,7 +2095,7 @@
         <!--Workshop List View Controller-->
         <scene sceneID="yfC-M5-cLB">
             <objects>
-                <viewController id="Met-Nx-KlF" customClass="WorkshopListViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WorkshopHomePage" id="Met-Nx-KlF" customClass="WorkshopListViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pQq-hU-zWq"/>
                         <viewControllerLayoutGuide type="bottom" id="CCz-Ja-aOI"/>
@@ -2179,7 +2131,7 @@
                                 <rect key="frame" x="26" y="188" width="382" height="605"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nre-8N-9CJ">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nre-8N-9CJ">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="605"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="STd-nk-8oS" userLabel="Horizontal Scroll View">
@@ -2830,7 +2782,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftd-jr-J7v">
-                                <rect key="frame" x="71" y="666" width="285" height="47"/>
+                                <rect key="frame" x="71" y="641" width="285" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                 <state key="normal" title="Button"/>
@@ -2838,6 +2790,15 @@
                                 <connections>
                                     <action selector="sigup:" destination="vJ2-iS-kcL" eventType="touchUpInside" id="1np-t2-WEX"/>
                                     <segue destination="pSB-9g-fdK" kind="modal" modalPresentationStyle="fullScreen" id="CAI-c1-lhQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eug-yf-s8e">
+                                <rect key="frame" x="40" y="716" width="348" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="cancel"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="vJ2-iS-kcL" eventType="touchUpInside" id="b0W-ah-IBp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -4165,7 +4126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yJ-8v-1dR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5112.6168224299063" y="-760.0431965442765"/>
+            <point key="canvasLocation" x="4286" y="-760"/>
         </scene>
         <!--Workshop Reservation Search Result View Controller-->
         <scene sceneID="EUA-dW-LoR">
@@ -4579,14 +4540,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0fs-bp-z5F"/>
+        <segue reference="ia1-No-qpp"/>
         <segue reference="jZ2-84-JPu"/>
-        <segue reference="mTg-zw-ugl"/>
+        <segue reference="4Px-CK-E1b"/>
         <segue reference="RT6-BM-Qkm"/>
-        <segue reference="0E9-SM-7v9"/>
         <segue reference="S3z-UW-31k"/>
         <segue reference="bLw-Ev-GvK"/>
-        <segue reference="Obs-1w-CP5"/>
+        <segue reference="GCR-WA-7nf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="article_big_2" width="924" height="1324"/>

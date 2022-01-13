@@ -212,7 +212,7 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func cancelOrder() {
-        let actionSheet = UIAlertController(title: title, message: "Are you sure you want to CANCEL the order?", preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: "Order cancellation", message: "Are you sure you want to CANCEL the order?", preferredStyle: .actionSheet)
 
         actionSheet.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [weak self] _ in
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
