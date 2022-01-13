@@ -69,6 +69,9 @@ class WorkshopSignUpViewController: UIViewController, UIPickerViewDataSource, UI
     }
     
     func signupWorkshop() {
+        let paxInt = Int(pax.text ?? "1")
+        print(paxInt)
+        print(type(of: paxInt))
         
         db.document("workshopSignup/\(workshopSignup.workshopSignupID)").setData([
             "workshop": "Workshop: Mini Dough Warrior",
@@ -82,7 +85,7 @@ class WorkshopSignUpViewController: UIViewController, UIPickerViewDataSource, UI
             "signupTime": getTimeAndDate(type: "time"),
             "venue": "Xiqu Centre, 88 Austin Road West",
             "address": "88 Austin Road West, Tsim Sha Tsiu",
-            "ticketFee": 250,
+            "ticketFee": "\(paxInt! * 250)/people",
         ])
     }
     

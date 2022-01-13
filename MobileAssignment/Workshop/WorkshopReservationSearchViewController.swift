@@ -15,14 +15,15 @@ class WorkshopReservationSearchViewController: UIViewController, UITextFieldDele
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var searchDecoIcon: UIImageView!
     @IBOutlet weak var previousID: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.previousID.text = ""
+//        self.previousID.text = ""
+        getLastOrderNumber()
         searchDecoIcon.alpha = 0.1
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        getLastOrderNumber()
     }
     
     func getLastOrderNumber() {
@@ -31,10 +32,13 @@ class WorkshopReservationSearchViewController: UIViewController, UITextFieldDele
             
             var index = lastOrderNumber.count - 1
             index = index < 0 ? 0 : index
+            
+            print(lastOrderNumber)
+            
             let result = self.lastOrderNumber[index].workshopReservationID
-
+            
             DispatchQueue.main.async {
-                self.previousID.text = "Last reservation ID: \(result as! String)"
+                self.previousID.text = result == nil ? "" : "Last reservation: \(result as! String)"
             }
         } catch {
             // error

@@ -87,10 +87,7 @@ class WorkshopReservationSearchResultViewController: UIViewController {
                         self.mapCreate(done: {})
                     }
                 }
-                label.text = field == "ticketFee" ? "$\((res as! Int) * self.paxCal)" : "\(res)"
-                if(field == "pax") {
-                    self.paxCal = res as! Int
-                }
+                label.text = field == "ticketFee" ? "$\(res)" : "\(res)"
             }
         }
     }
