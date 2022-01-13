@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var articleTag: Int = -1;
+    var coordinates: CLLocationCoordinate2D? = nil
+    
     @IBOutlet weak var date: UILabel!
     
     @IBOutlet weak var imageSlideShow: UIImageView!
@@ -20,7 +23,15 @@ class ViewController: UIViewController{
     @IBOutlet weak var lgArticleTwo: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        saveLog()
+        
         date.text = "2022"
+        
+        let locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestLocation()
+        locationManager.requestAlwaysAuthorization()
     }
 
     var currentImage = 1
@@ -81,6 +92,8 @@ class ViewController: UIViewController{
             "logTime": getTimeAndDate(type: "time"),
             "logToken": getToken(),
             "logCount": logRecord.logCount + 1,
+            "latitude": "\(String(describing: coordinates?.latitude))",
+            "longitude": "\(String(describing: coordinates?.longitude))"
         ] as [String : Any]
         
         let bodyData = try? JSONSerialization.data(
@@ -92,5 +105,11 @@ class ViewController: UIViewController{
         request.httpMethod = "POST"
         request.httpBody = bodyData
     }
+    
+    func locationManager( _ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            coordinates = location.coordinate
+            
+        }
+    }
 }
-
