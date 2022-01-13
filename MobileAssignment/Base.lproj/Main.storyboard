@@ -923,7 +923,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1x $399" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTr-hE-4EI">
-                                                                <rect key="frame" x="24" y="241" width="49" height="16"/>
+                                                                <rect key="frame" x="24" y="240" width="49" height="16"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                 <color key="textColor" systemColor="systemGray2Color"/>
@@ -1221,8 +1221,8 @@
                                             <segue destination="e2T-7Y-cJY" kind="modal" modalPresentationStyle="fullScreen" id="rdp-yv-2wg"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDg-dz-9na">
-                                        <rect key="frame" x="138" y="12" width="153" height="33"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preview &amp; Edit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDg-dz-9na">
+                                        <rect key="frame" x="125" y="12" width="180" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="25"/>
                                         <nil key="textColor"/>
@@ -4560,7 +4560,7 @@
         <segue reference="hwE-y8-Vxk"/>
         <segue reference="mTg-zw-ugl"/>
         <segue reference="RT6-BM-Qkm"/>
-        <segue reference="S3z-UW-31k"/>
+        <segue reference="rdp-yv-2wg"/>
         <segue reference="bLw-Ev-GvK"/>
         <segue reference="zUY-aj-Rtg"/>
     </inferredMetricsTieBreakers>

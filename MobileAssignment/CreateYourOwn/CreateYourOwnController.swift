@@ -102,6 +102,7 @@ class CreateYourOwnController: UIViewController, UIImagePickerControllerDelegate
             imageList.append(front)
             imageIndexList.append(0)
             frontViewStepIcon.image = UIImage(named: "successful_icon_coloured")
+            frontViewBtn.isEnabled = false
             backViewBtn.isEnabled = true
             backViewButtonIcon.alpha = 1
         } else if(currentButtonIndex == 1) {
@@ -109,6 +110,7 @@ class CreateYourOwnController: UIViewController, UIImagePickerControllerDelegate
             imageList.append(back)
             imageIndexList.append(1)
             backViewStepIcon.image = UIImage(named: "successful_icon_coloured")
+            backViewBtn.isEnabled = false
             topViewBtn.isEnabled = true
             topViewButtonIcon.alpha = 1
         } else if(currentButtonIndex == 2) {
@@ -116,6 +118,7 @@ class CreateYourOwnController: UIViewController, UIImagePickerControllerDelegate
             imageList.append(top)
             imageIndexList.append(2)
             topViewStepIcon.image = UIImage(named: "successful_icon_coloured")
+            topViewBtn.isEnabled = false
             continueButton.isEnabled = true
         } else { print("Incorrect button index") }
         

@@ -117,8 +117,4 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
     }
-    
-    
-    
-    
 }
