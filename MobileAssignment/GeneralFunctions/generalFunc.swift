@@ -119,6 +119,8 @@ public func getRequest(apiURL: String) {
 }
 
 // Core Data
+let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+
 func getLastOrderNumber() {
     do {
         let item = try context?.fetch(LastOrderWorkshopItem.fetchRequest())
@@ -128,6 +130,19 @@ func getLastOrderNumber() {
     }
 }
 
+func updateLastOrderNumber(item: LastOrderWorkshopItem, newID: String, type: String) {
+    if(type == "order") {
+        item.customYourOwnOrderID = newID
+    } else {
+        item.workshopReservationID = newID
+    }
+    
+    do {
+        try context?.save()
+    } catch {
+        // error
+    }
+}
 
 
 
