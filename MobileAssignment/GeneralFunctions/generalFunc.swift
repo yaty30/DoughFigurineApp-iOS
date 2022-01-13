@@ -73,6 +73,28 @@ public func getEstimatedArrival(_ deliverPoint: CLLocation, _ destination: CLLoc
 
 //
 
+public func postRequest(apiURL: String, body: [String:AnyHashable]) {
+    guard let url = URL(string: apiURL) else { return }
+    
+    var request = URLRequest(url: url)
+    
+    request.httpMethod = "POST"
+    request.setValue("application/json", forHTTPHeaderField: "Content-type")
+    
+    request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
+    
+    // Request
+    let task = URLSession.shared.dataTask(with: request) { data, _, error in
+        guard let data = data, error == nil else { return }
+        
+        do {
+            let res = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+        } catch {
+            print(error)
+        }
+    }
+    task.resume()
+}
 
 
 

@@ -28,10 +28,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         date.text = "2022"
         
-        let locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.requestLocation()
-        locationManager.requestAlwaysAuthorization()
+//        let locationManager = CLLocationManager()
+//        locationManager.delegate = self
+//        locationManager.requestLocation()
+//        locationManager.requestAlwaysAuthorization()
     }
 
     var currentImage = 1
@@ -79,31 +79,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func saveLog() {
         let targetAPI = "https://61dff0d40f3bdb0017934c78.mockapi.io/v1/recordRunTime"
-        let url = URL(string: targetAPI)!
-        var request = URLRequest(url: url)
         
-        request.setValue(
-            "authToken",
-            forHTTPHeaderField: "Authorization"
-        )
-        
-        let body = [
+        let body: [String:AnyHashable] = [
             "logDate": getTimeAndDate(type: "date"),
             "logTime": getTimeAndDate(type: "time"),
             "logToken": getToken(),
             "logCount": logRecord.logCount + 1,
             "latitude": "\(String(describing: coordinates?.latitude))",
             "longitude": "\(String(describing: coordinates?.longitude))"
-        ] as [String : Any]
+        ]
         
-        let bodyData = try? JSONSerialization.data(
-            withJSONObject: body,
-            options: []
-        )
-
-        // Change the URLRequest to a POST request
-        request.httpMethod = "POST"
-        request.httpBody = bodyData
+        postRequest(apiURL: targetAPI, body: body)
     }
     
     func locationManager( _ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
