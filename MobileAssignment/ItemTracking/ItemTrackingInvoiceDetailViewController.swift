@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 import CoreLocation
 import MapKit
+import LocalAuthentication
 
 class ItemTrackingInvoiceDetailViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
@@ -28,6 +29,9 @@ class ItemTrackingInvoiceDetailViewController: UIViewController, CLLocationManag
     var city = ""
     var country = ""
 
+    @IBOutlet weak var addressView: UIView!
+    @IBOutlet weak var showAddressButton: UIButton!
+    
     @IBOutlet weak var mainView: UIScrollView!
     @IBOutlet weak var invoiceNumber: UILabel!
     @IBOutlet weak var orderDate: UILabel!
@@ -332,4 +336,32 @@ class ItemTrackingInvoiceDetailViewController: UIViewController, CLLocationManag
         }
     }
     
+    @IBAction func onShowAddress(_ sender: Any) {
+        let context = LAContext()
+        var error: NSError? = nil
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "Please authorise with Face id in order to disclose the shippoing address."
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason, reply: { [weak self] success, error in
+                guard success, error == nil else { return }  // failed
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 0.4...0.6)) {
+                    self!.undiscloseAddress(isHidden: true)
+                }
+                    
+            })
+            
+        } else {
+            let alert = UIAlertController(title: "Unavailable", message: "Face ID not regonising, address remains undisclosed", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+            
+            present(alert, animated: true)
+        }
+    }
+    
+    func undiscloseAddress(isHidden: Bool) {
+        self.addressView.isHidden = !isHidden
+        self.showAddressButton.isHidden = isHidden
+    }
 }
