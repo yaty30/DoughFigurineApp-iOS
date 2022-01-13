@@ -17,6 +17,7 @@ class WorkshopReservationSearchResultViewController: UIViewController {
     var lastNameText = ""
     var addressForMap = ""
     var id = workshopResevationSearch.id
+    var paxCal = 1
     
     @IBOutlet weak var workshopTitle: UILabel!
     @IBOutlet weak var name: UILabel!
@@ -86,7 +87,10 @@ class WorkshopReservationSearchResultViewController: UIViewController {
                         self.mapCreate(done: {})
                     }
                 }
-                label.text = field == "ticketFee" ? "$\(res)" : "\(res)"
+                label.text = field == "ticketFee" ? "$\((res as! Int) * self.paxCal)" : "\(res)"
+                if(field == "pax") {
+                    self.paxCal = res as! Int
+                }
             }
         }
     }

@@ -10,6 +10,7 @@ import UIKit
 class WorkshopSignUpViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
 
     let db = firebase.db
+    let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
     @IBOutlet weak var workshopTItle: UILabel!
     
@@ -86,6 +87,7 @@ class WorkshopSignUpViewController: UIViewController, UIPickerViewDataSource, UI
     }
     
     @IBAction func sigup(_ sender: Any) {
+        addRecords(id: workshopSignup.workshopSignupID, type: "workshop")
         signupWorkshop()
     }
     

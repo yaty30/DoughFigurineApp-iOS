@@ -59,9 +59,13 @@ class ItemTrackingViewController: UIViewController, UITextFieldDelegate {
         do {
             lastOrderNumber = try context!.fetch(LastOrderWorkshopItem.fetchRequest()) as! [LastOrderWorkshopItem]
             
-            let result = lastOrderNumber[lastOrderNumber.count - 1].customYourOwnOrderID
+            var index = lastOrderNumber.count - 1
+            index = index < 0 ? 0 : index
             
-            lastOrderNumberFromCore.text = "Last order: \(result! as String)"
+            DispatchQueue.main.async {
+                let result = self.lastOrderNumber[index].customYourOwnOrderID
+                self.lastOrderNumberFromCore.text = result == nil ? "" : "Last order: \(result as! String)"
+            }
         } catch {
             // error
         }
