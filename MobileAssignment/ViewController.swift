@@ -65,7 +65,32 @@ class ViewController: UIViewController{
     
     func setVerticalScrollIndicator(status: Bool) {
     }
+    
+    func saveLog() {
+        let targetAPI = "https://61dff0d40f3bdb0017934c78.mockapi.io/v1/recordRunTime"
+        let url = URL(string: targetAPI)!
+        var request = URLRequest(url: url)
+        
+        request.setValue(
+            "authToken",
+            forHTTPHeaderField: "Authorization"
+        )
+        
+        let body = [
+            "logDate": getTimeAndDate(type: "date"),
+            "logTime": getTimeAndDate(type: "time"),
+            "logToken": getToken(),
+            "logCount": logRecord.logCount + 1,
+        ] as [String : Any]
+        
+        let bodyData = try? JSONSerialization.data(
+            withJSONObject: body,
+            options: []
+        )
+
+        // Change the URLRequest to a POST request
+        request.httpMethod = "POST"
+        request.httpBody = bodyData
+    }
 }
-
-
 

@@ -37,6 +37,11 @@ public func getTimeAndDate(type: String) -> String {
     return "\(result)"
 }
 
+public func getToken() -> String {
+    let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    return String((0..<12).map{ _ in letters.randomElement()! })
+}
+
 
 // Item Tracking
 
@@ -65,3 +70,10 @@ public func getEstimatedArrival(_ deliverPoint: CLLocation, _ destination: CLLoc
     
     return res
 }
+
+//
+
+
+
+
+

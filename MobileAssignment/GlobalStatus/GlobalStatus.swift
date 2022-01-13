@@ -28,3 +28,7 @@ struct usefulData {
         "United Kingdom", "United States", "Canada", "South Korea"
     ]
 }
+
+struct logRecord {
+    static var logCount: Int = 0
+}

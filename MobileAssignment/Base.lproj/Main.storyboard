@@ -1933,11 +1933,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="master_content_img_1" translatesAutoresizingMaskIntoConstraints="NO" id="L6v-Lx-DWh">
-                                                        <rect key="frame" x="38" y="1393" width="354" height="411"/>
+                                                        <rect key="frame" x="38" y="1370" width="354" height="411"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="master_content_img_2" translatesAutoresizingMaskIntoConstraints="NO" id="T8c-9f-lVW">
-                                                        <rect key="frame" x="38" y="1755" width="354" height="176"/>
+                                                        <rect key="frame" x="38" y="1732" width="354" height="176"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Law Chung-man" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6K-Ug-jdN">
@@ -4556,12 +4556,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ia1-No-qpp"/>
-        <segue reference="jZ2-84-JPu"/>
+        <segue reference="0fs-bp-z5F"/>
+        <segue reference="hwE-y8-Vxk"/>
         <segue reference="mTg-zw-ugl"/>
         <segue reference="RT6-BM-Qkm"/>
         <segue reference="S3z-UW-31k"/>
-        <segue reference="7Km-8R-7Z0"/>
+        <segue reference="bLw-Ev-GvK"/>
         <segue reference="zUY-aj-Rtg"/>
     </inferredMetricsTieBreakers>
     <resources>
