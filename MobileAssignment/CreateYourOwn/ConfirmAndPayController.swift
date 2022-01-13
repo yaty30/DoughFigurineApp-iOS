@@ -44,8 +44,6 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        view.bringSubviewToFront(mainview)
-        
         updateOrderInfo(updated: {})
         updateShippingInfo(updated: {})
         
@@ -116,13 +114,20 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     @IBAction func payButton(_ sender: Any) {
+        addRecords(id: invoiceData.invoiceNumber, type: "order")
         invoiceData.emailAddress = emailAddress.text ?? ""
         updateOrderInfo(updated: {
-            self.updateShippingInfo(updated: {
-                self.udpatePaymentInfo(updated: {
-                    self.saveOrderData()
+            DispatchQueue.main.async {
+                self.updateShippingInfo(updated: {
+                    DispatchQueue.main.async {
+                        self.udpatePaymentInfo(updated: {
+                            DispatchQueue.main.async {
+                                self.saveOrderData()
+                            }
+                        })
+                    }
                 })
-            })
+            }
         })
     }
     

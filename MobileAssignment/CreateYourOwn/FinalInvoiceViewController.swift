@@ -13,29 +13,6 @@ import MapKit
 class FinalInvoiceViewController: UIViewController {
     
     let db = firebase.db
-//
-//    @IBOutlet weak var invoiceNumber: UILabel!
-//    @IBOutlet weak var orderDate: UILabel!
-//    @IBOutlet weak var orderTime: UILabel!
-//
-//    @IBOutlet weak var itemName: UILabel!
-//    @IBOutlet weak var itemPrice: UILabel!
-//    @IBOutlet weak var itemQty: UILabel!
-//    @IBOutlet weak var totalPrice: UILabel!
-//
-//    @IBOutlet weak var name: UILabel!
-//    @IBOutlet weak var emailAddress: UILabel!
-//    @IBOutlet weak var contactNumber: UILabel!
-//    @IBOutlet weak var flatAndTower: UILabel!
-//    @IBOutlet weak var streetName: UILabel!
-//    @IBOutlet weak var countyAndDistrict: UILabel!
-//    @IBOutlet weak var cityAndCountry: UILabel!
-//    @IBOutlet weak var zipCode: UILabel!
-//
-//    @IBOutlet weak var paymentMethod: UILabel!
-//    @IBOutlet weak var paidAmount: UILabel!
-//    @IBOutlet weak var paidOn: UILabel!
-//    @IBOutlet weak var paidAt: UILabel!
     
     @IBOutlet weak var previewMap: MKMapView!
     @IBOutlet weak var loadingView: UIView!
@@ -72,10 +49,12 @@ class FinalInvoiceViewController: UIViewController {
         outterLoading.startAnimating()
 
         getInvoiceInfo()
-        getShippingInfo()
         getPaymentInfo()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 1...1.6)) {
+            
+            self.getShippingInfo()
+            
             self.outterLoadingView.isHidden = true
             self.loadingView.isHidden = true
             self.mapCreate(done: {})

@@ -6,10 +6,11 @@
 //
 
 import UIKit
-
 class ItemTrackingViewController: UIViewController, UITextFieldDelegate {
 
     let db = firebase.db
+    let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+    var lastOrderNumber = [LastOrderWorkshopItem]()
     
     @IBOutlet weak var searchBarIconView: UIView!
     @IBOutlet weak var invoiceSearchBar: UITextField!
@@ -20,6 +21,7 @@ class ItemTrackingViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getLastOrderNumber()
         searchBarIconView?.alpha = 0.1
         searchIcon?.alpha = 0.1
         searchButton?.isEnabled = false
@@ -52,5 +54,33 @@ class ItemTrackingViewController: UIViewController, UITextFieldDelegate {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+
+    func getLastOrderNumber() {
+        do {
+            lastOrderNumber = try context!.fetch(LastOrderWorkshopItem.fetchRequest()) as! [LastOrderWorkshopItem]
+            
+            let result = lastOrderNumber[lastOrderNumber.count - 1].customYourOwnOrderID
+            
+            lastOrderNumberFromCore.text = "Last order: \(result! as String)"
+        } catch {
+            // error
+        }
+    }
+
+    func updateLastOrderNumber(item: LastOrderWorkshopItem, newID: String, type: String) {
+        if(type == "order") {
+            item.customYourOwnOrderID = newID
+        } else {
+            item.workshopReservationID = newID
+        }
+        
+        do {
+            try context?.save()
+        } catch {
+            // error
+        }
+    }
+
+
     
 }
