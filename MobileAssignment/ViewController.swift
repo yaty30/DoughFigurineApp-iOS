@@ -21,17 +21,31 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var smArticleOne: UIButton!
     @IBOutlet weak var smArticleTwo: UIButton!
     @IBOutlet weak var lgArticleTwo: UIButton!
+    
+    let manager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        saveLog()
+        getRequest(apiURL: "https://61dff0d40f3bdb0017934c78.mockapi.io/v1/recordRunTime")
         
         date.text = "2022"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.delegate = self
+        manager.requestAlwaysAuthorization()
+        manager.startUpdatingLocation()
         
-//        let locationManager = CLLocationManager()
-//        locationManager.delegate = self
-//        locationManager.requestLocation()
-//        locationManager.requestAlwaysAuthorization()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            manager.stopUpdatingLocation()
+            updateLocation(location, updated: {
+                self.saveLog()
+            })
+        }
     }
 
     var currentImage = 1
@@ -74,9 +88,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var verticalScrollView: UIScrollView!
     
-    func setVerticalScrollIndicator(status: Bool) {
-    }
-    
     func saveLog() {
         let targetAPI = "https://61dff0d40f3bdb0017934c78.mockapi.io/v1/recordRunTime"
         
@@ -85,17 +96,29 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             "logTime": getTimeAndDate(type: "time"),
             "logToken": getToken(),
             "logCount": logRecord.logCount + 1,
-            "latitude": "\(String(describing: coordinates?.latitude))",
-            "longitude": "\(String(describing: coordinates?.longitude))"
+            "coordinates": [
+                "latitude": coordinates?.latitude,
+                "longitude": coordinates?.longitude
+            ]
         ]
         
         postRequest(apiURL: targetAPI, body: body)
     }
     
-    func locationManager( _ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            coordinates = location.coordinate
+    func updateLocation(_ location: CLLocation, updated: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            self.coordinates = location.coordinate
             
+            if(self.coordinates != nil) {
+                updated()
+            } else {
+                print("save log failed.")
+                updated()
+            }
         }
     }
+    
+    
+    
+    
 }

@@ -96,6 +96,28 @@ public func postRequest(apiURL: String, body: [String:AnyHashable]) {
     task.resume()
 }
 
+public func getRequest(apiURL: String) {
+    guard let url = URL(string: apiURL) else { return }
+    
+    var request = URLRequest(url: url)
+    
+    request.httpMethod = "GET"
+    request.setValue("application/json", forHTTPHeaderField: "Content-type")
+  
+    // Request
+    let task = URLSession.shared.dataTask(with: request) { data, _, error in
+        guard let data = data, error == nil else { return }
+        
+        do {
+            let res = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+            print(res)
+        } catch {
+            print(error)
+        }
+    }
+    task.resume()
+}
+
 
 
 
