@@ -58,6 +58,8 @@
 		28DC0B64278F0C7100C5E404 /* WorkshopReservationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B63278F0C7100C5E404 /* WorkshopReservationSearchViewController.swift */; };
 		28DC0B67278F56C000C5E404 /* ArticleContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B66278F56C000C5E404 /* ArticleContentViewController.swift */; };
 		28DC0B69278F5C1C00C5E404 /* ArticleStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC0B68278F5C1C00C5E404 /* ArticleStatus.swift */; };
+		28E7BDD62790229C00BB1163 /* MobileAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534B8427804F7C00CC9120 /* MobileAssignmentTests.swift */; };
+		28E7BDD82790232000BB1163 /* MasterArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7BDD72790231F00BB1163 /* MasterArticleViewController.swift */; };
 		28FC6C3F278D8CEA007E3BD5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC6C3E278D8CEA007E3BD5 /* LocationManager.swift */; };
 		28FC6C42278D8DC1007E3BD5 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 28FC6C41278D8DC1007E3BD5 /* FloatingPanel */; };
 		28FC6C44278D8F79007E3BD5 /* TrackingInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FC6C43278D8F78007E3BD5 /* TrackingInformationViewController.swift */; };
@@ -132,6 +134,7 @@
 		28DC0B63278F0C7100C5E404 /* WorkshopReservationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopReservationSearchViewController.swift; sourceTree = "<group>"; };
 		28DC0B66278F56C000C5E404 /* ArticleContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleContentViewController.swift; sourceTree = "<group>"; };
 		28DC0B68278F5C1C00C5E404 /* ArticleStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStatus.swift; sourceTree = "<group>"; };
+		28E7BDD72790231F00BB1163 /* MasterArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterArticleViewController.swift; sourceTree = "<group>"; };
 		28FC6C3E278D8CEA007E3BD5 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		28FC6C43278D8F78007E3BD5 /* TrackingInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -341,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				28DC0B66278F56C000C5E404 /* ArticleContentViewController.swift */,
+				28E7BDD72790231F00BB1163 /* MasterArticleViewController.swift */,
 			);
 			path = Article;
 			sourceTree = "<group>";
@@ -538,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				281F2E862784B81F00551F98 /* Firebase.swift in Sources */,
+				28E7BDD82790232000BB1163 /* MasterArticleViewController.swift in Sources */,
 				28534BB32780DE0B00CC9120 /* ArticleListController.swift in Sources */,
 				28DC0B62278F04CB00C5E404 /* WorkshopReservationSearchResultViewController.swift in Sources */,
 				28CD576027884F4600F99CCA /* generalFunc.swift in Sources */,
@@ -593,6 +598,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28E7BDD62790229C00BB1163 /* MobileAssignmentTests.swift in Sources */,
 				28D5C9CC27900E4C00E0EFD0 /* OrderCustomTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

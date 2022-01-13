@@ -395,7 +395,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                                 <connections>
                                                     <action selector="smallArticle:" destination="gqo-2B-zBr" eventType="touchUpInside" id="n8z-El-RqV"/>
-                                                    <segue destination="ihX-OC-kX6" kind="modal" modalPresentationStyle="fullScreen" id="RBi-30-kzk"/>
+                                                    <segue destination="ihX-OC-kX6" kind="popoverPresentation" popoverAnchorView="HB6-XU-epv" id="RBi-30-kzk">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNH-Ka-wV5" userLabel="big article 2">
@@ -620,12 +622,19 @@
                                 <color key="textColor" red="0.3302532062626849" green="0.34306670962195857" blue="0.40828450520833337" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back_icon" translatesAutoresizingMaskIntoConstraints="NO" id="BJG-nR-nwt">
+                                <rect key="frame" x="12" y="65" width="50" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.alpha" value="0.5"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8P-rW-LHU">
                                 <rect key="frame" x="0.0" y="72" width="76" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGray2Color"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="BACK"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
                                 <connections>
                                     <segue destination="k5P-9r-wkW" kind="modal" identifier="goingBackToPreviousPage" animates="NO" modalPresentationStyle="fullScreen" id="7Km-8R-7Z0"/>
                                 </connections>
@@ -1841,16 +1850,16 @@
             </objects>
             <point key="canvasLocation" x="-726.1682242990654" y="680.99352051835854"/>
         </scene>
-        <!--Article Content View Controller-->
+        <!--Master Article View Controller-->
         <scene sceneID="QSo-Vh-mB9">
             <objects>
-                <viewController id="ihX-OC-kX6" customClass="ArticleContentViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ihX-OC-kX6" customClass="MasterArticleViewController" customModule="MobileAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tam-BR-1bY"/>
                         <viewControllerLayoutGuide type="bottom" id="1lh-Bf-Eml"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ctb-fs-Kek">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" id="VOw-lt-dTr" userLabel="Information View">
@@ -1868,14 +1877,14 @@
                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S4A-Oy-dFa">
                                                 <rect key="frame" x="0.0" y="0.0" width="428" height="2000"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="master_content_hero" translatesAutoresizingMaskIntoConstraints="NO" id="9Cq-Ye-Kel">
-                                                        <rect key="frame" x="-29" y="1" width="486" height="844"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    </imageView>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rc4-NN-Vov">
                                                         <rect key="frame" x="-2" y="0.0" width="432" height="844"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="master_content_hero" translatesAutoresizingMaskIntoConstraints="NO" id="9Cq-Ye-Kel">
+                                                                <rect key="frame" x="-27" y="-130" width="486" height="974"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MAKING FIGURINES WITH DOUGH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJV-NL-InX">
                                                                 <rect key="frame" x="27" y="383" width="379" height="28"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1991,13 +2000,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <connections>
-                        <outlet property="masterMainView" destination="rc4-NN-Vov" id="MdU-Sy-QOp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kHc-NS-NEI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="426" y="719"/>
+            <point key="canvasLocation" x="424.76635514018687" y="718.57451403887694"/>
         </scene>
         <!--Item Tracking View Controller-->
         <scene sceneID="hQf-G1-c23">
@@ -4550,13 +4556,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0fs-bp-z5F"/>
+        <segue reference="ia1-No-qpp"/>
         <segue reference="jZ2-84-JPu"/>
         <segue reference="mTg-zw-ugl"/>
         <segue reference="RT6-BM-Qkm"/>
         <segue reference="S3z-UW-31k"/>
-        <segue reference="bLw-Ev-GvK"/>
-        <segue reference="qDk-RB-YeS"/>
+        <segue reference="7Km-8R-7Z0"/>
+        <segue reference="zUY-aj-Rtg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="article_big_2" width="924" height="1324"/>
@@ -4579,7 +4585,7 @@
         <image name="language_icon" width="344" height="344"/>
         <image name="login_page_hero" width="5184" height="3456"/>
         <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="master_content_hero" width="2684" height="1768"/>
+        <image name="master_content_hero" width="752" height="1448"/>
         <image name="master_content_img_1" width="1608" height="1460"/>
         <image name="master_content_img_2" width="1608" height="758"/>
         <image name="master_intro_hero" width="1438" height="484"/>

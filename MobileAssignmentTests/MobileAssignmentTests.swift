@@ -28,7 +28,9 @@ class MobileAssignmentTests: XCTestCase {
     }
 
     func testExample() throws {
-        // let firstTakeFVbtnIsExists = app.buttons["firstTakeFVbtn"].exists
+        app.buttons["firstTakeFVbtn"].tap()
+        app.buttons["firstTakeBVbtn"].tap()
+        app.buttons["firstTakeTVbtn"].tap()
     }
 
     func testPerformanceExample() throws {

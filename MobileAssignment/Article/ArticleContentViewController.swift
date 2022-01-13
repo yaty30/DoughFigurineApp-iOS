@@ -11,8 +11,6 @@ class ArticleContentViewController: UIViewController {
 
     let db = firebase.db
     
-    @IBOutlet weak var masterMainView: UIView!
-    
     @IBOutlet weak var articleTitle: UILabel!
     
     @IBOutlet weak var pTitleOne: UILabel!
@@ -36,7 +34,6 @@ class ArticleContentViewController: UIViewController {
         self.loadingView.isHidden = false
         self.loading.startAnimating()
         
-        // masterMainView.edgesIgnoringSafeArea = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
