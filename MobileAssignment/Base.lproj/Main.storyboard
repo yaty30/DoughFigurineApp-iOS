@@ -662,6 +662,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu5-Hl-rqw">
                                                 <rect key="frame" x="211" y="23" width="91" height="87"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="firstTakeFVbtn"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title=""/>
                                                 <userDefinedRuntimeAttributes>
@@ -709,6 +710,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8r-BA-65h">
                                                 <rect key="frame" x="211" y="25" width="91" height="87"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="firstTakeBVbtn"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title=""/>
                                                 <userDefinedRuntimeAttributes>
@@ -742,6 +744,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSI-HW-src">
                                                 <rect key="frame" x="208" y="26" width="91" height="87"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="firstTakeTVbtn"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title=""/>
                                                 <userDefinedRuntimeAttributes>
@@ -2801,6 +2804,13 @@
                                     <action selector="onCancel:" destination="vJ2-iS-kcL" eventType="touchUpInside" id="b0W-ah-IBp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirmation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0C-AE-gD2">
+                                <rect key="frame" x="54" y="39" width="308" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -4540,14 +4550,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MQV-kt-fki"/>
         <segue reference="0fs-bp-z5F"/>
-        <segue reference="hwE-y8-Vxk"/>
+        <segue reference="jZ2-84-JPu"/>
         <segue reference="mTg-zw-ugl"/>
         <segue reference="RT6-BM-Qkm"/>
         <segue reference="S3z-UW-31k"/>
-        <segue reference="7Km-8R-7Z0"/>
-        <segue reference="GCR-WA-7nf"/>
+        <segue reference="bLw-Ev-GvK"/>
+        <segue reference="qDk-RB-YeS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="article_big_2" width="924" height="1324"/>

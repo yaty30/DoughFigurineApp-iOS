@@ -20,9 +20,7 @@ class ViewController: UIViewController{
     @IBOutlet weak var lgArticleTwo: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         date.text = "2022"
-        
     }
 
     var currentImage = 1
