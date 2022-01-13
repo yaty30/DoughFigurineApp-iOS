@@ -44,7 +44,7 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.bringSubviewToFront(mainview)
+//        view.bringSubviewToFront(mainview)
         
         updateOrderInfo(updated: {})
         updateShippingInfo(updated: {})
@@ -205,5 +205,30 @@ class ConfirmAndPayController: UIViewController, UIPickerViewDelegate, UIPickerV
       
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         shippingInfo.country = usefulData.countryList[row]
+    }
+    
+    @IBAction func cancelOrderTrigger(_ sender: Any) {
+        self.cancelOrder()
+    }
+    
+    func cancelOrder() {
+        let actionSheet = UIAlertController(title: title, message: "Are you sure you want to CANCEL the order?", preferredStyle: .actionSheet)
+
+        actionSheet.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [weak self] _ in
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextVC = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! ViewController
+            
+            nextVC.modalPresentationStyle = .fullScreen
+            self!.present(nextVC, animated:true, completion:nil)
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "No", style: .default, handler: { [] _ in
+            print("dismissed")
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "dismiss", style: .cancel, handler: nil))
+        
+        
+        present(actionSheet, animated: true)
     }
 }
